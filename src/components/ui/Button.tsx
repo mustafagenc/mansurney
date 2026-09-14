@@ -1,5 +1,5 @@
 import type { ComponentProps, ReactNode } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 const variants = {
   gold: 'bg-altin text-murekkep hover:bg-altin-koyu hover:text-white',

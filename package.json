@@ -15,7 +15,8 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "images:recover": "tsx scripts/recover-images.ts",
-    "images:optimize": "tsx scripts/optimize-images.ts"
+    "images:optimize": "tsx scripts/optimize-images.ts",
+    "prelaunch": "tsx scripts/prelaunch-check.ts"
   },
   "dependencies": {
     "@marsidev/react-turnstile": "1.6.1",

@@ -1,7 +1,7 @@
 ---
 baslik: Ney Siparişi
 slug: ney-siparisi
-kaynak_url: https://mansurney.com/siparis.php
+kaynak_url: https://mansurney.vercel.app/siparis.php
 menu: NEY SİPARİŞİ (üst menü + üst bar butonu)
 alindi: 2026-09-14
 ---

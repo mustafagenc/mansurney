@@ -1,6 +1,6 @@
 ---
 baslik: Anasayfa
-kaynak_url: https://mansurney.com/index.php
+kaynak_url: https://mansurney.vercel.app/index.php
 html_title: "Anasayfa — Mansur Ney"
 meta_description: "" # boş
 meta_keywords: "" # boş

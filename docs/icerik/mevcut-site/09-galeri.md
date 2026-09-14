@@ -1,8 +1,8 @@
 ---
 baslik: Foto Galeri
 kaynak_url:
-  - https://mansurney.com/fotogaleri.php
-  - https://mansurney.com/galeri.php?id=13
+  - https://mansurney.vercel.app/fotogaleri.php
+  - https://mansurney.vercel.app/galeri.php?id=13
 alindi: 2026-09-14
 ---
 

@@ -136,30 +136,30 @@ Trafiğin düşük olduğu bir saatte yapın:
 Anasayfa 200 dönüyor:
 
 ```bash
-curl -sI https://mansurney.com/ | head -1
+curl -sI https://mansurney.vercel.app/ | head -1
 ```
 
 Eski bir URL kalıbı kalıcı yönlendiriliyor (örnek: `icerik.php?id=13`):
 
 ```bash
-curl -sI "https://mansurney.com/icerik.php?id=13&s=neyin-bakimi" | grep -iE "^(HTTP|location)"
+curl -sI "https://mansurney.vercel.app/icerik.php?id=13&s=neyin-bakimi" | grep -iE "^(HTTP|location)"
 ```
 
 Beklenen: `301` durum kodu ve `location` başlığında hedef yol — göreli
-(`/ney-rehberi/bakimi`) veya mutlak (`https://mansurney.com/ney-rehberi/bakimi`) olabilir,
+(`/ney-rehberi/bakimi`) veya mutlak (`https://mansurney.vercel.app/ney-rehberi/bakimi`) olabilir,
 ikisi de doğrudur (sorgu dizesi olduğu gibi iletilebilir — bu kabul edilebilir, çünkü hedef
 sayfadaki canonical etiketi asıl URL'yi zaten belirtir).
 
 Sitemap 42 URL içeriyor (14 rota × 3 dil):
 
 ```bash
-curl -s https://mansurney.com/sitemap.xml | grep -c "<url>"
+curl -s https://mansurney.vercel.app/sitemap.xml | grep -c "<url>"
 ```
 
 `robots.txt` sitemap'i işaret ediyor:
 
 ```bash
-curl -s https://mansurney.com/robots.txt
+curl -s https://mansurney.vercel.app/robots.txt
 ```
 
 > Not: Bu doğrulamalar yalnızca canlı (production) alan adında anlamlıdır. `vercel.json`

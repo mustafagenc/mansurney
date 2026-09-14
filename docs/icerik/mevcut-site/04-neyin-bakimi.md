@@ -1,7 +1,7 @@
 ---
 baslik: Neyin Bakımı
 slug: neyin-bakimi
-kaynak_url: https://mansurney.com/icerik.php?id=13&s=neyin-bakimi
+kaynak_url: https://mansurney.vercel.app/icerik.php?id=13&s=neyin-bakimi
 menu: NEY ▾ > NEY BAKIMI
 tarih: 2018-04-23
 goruntulenme: 118300

@@ -1,7 +1,7 @@
 ---
 baslik: Neyin Tarihçesi
 slug: neyin-tarihcesi
-kaynak_url: https://mansurney.com/icerik.php?id=10&s=neyin-tarihcesi
+kaynak_url: https://mansurney.vercel.app/icerik.php?id=10&s=neyin-tarihcesi
 menu: NEYİN TARİHÇESİ (üst menü)
 tarih: 2018-04-23
 goruntulenme: 116895

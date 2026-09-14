@@ -1,7 +1,7 @@
 ---
 baslik: Neyin Bölümleri
 slug: neyin-bolumleri
-kaynak_url: https://mansurney.com/icerik.php?id=12&s=neyin-bolumleri
+kaynak_url: https://mansurney.vercel.app/icerik.php?id=12&s=neyin-bolumleri
 menu: NEY ▾ > NEYİN BÖLÜMLERİ
 tarih: 2018-04-23
 goruntulenme: 111099
@@ -16,19 +16,19 @@ alindi: 2026-09-14
 
 Başpare neyin ağız kısmına konulan ,çeşitli ağaç veya boynuzlardan yapılan, üflemeye yardımcı olan parçadır.
 
-![BAŞPARE](https://mansurney.com/tasarim/baspare.JPG) <!-- ⚠️ 404: görsel sunucuda yok -->
+![BAŞPARE](https://mansurney.vercel.app/tasarim/baspare.JPG) <!-- ⚠️ 404: görsel sunucuda yok -->
 
 ## Parazvane
 
 Neyin alt ve üst kısımlarına yerleştirilen ve neylerin çatlamasını önleyen, pirinç veya alpakko(bafon)”dan yapılmış malzemedir.
 
-![PARAZVANE](https://mansurney.com/tasarim/parazvane.JPG) <!-- ⚠️ 404 -->
+![PARAZVANE](https://mansurney.vercel.app/tasarim/parazvane.JPG) <!-- ⚠️ 404 -->
 
 ## Ney Yapım Ustası
 
-![Ney Yapım Ustası](https://mansurney.com/tasarim/alper.JPG) <!-- ⚠️ 404 — alt metin sitede bozuk kodlanmış: "Ney YapÄ±m UstasÄ±" -->
+![Ney Yapım Ustası](https://mansurney.vercel.app/tasarim/alper.JPG) <!-- ⚠️ 404 — alt metin sitede bozuk kodlanmış: "Ney YapÄ±m UstasÄ±" -->
 
-![Ney](https://mansurney.com/tasarim/ney1.JPG) <!-- ⚠️ 404 -->
+![Ney](https://mansurney.vercel.app/tasarim/ney1.JPG) <!-- ⚠️ 404 -->
 
 ---
 

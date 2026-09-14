@@ -261,7 +261,7 @@ test('anasayfa 200 döner', async ({ page }) => {
 - [ ] **Adım 9: `.env.example`**
 
 ```dotenv
-NEXT_PUBLIC_SITE_URL=https://mansurney.com
+NEXT_PUBLIC_SITE_URL=https://mansurney.vercel.app
 RESEND_API_KEY=
 FORM_TO_EMAIL=neyzen@mansurney.com
 FORM_FROM_EMAIL=Mansur Ney <form@mansurney.com>
@@ -587,7 +587,7 @@ import { isRtl, routing } from '@/i18n/routing';
 import { fontVariables } from '@/lib/fonts';
 import '../globals.css';
 
-export const metadata: Metadata = { metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.com') };
+export const metadata: Metadata = { metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.vercel.app') };
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -1158,7 +1158,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
 }
 ```
 
-- [ ] **Adım 8: Layout’a bağla.** `src/app/[locale]/layout.tsx` içinde `<NextIntlClientProvider>` içeriğini `<Header /><main id="icerik">{children}</main><Footer />` yap. `amblem.svg` dosyasını indir: `curl -sL https://mansurney.com/assets/img/amblem.svg -o public/images/brand/amblem.svg` ve `src/app/icon.svg` olarak da kopyala.
+- [ ] **Adım 8: Layout’a bağla.** `src/app/[locale]/layout.tsx` içinde `<NextIntlClientProvider>` içeriğini `<Header /><main id="icerik">{children}</main><Footer />` yap. `amblem.svg` dosyasını indir: `curl -sL https://mansurney.vercel.app/assets/img/amblem.svg -o public/images/brand/amblem.svg` ve `src/app/icon.svg` olarak da kopyala.
 
 - [ ] **Adım 9: Yerelleştirilmiş 404** — `src/app/[locale]/not-found.tsx`:
 
@@ -1266,7 +1266,7 @@ test.each(walk(ROOT).filter((f) => /\.(jpe?g|png|webp)$/i.test(f)))('%s ≤ 450 
 ```ts
 export type ImageSource = { url: string; out: string };
 
-const live = 'https://mansurney.com';
+const live = 'https://mansurney.vercel.app';
 
 export const imageSources: ImageSource[] = [
   { url: `${live}/assets/img/amblem.svg`, out: 'brand/amblem.svg' },
@@ -1524,7 +1524,7 @@ export async function pageMetadata(args: { locale: Locale; title: string; descri
 import type { Article, BreadcrumbList, FAQPage, WithContext } from 'schema-dts';
 import type { Faq } from './content';
 
-const site = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.com';
+const site = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.vercel.app';
 const abs = (path: string) => new URL(path, site).toString();
 
 export const breadcrumbLd = (items: { name: string; path: string }[]): WithContext<BreadcrumbList> => ({
@@ -3384,7 +3384,7 @@ import { expect, test } from 'vitest';
 import { resolveLegacyUrl } from '@/config/legacy-redirects';
 
 const r = (url: string) => {
-  const u = new URL(url, 'https://mansurney.com');
+  const u = new URL(url, 'https://mansurney.vercel.app');
   return resolveLegacyUrl(u.pathname, u.searchParams);
 };
 
@@ -3595,7 +3595,7 @@ import { getPathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { allRoutes } from '@/lib/routes';
 
-const site = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.com';
+const site = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return allRoutes().flatMap((route) => {
@@ -3617,7 +3617,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 ```ts
 import type { MetadataRoute } from 'next';
 
-const site = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.com';
+const site = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.vercel.app';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -3857,16 +3857,16 @@ jobs:
 - [ ] **Adım 6: Geçiş** — trafiğin düşük olduğu saatte: TTL’i bir gün önceden 300 sn’ye indir → `@` ve `www` kayıtlarını Vercel’e yönlendir (Cloudflare kaydı “DNS only”) → Vercel’de `www` → apex kalıcı yönlendirme → SSL aktif olunca aşağıdaki doğrulamalar:
 
 ```bash
-curl -sI https://mansurney.com/ | head -1
+curl -sI https://mansurney.vercel.app/ | head -1
 ```
 ```bash
-curl -sI "https://mansurney.com/icerik.php?id=13&s=neyin-bakimi" | grep -iE "^(HTTP|location)"
+curl -sI "https://mansurney.vercel.app/icerik.php?id=13&s=neyin-bakimi" | grep -iE "^(HTTP|location)"
 ```
 ```bash
-curl -s https://mansurney.com/sitemap.xml | grep -c "<url>"
+curl -s https://mansurney.vercel.app/sitemap.xml | grep -c "<url>"
 ```
 
-Beklenen: `HTTP/2 200`; `301` + `location: https://mansurney.com/ney-rehberi/bakimi`; `42`.
+Beklenen: `HTTP/2 200`; `301` + `location: https://mansurney.vercel.app/ney-rehberi/bakimi`; `42`.
 
 - [ ] **Adım 7: Arama motorları** — Search Console’da (alan adı mülkü, DNS doğrulamalı) `sitemap.xml` gönder; “URL Denetimi” ile `/`, `/en`, `/ar`, `/ney-rehberi/bakimi` için dizine ekleme iste. Bing Webmaster Tools’a aynı sitemap. Google Business Profile varsa web sitesi alanını ve adresi güncelle (§15-8).
 

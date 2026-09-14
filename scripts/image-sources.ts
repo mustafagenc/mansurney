@@ -1,6 +1,6 @@
 export type ImageSource = { url: string; out: string };
 
-const live = 'https://mansurney.com';
+const live = 'https://mansurney.vercel.app';
 
 export const imageSources: ImageSource[] = [
   { url: `${live}/assets/img/amblem.svg`, out: 'brand/amblem.svg' },

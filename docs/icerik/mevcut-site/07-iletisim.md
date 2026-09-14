@@ -1,7 +1,7 @@
 ---
 baslik: İletişim
 slug: iletisim
-kaynak_url: https://mansurney.com/iletisim.php
+kaynak_url: https://mansurney.vercel.app/iletisim.php
 alindi: 2026-09-14
 ---
 

@@ -1,8 +1,8 @@
 ---
 baslik: Haberler
 kaynak_url:
-  - https://mansurney.com/haberler.php
-  - https://mansurney.com/kategori.php?id=92&s=haberler   # üst menüdeki link — BOŞ kategori
+  - https://mansurney.vercel.app/haberler.php
+  - https://mansurney.vercel.app/kategori.php?id=92&s=haberler   # üst menüdeki link — BOŞ kategori
 alindi: 2026-09-14
 ---
 

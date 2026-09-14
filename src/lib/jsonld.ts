@@ -5,7 +5,7 @@ import { getPathname } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import type { Faq } from './content';
 
-const site = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.com';
+const site = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.vercel.app';
 const abs = (path: string) => new URL(path, site).toString();
 
 const dayNames: Record<(typeof business.openingHours)[number]['days'][number], DayOfWeek> = {

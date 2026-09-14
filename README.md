@@ -1,6 +1,6 @@
 # Mansur Ney
 
-[mansurney.com](https://mansurney.com), Hatay/Antakya'da el yapımı ney üreten bir atölyenin web sitesidir. Bu depo, mevcut PHP sitesinin görsel kimliğini koruyarak Türkçe (varsayılan), İngilizce ve Arapça (RTL) destekli, statik üretilen bir Next.js sitesi olarak yeniden kurulmasını içerir.
+[mansurney.com](https://mansurney.vercel.app), Hatay/Antakya'da el yapımı ney üreten bir atölyenin web sitesidir. Bu depo, mevcut PHP sitesinin görsel kimliğini koruyarak Türkçe (varsayılan), İngilizce ve Arapça (RTL) destekli, statik üretilen bir Next.js sitesi olarak yeniden kurulmasını içerir.
 
 > Bu README yalnızca gerçekten var olan veya kararlaştırılmış şeyleri anlatır. Uygulama detayları için bkz. [Belgeler](#belgeler); yayına geçiş adımları için bkz. [Yayın kontrol listesi](docs/yayin-kontrol-listesi.md).
 
@@ -79,7 +79,7 @@ Değişikliklerin doğrulama yolu `pnpm typecheck`, `pnpm lint` ve `pnpm build` 
 
 | Değişken | Anlamı |
 |---|---|
-| `NEXT_PUBLIC_SITE_URL` | Sitenin kanonik kök URL'si (`https://mansurney.com`) |
+| `NEXT_PUBLIC_SITE_URL` | Sitenin kanonik kök URL'si (`https://mansurney.vercel.app`) |
 | `RESEND_API_KEY` | Sipariş/iletişim formu e-postalarını göndermek için Resend API anahtarı |
 | `FORM_TO_EMAIL` | Form gönderimlerinin ulaşacağı adres (`neyzen@mansurney.com`) |
 | `FORM_FROM_EMAIL` | Resend üzerinden gönderilen e-postaların "gönderen" adresi |

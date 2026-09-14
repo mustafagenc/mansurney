@@ -1,7 +1,7 @@
 ---
 baslik: Ney Çantası
 slug: ney-cantasi
-kaynak_url: https://mansurney.com/icerik.php?id=14&s=ney-cantasi
+kaynak_url: https://mansurney.vercel.app/icerik.php?id=14&s=ney-cantasi
 menu: NEY ▾ > NEY ÇANTASI
 tarih: 2018-04-23
 goruntulenme: 113119
@@ -14,8 +14,8 @@ alindi: 2026-09-14
 
 Şık tasarımı,sağlam yapısı ve aynı zamanda hafifliği ile göze çarpan ney çantasını sizlere sunuyoruz. Ney Çantası alüminyumdan imal edilmiş olup 3'lü ve Takım ney çantası olarak iki çeşittir.
 
-![](https://mansurney.com/canta2.jpg) <!-- ⚠️ 404 -->
-![](https://mansurney.com/canta1.jpg) <!-- ⚠️ 404 -->
+![](https://mansurney.vercel.app/canta2.jpg) <!-- ⚠️ 404 -->
+![](https://mansurney.vercel.app/canta1.jpg) <!-- ⚠️ 404 -->
 
 ---
 

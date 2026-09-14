@@ -1,6 +1,6 @@
 # mansurney.com — İçerik Arşivi
 
-14 Eylül 2026’da https://mansurney.com adresinden alınan metinler. Yeni Next.js sitesine içerik taşımanın kaynağıdır.
+14 Eylül 2026’da https://mansurney.vercel.app adresinden alınan metinler. Yeni Next.js sitesine içerik taşımanın kaynağıdır.
 
 ## Mevcut site (`mevcut-site/`)
 

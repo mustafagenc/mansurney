@@ -41,7 +41,29 @@
     "title": "Aradığınız sayfa bulunamadı",
     "text": "Sayfa taşınmış ya da kaldırılmış olabilir. Anasayfadan devam edebilirsiniz."
   },
-  "Home": { "title": "Mansur Ney" },
+  "Home": {
+    "metaTitle": "El Yapımı Ney — Hatay",
+    "hero": {
+      "eyebrow": "Mansur Ney · Neyzen Atölyesi",
+      "title": "Dinle neyden",
+      "text": "Kamışın sükûtundan doğan ses; nefesle söze duran sabır.",
+      "lead": "Asi kıyısının kamışından, sekiz akortta el yapımı ney.",
+      "imageAlt": "Yakın plan, yan yana dizilmiş kamış neyler ve başpareler",
+      "gallery": "Galeriyi gör"
+    },
+    "about": {
+      "eyebrow": "Neyin Tarihçesi",
+      "title": "Sazların en kadîmi, sükûtun sesi",
+      "text": "Ney; sulak zeminde, muhtelif uzunluklarda yetişen bitki ve bu bitkiden üretilen nefesli bir çalgıdır. Kökeni mitolojik çağlara dayanır; Sümerlerden Mevlevîliğe binlerce yıllık bir yolculuğun sesidir.",
+      "cta": "Devamını oku"
+    },
+    "tunings": { "eyebrow": "Akortlar", "title": "Her ahenkte ney", "cta": "Akortları incele" },
+    "gallery": { "cta": "Tüm galeriyi gör" },
+    "order": {
+      "title": "Neyinizi atölyemizden isteyin",
+      "text": "Akordunuzu seçin ya da bize danışın; atölyemiz en kısa sürede sizinle iletişime geçsin."
+    }
+  },
   "Guide": {
     "eyebrow": "Ney Rehberi",
     "title": "Bilgi & Makaleler",

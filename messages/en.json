@@ -41,7 +41,29 @@
     "title": "Page not found",
     "text": "The page may have been moved or removed. You can continue from the home page."
   },
-  "Home": { "title": "Mansur Ney" },
+  "Home": {
+    "metaTitle": "Handmade Ney — Hatay",
+    "hero": {
+      "eyebrow": "Mansur Ney · Ney Workshop",
+      "title": "Listen to the ney",
+      "text": "A sound born from the reed's silence; patience turned to speech by breath.",
+      "lead": "Handmade ney in eight tunings, from reed grown on the banks of the Orontes.",
+      "imageAlt": "Close-up of reed neys and mouthpieces arranged side by side",
+      "gallery": "View the gallery"
+    },
+    "about": {
+      "eyebrow": "History of the Ney",
+      "title": "The oldest of instruments, the voice of silence",
+      "text": "The ney is a plant that grows to varying lengths in wetlands, and the wind instrument crafted from it. Its origins reach back to mythological times — the voice of a journey spanning thousands of years, from the Sumerians to the Mevlevi order.",
+      "cta": "Read more"
+    },
+    "tunings": { "eyebrow": "Tunings", "title": "A ney for every harmony", "cta": "Explore the tunings" },
+    "gallery": { "cta": "View the full gallery" },
+    "order": {
+      "title": "Order your ney from our workshop",
+      "text": "Choose your tuning or ask us for advice; our workshop will get in touch with you as soon as possible."
+    }
+  },
   "Guide": {
     "eyebrow": "Ney Guide",
     "title": "Articles",

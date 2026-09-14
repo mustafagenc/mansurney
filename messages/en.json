@@ -51,5 +51,29 @@
     "orderCtaTitle": "Order a Ney",
     "orderCtaText": "Contact our workshop for your handmade Mansur ney.",
     "orderCtaButton": "Place an order"
+  },
+  "Tunings": {
+    "eyebrow": "Tunings",
+    "title": "Handmade ney in every tuning",
+    "intro": "A ney's tuning (ahenk) is determined by its length. Our workshop makes neys in eight tunings; if you are unsure which suits you, ask us.",
+    "length": "Length",
+    "lengthUnknown": "Ask the master for the measurement",
+    "listen": "Listen to its sound",
+    "orderThis": "Order a {name} ney"
+  },
+  "Case": {
+    "eyebrow": "Accessories",
+    "models": "Models",
+    "capacity": "{count, plural, =1 {1 ney} other {# neys}}",
+    "set": "Set",
+    "aluminium": "Aluminium",
+    "wood": "Wood",
+    "askPrice": "Contact us for pricing"
+  },
+  "Workshop": {
+    "eyebrow": "About",
+    "master": "Ney-making master",
+    "aboutAlt": "Ink illustration of a neyzen playing the ney",
+    "interiorAlt": "Neys, prayer beads and tef/bendir drums hanging on the workshop wall"
   }
 }

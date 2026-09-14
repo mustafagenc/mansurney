@@ -51,5 +51,29 @@
     "orderCtaTitle": "Ney Siparişi",
     "orderCtaText": "El yapımı Mansur neyleriniz için atölyemizle iletişime geçin.",
     "orderCtaButton": "Sipariş ver"
+  },
+  "Tunings": {
+    "eyebrow": "Akortlar",
+    "title": "Her ahenkte el yapımı ney",
+    "intro": "Neyin akordu (ahengi) boyuna göre belirlenir. Atölyemiz sekiz akortta ney üretir; hangi akordun size uygun olduğundan emin değilseniz bize danışın.",
+    "length": "Boy",
+    "lengthUnknown": "Ölçü için ustaya danışın",
+    "listen": "Sesini dinleyin",
+    "orderThis": "{name} ney siparişi"
+  },
+  "Case": {
+    "eyebrow": "Aksesuar",
+    "models": "Modeller",
+    "capacity": "{count, plural, =1 {1 ney} other {# ney}}",
+    "set": "Takım",
+    "aluminium": "Alüminyum",
+    "wood": "Ahşap",
+    "askPrice": "Fiyat için iletişime geçin"
+  },
+  "Workshop": {
+    "eyebrow": "Hakkımızda",
+    "master": "Ney yapım ustası",
+    "aboutAlt": "Ney çalan bir neyzeni betimleyen mürekkep tasviri",
+    "interiorAlt": "Atölye duvarında asılı neyler, tespihler ve tef/bendirler"
   }
 }

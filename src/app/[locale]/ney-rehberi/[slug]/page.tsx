@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
 import { OrderCta } from '@/components/guide/OrderCta';
 import { JsonLd } from '@/components/JsonLd';
-import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
+import { PageHero } from '@/components/PageHero';
 import { Container } from '@/components/ui/Container';
 import { getPathname } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
@@ -68,20 +68,14 @@ export default async function GuidePage({ params }: PageProps<'/[locale]/ney-reh
       />
       {faq.length > 0 && <JsonLd data={faqLd(faq)} />}
 
-      <section className="bg-yesil py-12 text-kagit">
-        <Container>
-          <h1 className="text-4xl text-kagit md:text-5xl">{meta.title}</h1>
-          <div className="mt-4">
-            <Breadcrumbs
-              items={[
-                { label: t('Common.home'), href: '/' },
-                { label: t('Guide.eyebrow'), href: '/ney-rehberi' },
-                { label: meta.title },
-              ]}
-            />
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        title={meta.title}
+        breadcrumbs={[
+          { label: t('Common.home'), href: '/' },
+          { label: t('Guide.eyebrow'), href: '/ney-rehberi' },
+          { label: meta.title },
+        ]}
+      />
 
       <Container className="grid gap-12 py-14 lg:grid-cols-[1fr_320px]">
         <article>

@@ -6,7 +6,9 @@ import { GuideGrid } from '@/components/home/GuideGrid';
 import { Hero } from '@/components/home/Hero';
 import { OrderBand } from '@/components/home/OrderBand';
 import { TuningsTeaser } from '@/components/home/TuningsTeaser';
+import { JsonLd } from '@/components/JsonLd';
 import type { Locale } from '@/i18n/routing';
+import { localBusinessLd } from '@/lib/jsonld';
 import { pageMetadata } from '@/lib/seo';
 
 export async function generateMetadata({ params }: PageProps<'/[locale]'>) {
@@ -22,9 +24,12 @@ export async function generateMetadata({ params }: PageProps<'/[locale]'>) {
 }
 
 export default async function HomePage({ params }: PageProps<'/[locale]'>) {
-  setRequestLocale((await params).locale as Locale);
+  const locale = (await params).locale as Locale;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'Meta' });
   return (
     <>
+      <JsonLd data={localBusinessLd(locale, t('defaultDescription'))} />
       <Hero />
       <CoupletBand />
       <AboutTeaser />

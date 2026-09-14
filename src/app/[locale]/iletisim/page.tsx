@@ -1,11 +1,13 @@
 import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
 import { ContactForm } from '@/components/forms/ContactForm';
+import { JsonLd } from '@/components/JsonLd';
 import { PageHero } from '@/components/PageHero';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { ReedDivider } from '@/components/ui/ReedDivider';
 import { business, telUrl, whatsappUrl } from '@/config/business';
 import type { Locale } from '@/i18n/routing';
+import { localBusinessLd } from '@/lib/jsonld';
 import { pageMetadata } from '@/lib/seo';
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/iletisim'>) {
@@ -31,6 +33,7 @@ export default async function ContactPage({ params }: PageProps<'/[locale]/ileti
 
   return (
     <>
+      <JsonLd data={localBusinessLd(locale, t('Meta.defaultDescription'))} />
       <PageHero
         title={t('Contact.title')}
         breadcrumbs={[{ label: t('Common.home'), href: '/' }, { label: t('Contact.title') }]}

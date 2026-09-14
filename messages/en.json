@@ -1,0 +1,172 @@
+{
+  "Meta": {
+    "siteName": "Mansur Ney",
+    "tagline": "Ney Workshop",
+    "defaultDescription": "Handmade Turkish ney flutes from Hatay reed, crafted in every tuning. Order a ney, ney cases, and a guide to ney making and care."
+  },
+  "Common": {
+    "readMore": "Read more",
+    "backHome": "Back to home",
+    "home": "Home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "whatsapp": "Message us on WhatsApp",
+    "call": "Call us",
+    "skipToContent": "Skip to content",
+    "mainNav": "Main navigation"
+  },
+  "Nav": {
+    "home": "Home",
+    "guide": "Ney Guide",
+    "tunings": "Tunings",
+    "case": "Ney Case",
+    "workshop": "Workshop",
+    "gallery": "Gallery",
+    "order": "Order a Ney",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "couplet": "Having created the ney from a meadow, God / made Rumi known to the world through it",
+    "about": "The ney is the oldest of wind instruments, made from reed grown in wetlands. In our workshop, reeds from the banks of the Orontes become neys by hand.",
+    "quickLinks": "Quick Links",
+    "guideLinks": "Ney Guide",
+    "contactTitle": "Contact",
+    "legal": "Legal",
+    "privacyNotice": "Privacy Notice",
+    "privacyPolicy": "Privacy Policy",
+    "rights": "© {year} Mansur Ney. All rights reserved."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "text": "The page may have been moved or removed. You can continue from the home page."
+  },
+  "Home": {
+    "metaTitle": "Handmade Ney — Hatay",
+    "hero": {
+      "eyebrow": "Mansur Ney · Ney Workshop",
+      "title": "Listen to the ney",
+      "text": "A sound born from the reed's silence; patience turned to speech by breath.",
+      "lead": "Handmade ney in eight tunings, from reed grown on the banks of the Orontes.",
+      "imageAlt": "Close-up of reed neys and mouthpieces arranged side by side",
+      "gallery": "View the gallery"
+    },
+    "about": {
+      "eyebrow": "History of the Ney",
+      "title": "The oldest of instruments, the voice of silence",
+      "text": "The ney is a plant that grows to varying lengths in wetlands, and the wind instrument crafted from it. Its origins reach back to mythological times — the voice of a journey spanning thousands of years, from the Sumerians to the Mevlevi order.",
+      "cta": "Read more"
+    },
+    "tunings": { "eyebrow": "Tunings", "title": "A ney for every harmony", "cta": "Explore the tunings" },
+    "gallery": { "cta": "View the full gallery" },
+    "order": {
+      "title": "Order your ney from our workshop",
+      "text": "Choose your tuning or ask us for advice; our workshop will get in touch with you as soon as possible."
+    }
+  },
+  "Guide": {
+    "eyebrow": "Ney Guide",
+    "title": "Articles",
+    "description": "Stories on the history, making, parts and care of the ney.",
+    "updated": "Updated: {date}",
+    "related": "More articles",
+    "faqTitle": "Frequently asked questions",
+    "orderCtaTitle": "Order a Ney",
+    "orderCtaText": "Contact our workshop for your handmade Mansur ney.",
+    "orderCtaButton": "Place an order"
+  },
+  "Tunings": {
+    "eyebrow": "Tunings",
+    "title": "Handmade ney in every tuning",
+    "intro": "A ney's tuning (ahenk) is determined by its length. Our workshop makes neys in eight tunings; if you are unsure which suits you, ask us.",
+    "length": "Length",
+    "lengthUnknown": "Ask the master for the measurement",
+    "listen": "Listen to its sound",
+    "orderThis": "Order a {name} ney"
+  },
+  "Case": {
+    "eyebrow": "Accessories",
+    "models": "Models",
+    "capacity": "{count, plural, =1 {1 ney} other {# neys}}",
+    "set": "Set",
+    "aluminium": "Aluminium",
+    "wood": "Wood",
+    "askPrice": "Contact us for pricing"
+  },
+  "Workshop": {
+    "eyebrow": "About",
+    "master": "Ney-making master",
+    "aboutAlt": "Ink illustration of a neyzen playing the ney",
+    "interiorAlt": "Neys, prayer beads and tef/bendir drums hanging on the workshop wall"
+  },
+  "Gallery": {
+    "eyebrow": "From the Workshop",
+    "title": "Photo Gallery",
+    "description": "Neys, reed canes and moments of everyday work from the Mansur Ney workshop.",
+    "viewer": "Image viewer",
+    "prev": "Previous image",
+    "next": "Next image",
+    "close": "Close",
+    "categories": { "workshop": "Workshop", "neys": "Neys", "cases": "Cases" }
+  },
+  "Forms": {
+    "required": "required",
+    "name": "Full name",
+    "phone": "Phone",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "consent": "I have read the <link>Privacy Notice</link> and consent to the processing of my personal data to respond to my request.",
+    "sending": "Sending…",
+    "success": "Your request has been received. Our workshop will contact you shortly.",
+    "errors": {
+      "validation": "Please check the marked fields.",
+      "captcha": "Security verification could not be completed. Please refresh the page and try again.",
+      "server": "This could not be sent right now. Please reach us by phone or WhatsApp.",
+      "name": "Please enter your name using at least 2 characters.",
+      "phone": "Please enter a valid phone number.",
+      "email": "Please enter a valid email address.",
+      "quantity": "Quantity must be between 1 and 50.",
+      "message": "Your message must be at least 10 characters.",
+      "consent": "Please accept the privacy notice to continue.",
+      "tuning": "Please choose a tuning from the list.",
+      "note": "The note can be at most 2000 characters.",
+      "subject": "The subject can be at most 150 characters."
+    }
+  },
+  "Order": {
+    "title": "Ney Order",
+    "heading": "Handmade Mansur Ney",
+    "intro": "Every ney we make is prepared from selected reed, using traditional methods and craftsmanship. Fill in the form below to order a ney in the tuning and size you want; our workshop will get in touch with you as soon as possible.",
+    "description": "Order a handmade ney: request your ney in the Bolâhenk, Süpürde, Mansur, Kız, Müstahsen, Şah, Davud or Bolâhenk Nısfiye tuning.",
+    "tuning": "Tuning",
+    "tuningUnsure": "Select / I'll ask for advice",
+    "quantity": "Quantity",
+    "note": "Your note",
+    "notePlaceholder": "Any special requests, preferred size, etc.",
+    "submit": "Send order request",
+    "whyTitle": "Why Mansur Ney?",
+    "why": {
+      "reed": "Selected reed",
+      "craft": "Handcraftsmanship and precise tuning",
+      "tunings": "Made in every tuning",
+      "packing": "Careful packaging"
+    },
+    "shipping": "We ship neys by courier anywhere in Turkey.",
+    "whatsappText": "Hello, I would like information about ordering a ney."
+  },
+  "Contact": {
+    "title": "Contact",
+    "heading": "Write to us",
+    "description": "Get in touch with the Mansur Ney workshop: Antakya / Hatay address, phone, WhatsApp and contact form.",
+    "submit": "Send",
+    "infoTitle": "Contact information",
+    "hours": "Opening hours",
+    "map": "Open in maps"
+  },
+  "Legal": {
+    "updated": "Last updated: {date}",
+    "kvkkDescription": "Privacy notice explaining which personal data we collect through the order and contact forms, and for what purpose and legal basis.",
+    "privacyDescription": "Privacy policy explaining that the Mansur Ney website uses no cookies, plus our server logs and service providers."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  // Editor Settings
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.rulers": [120],
+  "doppler.autocomplete.enable": true,
+  "doppler.hover.enable": true,
+  // Copilot Settings
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": true
+  },
+  // Files to include in AI context
+  "files.associations": {
+    ".ai-coding-prompt.md": "markdown"
+  },
+  // ESLint Settings
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  // Prettier Settings
+  "prettier.requireConfig": true,
+  // File Nesting
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    ".eslintrc.json": ".eslintignore",
+    ".prettierrc.json": ".prettierignore",
+    "tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo",
+    ".gitattributes": ".gitignore",
+    "README.md": "SECURITY.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, LICENSE",
+    "vitest.config.ts": "vitest.setup.ts",
+    ".env": ".env.example, .env.local, .env.json, .env.prod",
+    "instrumentation.ts": "instrumentation.node.ts",
+    "vercel.json": ".vercelignore",
+    "next.config.ts": "next-env.d.ts",
+    ".npmrc": ".npmrc.ci",
+    "Dockerfile": ".dockerignore",
+    "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml"
+  },
+  // Git Settings
+  "git.enableCommitSigning": true,
+  // Search Settings
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/build": true,
+    "pnpm-lock.yaml": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "i18n-ally.localesPaths": [
+    "messages",
+    "src/i18n"
+  ]
+}

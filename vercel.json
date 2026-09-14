@@ -1,0 +1,63 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "regions": ["fra1"],
+  "redirects": [
+    { "source": "/index.php", "destination": "/", "statusCode": 301 },
+    {
+      "source": "/icerik.php",
+      "has": [{ "type": "query", "key": "id", "value": "10" }],
+      "destination": "/ney-rehberi/tarihce",
+      "statusCode": 301
+    },
+    {
+      "source": "/icerik.php",
+      "has": [{ "type": "query", "key": "id", "value": "11" }],
+      "destination": "/ney-rehberi/yapimi",
+      "statusCode": 301
+    },
+    {
+      "source": "/icerik.php",
+      "has": [{ "type": "query", "key": "id", "value": "12" }],
+      "destination": "/ney-rehberi/bolumleri",
+      "statusCode": 301
+    },
+    {
+      "source": "/icerik.php",
+      "has": [{ "type": "query", "key": "id", "value": "13" }],
+      "destination": "/ney-rehberi/bakimi",
+      "statusCode": 301
+    },
+    {
+      "source": "/icerik.php",
+      "has": [{ "type": "query", "key": "id", "value": "14" }],
+      "destination": "/ney-cantasi",
+      "statusCode": 301
+    },
+    {
+      "source": "/icerik.php",
+      "has": [{ "type": "query", "key": "id", "value": "53" }],
+      "destination": "/akortlar",
+      "statusCode": 301
+    },
+    {
+      "source": "/icerik.php",
+      "has": [{ "type": "query", "key": "id", "value": "54" }],
+      "destination": "/akortlar",
+      "statusCode": 301
+    },
+    { "source": "/icerik.php", "destination": "/ney-rehberi", "statusCode": 301 },
+    { "source": "/siparis.php", "destination": "/siparis", "statusCode": 301 },
+    { "source": "/iletisim.php", "destination": "/iletisim", "statusCode": 301 },
+    { "source": "/fotogaleri.php", "destination": "/galeri", "statusCode": 301 },
+    { "source": "/galeri.php", "destination": "/galeri", "statusCode": 301 },
+    { "source": "/haberler.php", "destination": "/", "statusCode": 301 },
+    {
+      "source": "/haber.php",
+      "has": [{ "type": "query", "key": "id", "value": "5" }],
+      "destination": "/ney-cantasi",
+      "statusCode": 301
+    },
+    { "source": "/haber.php", "destination": "/", "statusCode": 301 },
+    { "source": "/kategori.php", "destination": "/", "statusCode": 301 }
+  ]
+}

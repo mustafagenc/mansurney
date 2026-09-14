@@ -1,0 +1,172 @@
+{
+  "Meta": {
+    "siteName": "Mansur Ney",
+    "tagline": "Neyzen Atölyesi",
+    "defaultDescription": "Hatay’da Asi kamışından el yapımı ney. Tüm akortlarda ney siparişi, ney çantası, ney yapımı ve bakımı rehberi."
+  },
+  "Common": {
+    "readMore": "Devamını oku",
+    "backHome": "Anasayfaya dön",
+    "home": "Anasayfa",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "language": "Dil",
+    "whatsapp": "WhatsApp ile yazın",
+    "call": "Arayın",
+    "skipToContent": "İçeriğe geç",
+    "mainNav": "Ana menü"
+  },
+  "Nav": {
+    "home": "Anasayfa",
+    "guide": "Ney Rehberi",
+    "tunings": "Akortlar",
+    "case": "Ney Çantası",
+    "workshop": "Atölye",
+    "gallery": "Galeri",
+    "order": "Ney Siparişi",
+    "contact": "İletişim"
+  },
+  "Footer": {
+    "couplet": "Bir çemenden yaratıp Hazret-i Mevlâ nây’ı / Halka bildirmek için Hazret-i Mevlânâ’yı",
+    "about": "Ney; sulak zeminde yetişen kamıştan üretilen, sazların en kadîmi nefesli çalgıdır. Atölyemizde Asi kıyısının kamışları ustalıkla neye dönüşür.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "guideLinks": "Ney Rehberi",
+    "contactTitle": "İletişim",
+    "legal": "Yasal",
+    "privacyNotice": "KVKK Aydınlatma Metni",
+    "privacyPolicy": "Gizlilik Politikası",
+    "rights": "© {year} Mansur Ney. Tüm hakları saklıdır."
+  },
+  "NotFound": {
+    "title": "Aradığınız sayfa bulunamadı",
+    "text": "Sayfa taşınmış ya da kaldırılmış olabilir. Anasayfadan devam edebilirsiniz."
+  },
+  "Home": {
+    "metaTitle": "El Yapımı Ney — Hatay",
+    "hero": {
+      "eyebrow": "Mansur Ney · Neyzen Atölyesi",
+      "title": "Dinle neyden",
+      "text": "Kamışın sükûtundan doğan ses; nefesle söze duran sabır.",
+      "lead": "Asi kıyısının kamışından, sekiz akortta el yapımı ney.",
+      "imageAlt": "Yakın plan, yan yana dizilmiş kamış neyler ve başpareler",
+      "gallery": "Galeriyi gör"
+    },
+    "about": {
+      "eyebrow": "Neyin Tarihçesi",
+      "title": "Sazların en kadîmi, sükûtun sesi",
+      "text": "Ney; sulak zeminde, muhtelif uzunluklarda yetişen bitki ve bu bitkiden üretilen nefesli bir çalgıdır. Kökeni mitolojik çağlara dayanır; Sümerlerden Mevlevîliğe binlerce yıllık bir yolculuğun sesidir.",
+      "cta": "Devamını oku"
+    },
+    "tunings": { "eyebrow": "Akortlar", "title": "Her ahenkte ney", "cta": "Akortları incele" },
+    "gallery": { "cta": "Tüm galeriyi gör" },
+    "order": {
+      "title": "Neyinizi atölyemizden isteyin",
+      "text": "Akordunuzu seçin ya da bize danışın; atölyemiz en kısa sürede sizinle iletişime geçsin."
+    }
+  },
+  "Guide": {
+    "eyebrow": "Ney Rehberi",
+    "title": "Bilgi & Makaleler",
+    "description": "Neyin tarihçesinden yapımına, bölümlerinden bakımına dair yazılar.",
+    "updated": "Güncelleme: {date}",
+    "related": "Diğer yazılar",
+    "faqTitle": "Sık sorulan sorular",
+    "orderCtaTitle": "Ney Siparişi",
+    "orderCtaText": "El yapımı Mansur neyleriniz için atölyemizle iletişime geçin.",
+    "orderCtaButton": "Sipariş ver"
+  },
+  "Tunings": {
+    "eyebrow": "Akortlar",
+    "title": "Her ahenkte el yapımı ney",
+    "intro": "Neyin akordu (ahengi) boyuna göre belirlenir. Atölyemiz sekiz akortta ney üretir; hangi akordun size uygun olduğundan emin değilseniz bize danışın.",
+    "length": "Boy",
+    "lengthUnknown": "Ölçü için ustaya danışın",
+    "listen": "Sesini dinleyin",
+    "orderThis": "{name} ney siparişi"
+  },
+  "Case": {
+    "eyebrow": "Aksesuar",
+    "models": "Modeller",
+    "capacity": "{count, plural, =1 {1 ney} other {# ney}}",
+    "set": "Takım",
+    "aluminium": "Alüminyum",
+    "wood": "Ahşap",
+    "askPrice": "Fiyat için iletişime geçin"
+  },
+  "Workshop": {
+    "eyebrow": "Hakkımızda",
+    "master": "Ney yapım ustası",
+    "aboutAlt": "Ney çalan bir neyzeni betimleyen mürekkep tasviri",
+    "interiorAlt": "Atölye duvarında asılı neyler, tespihler ve tef/bendirler"
+  },
+  "Gallery": {
+    "eyebrow": "Atölyeden",
+    "title": "Foto Galeri",
+    "description": "Mansur Ney atölyesinden neyler, kamışlar ve çalışma anları.",
+    "viewer": "Görsel görüntüleyici",
+    "prev": "Önceki görsel",
+    "next": "Sonraki görsel",
+    "close": "Kapat",
+    "categories": { "workshop": "Atölye", "neys": "Neyler", "cases": "Çantalar" }
+  },
+  "Forms": {
+    "required": "zorunlu",
+    "name": "Adınız Soyadınız",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "subject": "Konu",
+    "message": "Mesajınız",
+    "consent": "<link>KVKK Aydınlatma Metni</link>’ni okudum, kişisel verilerimin talebime dönüş yapılması amacıyla işlenmesini kabul ediyorum.",
+    "sending": "Gönderiliyor…",
+    "success": "Talebiniz bize ulaştı. Atölyemiz en kısa sürede sizinle iletişime geçecek.",
+    "errors": {
+      "validation": "Lütfen işaretli alanları kontrol edin.",
+      "captcha": "Güvenlik doğrulaması tamamlanamadı. Sayfayı yenileyip tekrar deneyin.",
+      "server": "Şu an gönderilemedi. Lütfen telefon veya WhatsApp ile ulaşın.",
+      "name": "Adınızı en az 2 karakter olarak yazın.",
+      "phone": "Geçerli bir telefon numarası yazın.",
+      "email": "Geçerli bir e-posta adresi yazın.",
+      "quantity": "Adet 1 ile 50 arasında olmalı.",
+      "message": "Mesajınız en az 10 karakter olmalı.",
+      "consent": "Devam etmek için aydınlatma metnini onaylayın.",
+      "tuning": "Listeden bir akort seçin.",
+      "note": "Not en fazla 2000 karakter olabilir.",
+      "subject": "Konu en fazla 150 karakter olabilir."
+    }
+  },
+  "Order": {
+    "title": "Ney Siparişi",
+    "heading": "El Yapımı Mansur Neyi",
+    "intro": "Her neyimiz, seçilmiş kamıştan, geleneksel yöntemlerle ve ustalıkla hazırlanır. İstediğiniz akort ve ölçüde ney siparişi için aşağıdaki formu doldurun; atölyemiz en kısa sürede sizinle iletişime geçsin.",
+    "description": "El yapımı ney siparişi: Bolâhenk, Süpürde, Mansur, Kız, Müstahsen, Şah, Davud ve Bolâhenk Nısfiye akortlarında ney talebinizi iletin.",
+    "tuning": "Akort",
+    "tuningUnsure": "Seçiniz / danışacağım",
+    "quantity": "Adet",
+    "note": "Notunuz",
+    "notePlaceholder": "Özel istekleriniz, tercih ettiğiniz ölçü vb.",
+    "submit": "Sipariş talebi gönder",
+    "whyTitle": "Neden Mansur Ney?",
+    "why": {
+      "reed": "Seçilmiş kamış",
+      "craft": "El işçiliği ve hassas akort",
+      "tunings": "Tüm akortlarda üretim",
+      "packing": "Özenli paketleme"
+    },
+    "shipping": "Türkiye’nin her yerine kargo ile ney gönderiyoruz.",
+    "whatsappText": "Merhaba, ney siparişi hakkında bilgi almak istiyorum."
+  },
+  "Contact": {
+    "title": "İletişim",
+    "heading": "Bize yazın",
+    "description": "Mansur Ney atölyesine ulaşın: Antakya / Hatay adres, telefon, WhatsApp ve iletişim formu.",
+    "submit": "Gönder",
+    "infoTitle": "İletişim bilgileri",
+    "hours": "Çalışma saatleri",
+    "map": "Haritada aç"
+  },
+  "Legal": {
+    "updated": "Son güncelleme: {date}",
+    "kvkkDescription": "Sipariş ve iletişim formlarında topladığımız kişisel verilerin hangi amaçla, hangi hukuki sebeple işlendiğine ilişkin KVKK aydınlatma metni.",
+    "privacyDescription": "Mansur Ney web sitesinin çerez kullanmadığını, sunucu günlüklerini ve hizmet sağlayıcılarını açıklayan gizlilik politikası."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "steoates.autoimport",
+    "dbaeumer.vscode-eslint",
+    "prisma.prisma",
+    "github.vscode-github-actions",
+    "vincaslt.highlight-matching-tag",
+    "wix.vscode-import-cost",
+    "stringham.move-ts",
+    "imgildev.vscode-next-pack",
+    "esbenp.prettier-vscode",
+    "gruntfuggly.todo-tree",
+    "vitest.explorer",
+    "bradlc.vscode-tailwindcss",
+    "csstools.postcss",
+    "vercel.turbo-vsc"
+  ]
+}

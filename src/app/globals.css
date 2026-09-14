@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-murekkep: #10201b;
+  --color-yesil: #1b3a31;
+  --color-yesil-acik: #2c5347;
+  --color-altin: #bf9b46;
+  --color-altin-koyu: #9c7d33;
+  --color-kagit: #f6f1e6;
+  --color-kagit-2: #efe7d5;
+  --color-kamis: #d8c39a;
+  --color-kor: #a2532b;
+  --color-metin: #243029;
+  --color-metin-soluk: #5d6b62;
+  /* altin-koyu (#9c7d33) on kagit (#f6f1e6) measures ~3.46:1, below the WCAG AA
+     4.5:1 text threshold. altin-metin (#7d6428) reaches ~5.0:1 on kagit and is
+     used for small/bold text (e.g. Eyebrow) where altin-koyu would otherwise apply. */
+  --color-altin-metin: #7d6428;
+  --radius-kart: 14px;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-source-sans), system-ui, sans-serif;
+  --font-arabic: var(--font-noto-naskh), 'Geeza Pro', serif;
+  --shadow-kart: 0 18px 48px -24px rgb(16 32 27 / 0.55);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-kagit text-metin font-body antialiased; font-size: 17px; line-height: 1.65; }
+  h1, h2, h3, h4 { @apply font-display text-murekkep; font-weight: 600; line-height: 1.15; }
+  :lang(ar) body, :lang(ar) h1, :lang(ar) h2, :lang(ar) h3, :lang(ar) h4 { font-family: var(--font-arabic); line-height: 1.8; }
+  :focus-visible { outline: 3px solid var(--color-altin); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+}
+
+/* `font-display`/`font-body` yardımcı sınıfları (utilities katmanı) base katmanındaki
+   Arapça kuralını ezer; Arapça metinde her durumda Noto Naskh Arabic kullanılır ve
+   Arap yazısında anlamsız olan eğik (italic) stil kapatılır. */
+@layer utilities {
+  :lang(ar) .font-display, :lang(ar) .font-body { font-family: var(--font-arabic); }
+  :lang(ar) .italic { font-style: normal; }
+}

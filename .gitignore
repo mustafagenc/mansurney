@@ -47,3 +47,6 @@ next-env.d.ts
 
 # superpowers sdd çalışma alanı
 .superpowers/
+
+# claude code ajan worktree’leri
+.claude/worktrees/

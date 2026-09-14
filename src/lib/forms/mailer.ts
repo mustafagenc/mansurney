@@ -1,5 +1,6 @@
 import 'server-only';
 import { Resend } from 'resend';
+import { isDryRun } from './dry-run';
 
 export type Mail = { subject: string; text: string; replyTo?: string };
 export interface Mailer {
@@ -12,20 +13,21 @@ function required(name: string) {
   return v;
 }
 
-const resendMailer = (): Mailer => {
-  const resend = new Resend(required('RESEND_API_KEY'));
-  return {
-    async send(mail) {
-      const { error } = await resend.emails.send({
-        from: required('FORM_FROM_EMAIL'),
-        to: [required('FORM_TO_EMAIL')],
-        subject: mail.subject,
-        text: mail.text,
-        replyTo: mail.replyTo,
-      });
-      if (error) throw new Error(error.message);
-    },
-  };
+// Ortam değişkenleri ve Resend istemcisi `send` içinde, tembel olarak okunur:
+// eksik bir anahtar yalnızca gerçekten e-posta gönderilirken (ve çağıranın
+// `try` bloğu içinde) hata verir — honeypot/doğrulama/captcha yollarını çökertmez.
+const resendMailer: Mailer = {
+  async send(mail) {
+    const resend = new Resend(required('RESEND_API_KEY'));
+    const { error } = await resend.emails.send({
+      from: required('FORM_FROM_EMAIL'),
+      to: [required('FORM_TO_EMAIL')],
+      subject: mail.subject,
+      text: mail.text,
+      replyTo: mail.replyTo,
+    });
+    if (error) throw new Error(error.message);
+  },
 };
 
 const dryRunMailer: Mailer = {
@@ -34,4 +36,4 @@ const dryRunMailer: Mailer = {
   },
 };
 
-export const getMailer = (): Mailer => (process.env.FORMS_DRY_RUN === '1' ? dryRunMailer : resendMailer());
+export const getMailer = (): Mailer => (isDryRun() ? dryRunMailer : resendMailer);

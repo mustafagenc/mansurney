@@ -21,12 +21,17 @@ export async function handleSubmission<S extends z.ZodType>(args: {
   }
 
   const token = typeof raw['cf-turnstile-response'] === 'string' ? raw['cf-turnstile-response'] : null;
-  if (!(await args.verify(token))) return { status: 'error', error: 'captcha' };
+  try {
+    if (!(await args.verify(token))) return { status: 'error', error: 'captcha' };
+  } catch (err) {
+    console.error('[forms] Turnstile doğrulaması yapılamadı', err instanceof Error ? err.message : err);
+    return { status: 'error', error: 'server' };
+  }
 
   try {
     await args.mailer.send(args.toMail(parsed.data));
   } catch (err) {
-    console.error('[forms] e-posta gönderilemedi', err);
+    console.error('[forms] e-posta gönderilemedi', err instanceof Error ? err.message : err);
     return { status: 'error', error: 'server' };
   }
   return { status: 'success' };

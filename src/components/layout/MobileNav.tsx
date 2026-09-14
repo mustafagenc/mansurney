@@ -26,7 +26,7 @@ export function MobileNav({ items }: { items: NavItem[] }) {
         <button type="button" className="mb-6 text-3xl" aria-label={t('closeMenu')} onClick={() => ref.current?.close()}>
           ×
         </button>
-        <nav>
+        <nav aria-label={t('mainNav')}>
           <ul className="space-y-4 text-lg">
             {items.map((i) => (
               <li key={i.href}>

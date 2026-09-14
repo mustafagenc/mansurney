@@ -38,7 +38,7 @@ export async function Header() {
               <small className="text-xs uppercase tracking-[0.2em] text-kamis rtl:tracking-normal">{t('Meta.tagline')}</small>
             </span>
           </Link>
-          <nav className="hidden lg:block" aria-label={t('Nav.home')}>
+          <nav className="hidden lg:block" aria-label={t('Common.mainNav')}>
             <ul className="flex items-center gap-6 text-sm font-semibold uppercase tracking-wide rtl:normal-case">
               {items.slice(1).map((i) => (
                 <li key={i.href}>

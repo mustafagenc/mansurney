@@ -13,7 +13,8 @@
     "language": "Language",
     "whatsapp": "Message us on WhatsApp",
     "call": "Call us",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "mainNav": "Main navigation"
   },
   "Nav": {
     "home": "Home",

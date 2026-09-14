@@ -1,0 +1,22 @@
+# Vercel'e yüklenmeyecek/derlenmeyecek dosyalar.
+#
+# Desenler .gitignore sözdizimini kullanır; öndeki "/" deseni yalnızca
+# proje KÖKÜNE bağlar (gitignore semantiği: "/" olmadan desen her derinlikte
+# eşleşir). Bu yüzden burada her satır "/" ile başlar — aksi halde örn.
+# "docs/" deseni "src/docs" gibi iç içe bir klasörü de (varsa) yanlışlıkla
+# dışlardı. `src/assets/` (uygulamanın import ettiği optimize görseller)
+# bu dosyada KESİNLİKLE hariç tutulmaz; yalnızca kök `/assets/` hariçtir.
+#
+# Kaynak: https://vercel.com/docs/deployments/vercel-ignore
+#         https://vercel.com/docs/builds/build-features#ignored-files-and-folders
+
+# Kök `docs/` — analiz, içerik arşivi, uygulama planı (git'te kalır, dağıtılmaz)
+/docs/
+
+# Kök `assets/` — ham müşteri fotoğrafları (git'te kalır, dağıtılmaz).
+# Optimize edilmiş kopyalar `src/assets/images/` altındadır ve bu satırdan
+# ETKİLENMEZ çünkü desen köke ("/") bağlıdır.
+/assets/
+
+# superpowers sdd çalışma alanı (zaten .gitignore'da, emin olmak için burada da)
+/.superpowers/

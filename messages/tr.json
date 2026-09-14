@@ -34,6 +34,7 @@
     "contactTitle": "İletişim",
     "legal": "Yasal",
     "privacyNotice": "KVKK Aydınlatma Metni",
+    "privacyPolicy": "Gizlilik Politikası",
     "rights": "© {year} Mansur Ney. Tüm hakları saklıdır."
   },
   "NotFound": {
@@ -85,5 +86,65 @@
     "next": "Sonraki görsel",
     "close": "Kapat",
     "categories": { "workshop": "Atölye", "neys": "Neyler", "cases": "Çantalar" }
+  },
+  "Forms": {
+    "required": "zorunlu",
+    "name": "Adınız Soyadınız",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "subject": "Konu",
+    "message": "Mesajınız",
+    "consent": "<link>KVKK Aydınlatma Metni</link>’ni okudum, kişisel verilerimin talebime dönüş yapılması amacıyla işlenmesini kabul ediyorum.",
+    "sending": "Gönderiliyor…",
+    "success": "Talebiniz bize ulaştı. Atölyemiz en kısa sürede sizinle iletişime geçecek.",
+    "errors": {
+      "validation": "Lütfen işaretli alanları kontrol edin.",
+      "captcha": "Güvenlik doğrulaması tamamlanamadı. Sayfayı yenileyip tekrar deneyin.",
+      "server": "Şu an gönderilemedi. Lütfen telefon veya WhatsApp ile ulaşın.",
+      "name": "Adınızı en az 2 karakter olarak yazın.",
+      "phone": "Geçerli bir telefon numarası yazın.",
+      "email": "Geçerli bir e-posta adresi yazın.",
+      "quantity": "Adet 1 ile 50 arasında olmalı.",
+      "message": "Mesajınız en az 10 karakter olmalı.",
+      "consent": "Devam etmek için aydınlatma metnini onaylayın.",
+      "tuning": "Listeden bir akort seçin.",
+      "note": "Not en fazla 2000 karakter olabilir.",
+      "subject": "Konu en fazla 150 karakter olabilir."
+    }
+  },
+  "Order": {
+    "title": "Ney Siparişi",
+    "heading": "El Yapımı Mansur Neyi",
+    "intro": "Her neyimiz, seçilmiş kamıştan, geleneksel yöntemlerle ve ustalıkla hazırlanır. İstediğiniz akort ve ölçüde ney siparişi için aşağıdaki formu doldurun; atölyemiz en kısa sürede sizinle iletişime geçsin.",
+    "description": "El yapımı ney siparişi: Bolâhenk, Süpürde, Mansur, Kız, Müstahsen, Şah, Davud ve Bolâhenk Nısfiye akortlarında ney talebinizi iletin.",
+    "tuning": "Akort",
+    "tuningUnsure": "Seçiniz / danışacağım",
+    "quantity": "Adet",
+    "note": "Notunuz",
+    "notePlaceholder": "Özel istekleriniz, tercih ettiğiniz ölçü vb.",
+    "submit": "Sipariş talebi gönder",
+    "whyTitle": "Neden Mansur Ney?",
+    "why": {
+      "reed": "Seçilmiş kamış",
+      "craft": "El işçiliği ve hassas akort",
+      "tunings": "Tüm akortlarda üretim",
+      "packing": "Özenli paketleme"
+    },
+    "shipping": "Türkiye’nin her yerine kargo ile ney gönderiyoruz.",
+    "whatsappText": "Merhaba, ney siparişi hakkında bilgi almak istiyorum."
+  },
+  "Contact": {
+    "title": "İletişim",
+    "heading": "Bize yazın",
+    "description": "Mansur Ney atölyesine ulaşın: Antakya / Hatay adres, telefon, WhatsApp ve iletişim formu.",
+    "submit": "Gönder",
+    "infoTitle": "İletişim bilgileri",
+    "hours": "Çalışma saatleri",
+    "map": "Haritada aç"
+  },
+  "Legal": {
+    "updated": "Son güncelleme: {date}",
+    "kvkkDescription": "Sipariş ve iletişim formlarında topladığımız kişisel verilerin hangi amaçla, hangi hukuki sebeple işlendiğine ilişkin KVKK aydınlatma metni.",
+    "privacyDescription": "Mansur Ney web sitesinin çerez kullanmadığını, sunucu günlüklerini ve hizmet sağlayıcılarını açıklayan gizlilik politikası."
   }
 }

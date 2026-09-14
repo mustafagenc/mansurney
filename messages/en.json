@@ -34,6 +34,7 @@
     "contactTitle": "Contact",
     "legal": "Legal",
     "privacyNotice": "Privacy Notice",
+    "privacyPolicy": "Privacy Policy",
     "rights": "© {year} Mansur Ney. All rights reserved."
   },
   "NotFound": {
@@ -85,5 +86,65 @@
     "next": "Next image",
     "close": "Close",
     "categories": { "workshop": "Workshop", "neys": "Neys", "cases": "Cases" }
+  },
+  "Forms": {
+    "required": "required",
+    "name": "Full name",
+    "phone": "Phone",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "consent": "I have read the <link>Privacy Notice</link> and consent to the processing of my personal data to respond to my request.",
+    "sending": "Sending…",
+    "success": "Your request has been received. Our workshop will contact you shortly.",
+    "errors": {
+      "validation": "Please check the marked fields.",
+      "captcha": "Security verification could not be completed. Please refresh the page and try again.",
+      "server": "This could not be sent right now. Please reach us by phone or WhatsApp.",
+      "name": "Please enter your name using at least 2 characters.",
+      "phone": "Please enter a valid phone number.",
+      "email": "Please enter a valid email address.",
+      "quantity": "Quantity must be between 1 and 50.",
+      "message": "Your message must be at least 10 characters.",
+      "consent": "Please accept the privacy notice to continue.",
+      "tuning": "Please choose a tuning from the list.",
+      "note": "The note can be at most 2000 characters.",
+      "subject": "The subject can be at most 150 characters."
+    }
+  },
+  "Order": {
+    "title": "Ney Order",
+    "heading": "Handmade Mansur Ney",
+    "intro": "Every ney we make is prepared from selected reed, using traditional methods and craftsmanship. Fill in the form below to order a ney in the tuning and size you want; our workshop will get in touch with you as soon as possible.",
+    "description": "Order a handmade ney: request your ney in the Bolâhenk, Süpürde, Mansur, Kız, Müstahsen, Şah, Davud or Bolâhenk Nısfiye tuning.",
+    "tuning": "Tuning",
+    "tuningUnsure": "Select / I'll ask for advice",
+    "quantity": "Quantity",
+    "note": "Your note",
+    "notePlaceholder": "Any special requests, preferred size, etc.",
+    "submit": "Send order request",
+    "whyTitle": "Why Mansur Ney?",
+    "why": {
+      "reed": "Selected reed",
+      "craft": "Handcraftsmanship and precise tuning",
+      "tunings": "Made in every tuning",
+      "packing": "Careful packaging"
+    },
+    "shipping": "We ship neys by courier anywhere in Turkey.",
+    "whatsappText": "Hello, I would like information about ordering a ney."
+  },
+  "Contact": {
+    "title": "Contact",
+    "heading": "Write to us",
+    "description": "Get in touch with the Mansur Ney workshop: Antakya / Hatay address, phone, WhatsApp and contact form.",
+    "submit": "Send",
+    "infoTitle": "Contact information",
+    "hours": "Opening hours",
+    "map": "Open in maps"
+  },
+  "Legal": {
+    "updated": "Last updated: {date}",
+    "kvkkDescription": "Privacy notice explaining which personal data we collect through the order and contact forms, and for what purpose and legal basis.",
+    "privacyDescription": "Privacy policy explaining that the Mansur Ney website uses no cookies, plus our server logs and service providers."
   }
 }

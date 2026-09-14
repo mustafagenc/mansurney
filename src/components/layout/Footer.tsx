@@ -5,11 +5,13 @@ import { business, telUrl, whatsappUrl } from '@/config/business';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import { getGuideList } from '@/lib/content';
+import { legalSlug } from '@/lib/legal-slugs';
 
 export async function Footer() {
   const t = await getTranslations();
   const social = Object.entries(business.social).filter((e): e is [string, string] => e[1] !== null);
-  const guides = await getGuideList((await getLocale()) as Locale);
+  const locale = (await getLocale()) as Locale;
+  const guides = await getGuideList(locale);
   return (
     <footer className="bg-murekkep pt-16 text-kamis">
       <Container>
@@ -84,8 +86,12 @@ export async function Footer() {
         <div className="flex flex-wrap justify-between gap-4 pb-8 text-xs">
           <span>{t('Footer.rights', { year: new Date().getFullYear() })}</span>
           <span className="flex gap-4">
-            {/* Görev 10'da yasal slug eşlemesi eklenince dile göre (kvkk / privacy-notice / ishaar-al-khususiya) güncellenir */}
-            <Link href={{ pathname: '/yasal/[slug]', params: { slug: 'kvkk' } }}>{t('Footer.privacyNotice')}</Link>
+            <Link href={{ pathname: '/yasal/[slug]', params: { slug: legalSlug('kvkk', locale) } }}>
+              {t('Footer.privacyNotice')}
+            </Link>
+            <Link href={{ pathname: '/yasal/[slug]', params: { slug: legalSlug('privacy', locale) } }}>
+              {t('Footer.privacyPolicy')}
+            </Link>
           </span>
         </div>
       </Container>

@@ -1,0 +1,39 @@
+{/* HUKUK-ONAYI-BEKLİYOR */}
+
+import { business } from '@/config/business';
+
+export const metadata = { title: 'KVKK Aydınlatma Metni', updated: '2026-09-14' };
+
+## Veri sorumlusu
+
+{business.name} {/* hukuk danışmanı: tam ticari unvan ve tebligata elverişli adres eklenecek */}
+
+## İşlenen kişisel veriler
+
+Sipariş formu: ad soyad, telefon, e-posta (isteğe bağlı), akort ve adet tercihi, not.
+
+İletişim formu: ad soyad, e-posta, telefon (isteğe bağlı), konu, mesaj.
+
+Güvenlik: bot korumasını sağlamak amacıyla Cloudflare Turnstile tarafından IP adresi ve tarayıcı bilgisi işlenir.
+
+## İşleme amaçları
+
+Sipariş ve bilgi taleplerine dönüş yapılması; formların kötüye kullanımının önlenmesi.
+
+## Hukuki sebep ve toplama yöntemi
+
+Web sitesi formları aracılığıyla elektronik ortamda; bir sözleşmenin kurulması için gerekli olması (md. 5/2-c) ve açık rıza.
+
+## Aktarım
+
+Form içeriği e-posta hizmet sağlayıcısı Resend (ABD), bot doğrulaması Cloudflare (ABD) ve barındırma Vercel (ABD) tarafından işlenir. {/* hukuk danışmanı: yurt dışına aktarım dayanağı (md. 9) belirlenecek */}
+
+## Saklama süresi
+
+{/* hukuk danışmanı: saklama süresi belirlenecek */}
+
+## İlgili kişinin hakları (md. 11)
+
+{/* hukuk danışmanı: KVKK md. 11 kapsamındaki hakların listesi eklenecek */}
+
+Başvurularınız için: {business.email}

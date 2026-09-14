@@ -51,10 +51,14 @@ export function Lightbox({
         </figcaption>
       </figure>
       <button type="button" onClick={() => go(-1)} aria-label={t('prev')} className="absolute start-2 top-1/2 text-5xl text-kagit">
-        ‹
+        <span aria-hidden="true" className="inline-block rtl:rotate-180">
+          ‹
+        </span>
       </button>
       <button type="button" onClick={() => go(1)} aria-label={t('next')} className="absolute end-2 top-1/2 text-5xl text-kagit">
-        ›
+        <span aria-hidden="true" className="inline-block rtl:rotate-180">
+          ›
+        </span>
       </button>
       <button type="button" onClick={onClose} aria-label={t('close')} autoFocus className="absolute end-2 top-2 text-4xl text-kagit">
         ×

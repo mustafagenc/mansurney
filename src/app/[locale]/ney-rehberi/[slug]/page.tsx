@@ -5,7 +5,7 @@ import { OrderCta } from '@/components/guide/OrderCta';
 import { JsonLd } from '@/components/JsonLd';
 import { PageHero } from '@/components/PageHero';
 import { Container } from '@/components/ui/Container';
-import { getPathname } from '@/i18n/navigation';
+import { getPathname, Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import { allGuideParams, getGuideList, guideKeyFromSlug, guideSlug, loadGuide } from '@/lib/content';
 import { articleLd, breadcrumbLd, faqLd } from '@/lib/jsonld';
@@ -79,7 +79,7 @@ export default async function GuidePage({ params }: PageProps<'/[locale]/ney-reh
 
       <Container className="grid gap-12 py-14 lg:grid-cols-[1fr_320px]">
         <article>
-          <Image src={meta.cover} alt={meta.coverAlt} priority placeholder="blur" sizes="(min-width:1024px) 760px, 100vw" className="rounded-kart" />
+          <Image src={meta.cover} alt={meta.coverAlt} loading="eager" fetchPriority="high" placeholder="blur" sizes="(min-width:1024px) 760px, 100vw" className="rounded-kart" />
           <p className="mt-4 text-sm text-metin-soluk">{t('Guide.updated', { date: format.dateTime(new Date(meta.updated), { dateStyle: 'long' }) })}</p>
           <p className="mt-6 text-lg font-semibold text-yesil">{meta.description}</p>
           <div className="max-w-prose">
@@ -103,7 +103,7 @@ export default async function GuidePage({ params }: PageProps<'/[locale]/ney-reh
             <ul className="space-y-3">
               {others.map((g) => (
                 <li key={g.key}>
-                  <a href={getPathname({ locale, href: { pathname: '/ney-rehberi/[slug]', params: { slug: g.slug } } })}>{g.meta.title}</a>
+                  <Link href={{ pathname: '/ney-rehberi/[slug]', params: { slug: g.slug } }}>{g.meta.title}</Link>
                 </li>
               ))}
             </ul>

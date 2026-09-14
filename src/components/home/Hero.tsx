@@ -34,7 +34,7 @@ export async function Hero() {
       />
       <div className="absolute inset-0 -z-10 bg-linear-to-t from-murekkep via-murekkep/50 to-transparent" />
       <Container className="pb-20 pt-40 text-kagit">
-        <Eyebrow className="!text-altin">{t('Home.hero.eyebrow')}</Eyebrow>
+        <Eyebrow className="text-altin!">{t('Home.hero.eyebrow')}</Eyebrow>
         <h1 className="mt-3 text-5xl text-kagit md:text-7xl">{t('Home.hero.title')}</h1>
         <p className="mt-4 max-w-xl font-display text-xl italic text-kamis">{t('Home.hero.text')}</p>
         <p className="mt-2 max-w-xl text-kagit/90">{t('Home.hero.lead')}</p>

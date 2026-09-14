@@ -31,3 +31,11 @@
   :focus-visible { outline: 3px solid var(--color-altin); outline-offset: 2px; }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 }
+
+/* `font-display`/`font-body` yardımcı sınıfları (utilities katmanı) base katmanındaki
+   Arapça kuralını ezer; Arapça metinde her durumda Noto Naskh Arabic kullanılır ve
+   Arap yazısında anlamsız olan eğik (italic) stil kapatılır. */
+@layer utilities {
+  :lang(ar) .font-display, :lang(ar) .font-body { font-family: var(--font-arabic); }
+  :lang(ar) .italic { font-style: normal; }
+}

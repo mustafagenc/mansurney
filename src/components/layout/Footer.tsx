@@ -73,7 +73,9 @@ export async function Footer() {
               </a>
             </p>
             <p className="mt-2 text-sm">
-              <a href={`mailto:${business.email}`}>{business.email}</a>
+              <a href={`mailto:${business.email}`} dir="ltr">
+                {business.email}
+              </a>
             </p>
             <p className="mt-2 text-sm">
               <a href={whatsappUrl()} target="_blank" rel="noopener">

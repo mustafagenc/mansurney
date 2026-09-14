@@ -34,7 +34,8 @@ export default async function WorkshopPage({ params }: PageProps<'/[locale]/atol
         <Image
           src={aboutImage}
           alt={t('Workshop.aboutAlt')}
-          priority
+          loading="eager"
+          fetchPriority="high"
           placeholder="blur"
           sizes="(min-width:1024px) 760px, 100vw"
           className="rounded-kart"

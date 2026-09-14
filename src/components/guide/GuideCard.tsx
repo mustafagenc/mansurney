@@ -3,7 +3,15 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import type { GuideMeta } from '@/lib/content';
 
-export async function GuideCard({ slug, meta }: { slug: string; meta: GuideMeta }) {
+export async function GuideCard({
+  slug,
+  meta,
+  headingLevel: Heading = 'h2',
+}: {
+  slug: string;
+  meta: GuideMeta;
+  headingLevel?: 'h2' | 'h3';
+}) {
   const t = await getTranslations('Common');
   const href = { pathname: '/ney-rehberi/[slug]', params: { slug } } as const;
   return (
@@ -18,11 +26,11 @@ export async function GuideCard({ slug, meta }: { slug: string; meta: GuideMeta 
         />
       </Link>
       <div className="p-5">
-        <h2 className="text-xl">
+        <Heading className="text-xl">
           <Link href={href} className="text-murekkep hover:text-altin-koyu">
             {meta.title}
           </Link>
-        </h2>
+        </Heading>
         <p className="mt-2 text-sm text-metin-soluk">{meta.description}</p>
         <Link href={href} className="mt-3 inline-block text-sm font-semibold">
           {t('readMore')} <span aria-hidden className="inline-block rtl:rotate-180">→</span>

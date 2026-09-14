@@ -82,5 +82,10 @@ export const localBusinessLd = (locale: Locale, description: string): WithContex
     opens: h.opens,
     closes: h.closes,
   })),
-  sameAs: Object.values(business.social).filter((u): u is string => u !== null),
+  ...sameAs(),
 });
+
+function sameAs(): { sameAs?: string[] } {
+  const urls = Object.values(business.social).filter((u): u is string => u !== null);
+  return urls.length > 0 ? { sameAs: urls } : {};
+}

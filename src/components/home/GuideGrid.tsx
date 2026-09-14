@@ -15,7 +15,7 @@ export async function GuideGrid() {
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {guides.map((g) => (
-            <GuideCard key={g.key} slug={g.slug} meta={g.meta} />
+            <GuideCard key={g.key} slug={g.slug} meta={g.meta} headingLevel="h3" />
           ))}
         </div>
       </Container>

@@ -1,3 +1,43 @@
 {
+  "Meta": {
+    "siteName": "Mansur Ney",
+    "tagline": "Neyzen Atölyesi",
+    "defaultDescription": "Hatay’da Asi kamışından el yapımı ney. Tüm akortlarda ney siparişi, ney çantası, ney yapımı ve bakımı rehberi."
+  },
+  "Common": {
+    "readMore": "Devamını oku",
+    "backHome": "Anasayfaya dön",
+    "home": "Anasayfa",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "language": "Dil",
+    "whatsapp": "WhatsApp ile yazın",
+    "call": "Arayın",
+    "skipToContent": "İçeriğe geç"
+  },
+  "Nav": {
+    "home": "Anasayfa",
+    "guide": "Ney Rehberi",
+    "tunings": "Akortlar",
+    "case": "Ney Çantası",
+    "workshop": "Atölye",
+    "gallery": "Galeri",
+    "order": "Ney Siparişi",
+    "contact": "İletişim"
+  },
+  "Footer": {
+    "couplet": "Bir çemenden yaratıp Hazret-i Mevlâ nây’ı / Halka bildirmek için Hazret-i Mevlânâ’yı",
+    "about": "Ney; sulak zeminde yetişen kamıştan üretilen, sazların en kadîmi nefesli çalgıdır. Atölyemizde Asi kıyısının kamışları ustalıkla neye dönüşür.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "guideLinks": "Ney Rehberi",
+    "contactTitle": "İletişim",
+    "legal": "Yasal",
+    "privacyNotice": "KVKK Aydınlatma Metni",
+    "rights": "© {year} Mansur Ney. Tüm hakları saklıdır."
+  },
+  "NotFound": {
+    "title": "Aradığınız sayfa bulunamadı",
+    "text": "Sayfa taşınmış ya da kaldırılmış olabilir. Anasayfadan devam edebilirsiniz."
+  },
   "Home": { "title": "Mansur Ney" }
 }

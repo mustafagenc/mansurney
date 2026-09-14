@@ -1,15 +1,26 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Footer } from '@/components/layout/Footer';
+import { Header } from '@/components/layout/Header';
 import { isRtl, routing } from '@/i18n/routing';
 import { fontVariables } from '@/lib/fonts';
 import '../globals.css';
 
-export const metadata: Metadata = { metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.com') };
-
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Promise<Metadata> {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
+  const t = await getTranslations({ locale, namespace: 'Meta' });
+  return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.com'),
+    title: { default: `${t('siteName')} — ${t('tagline')}`, template: `%s — ${t('siteName')}` },
+    description: t('defaultDescription'),
+  };
 }
 
 export default async function LocaleLayout({ children, params }: LayoutProps<'/[locale]'>) {
@@ -20,7 +31,11 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   return (
     <html lang={locale} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={fontVariables}>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Header />
+          <main id="icerik">{children}</main>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

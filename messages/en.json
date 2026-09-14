@@ -1,3 +1,43 @@
 {
+  "Meta": {
+    "siteName": "Mansur Ney",
+    "tagline": "Ney Workshop",
+    "defaultDescription": "Handmade Turkish ney flutes from Hatay reed, crafted in every tuning. Order a ney, ney cases, and a guide to ney making and care."
+  },
+  "Common": {
+    "readMore": "Read more",
+    "backHome": "Back to home",
+    "home": "Home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "whatsapp": "Message us on WhatsApp",
+    "call": "Call us",
+    "skipToContent": "Skip to content"
+  },
+  "Nav": {
+    "home": "Home",
+    "guide": "Ney Guide",
+    "tunings": "Tunings",
+    "case": "Ney Case",
+    "workshop": "Workshop",
+    "gallery": "Gallery",
+    "order": "Order a Ney",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "couplet": "Having created the ney from a meadow, God / made Rumi known to the world through it",
+    "about": "The ney is the oldest of wind instruments, made from reed grown in wetlands. In our workshop, reeds from the banks of the Orontes become neys by hand.",
+    "quickLinks": "Quick Links",
+    "guideLinks": "Ney Guide",
+    "contactTitle": "Contact",
+    "legal": "Legal",
+    "privacyNotice": "Privacy Notice",
+    "rights": "© {year} Mansur Ney. All rights reserved."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "text": "The page may have been moved or removed. You can continue from the home page."
+  },
   "Home": { "title": "Mansur Ney" }
 }

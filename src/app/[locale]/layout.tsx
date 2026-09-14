@@ -29,7 +29,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={fontVariables}>
+    <html lang={locale} dir={isRtl(locale) ? 'rtl' : 'ltr'} className={fontVariables} data-scroll-behavior="smooth">
       <body>
         <NextIntlClientProvider>
           <Header />

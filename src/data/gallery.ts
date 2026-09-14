@@ -4,14 +4,11 @@ import w16 from '@/assets/images/gallery/workshop-16.jpg';
 import w17 from '@/assets/images/gallery/workshop-17.jpg';
 import w18 from '@/assets/images/gallery/workshop-18.jpg';
 import w19 from '@/assets/images/gallery/workshop-19.jpg';
-import mouthpiecesCloseup from '@/assets/images/gallery/mouthpieces-closeup.jpg';
-import neyOnReedMat from '@/assets/images/gallery/ney-on-reed-mat.jpg';
 import neyRowsCloseup from '@/assets/images/gallery/ney-rows-closeup.jpg';
 import neyzenPortraitClose from '@/assets/images/gallery/neyzen-portrait-close.jpg';
 import neyzenProfileClose from '@/assets/images/gallery/neyzen-profile-close.jpg';
 import neyzenWithDafDrums from '@/assets/images/gallery/neyzen-with-daf-drums.jpg';
 import playingNeySeated from '@/assets/images/gallery/playing-ney-seated.jpg';
-import stagePerformance from '@/assets/images/gallery/stage-performance.jpg';
 import adjustingNey from '@/assets/images/workshop/adjusting-ney.jpg';
 import drillingFingerHoles from '@/assets/images/workshop/drilling-finger-holes.jpg';
 import heatingCaneOverFlame from '@/assets/images/workshop/heating-cane-over-flame.jpg';
@@ -35,6 +32,13 @@ export type GalleryItem = { id: string; image: StaticImageData; category: Galler
 // gallery/daf-calligraphy-detail.jpg hiçbir kategoriye net uymadığı için,
 // gallery/neyzen-with-daf-drums-2.jpg ise neyzen-with-daf-drums.jpg'nin daha
 // düşük çözünürlüklü neredeyse-aynı çekimi olduğu için dışarıda bırakıldı.
+// R36 (fix round 1): gallery/ney-on-reed-mat.jpg (workshop-16.jpg ile) ve
+// gallery/mouthpieces-closeup.jpg (workshop-17.jpg ile) görsel olarak
+// neredeyse aynı çekimler olduğundan, her çiftten yalnızca zorunlu
+// workshop-16/17 tutuldu (aynı çözünürlük, kayda değer bir kalite farkı yok).
+// R37 (fix round 1): gallery/stage-performance.jpg, sahnede net odaklanmış,
+// atölyeyle ilgisi olmayan bir izleyicinin kimliği belirgin olduğundan ve
+// yayın için ustadan onay beklenmediğinden şimdilik dışarıda bırakıldı.
 export const gallery: GalleryItem[] = [
   {
     id: 'workshop-16',
@@ -74,26 +78,6 @@ export const gallery: GalleryItem[] = [
       tr: 'Diyagonal sıralanmış, işlenmemiş kamış saplarının yakın plan dokusu.',
       en: 'A close-up texture shot of unprocessed reed canes arranged in diagonal rows.',
       ar: 'لقطة قريبة لنسيج قصبات خام غير معالجة مرتبة في صفوف قطرية.',
-    },
-  },
-  {
-    id: 'mouthpieces-closeup',
-    image: mouthpiecesCloseup,
-    category: 'neys',
-    alt: {
-      tr: 'Kamış hasırı üzerinde yan yana duran, siyah huni uçlu ve gümüş bilezikli üç ney başpâresi.',
-      en: 'Three ney mouthpieces with black bell-shaped tips and silver bands, lined up on a reed mat.',
-      ar: 'ثلاثة أفواه ناي بأطراف سوداء على شكل جرس وأطواق فضية، مصفوفة على حصيرة من القصب.',
-    },
-  },
-  {
-    id: 'ney-on-reed-mat',
-    image: neyOnReedMat,
-    category: 'neys',
-    alt: {
-      tr: 'Örülü kamış hasırı üzerine çapraz bırakılmış, bitmiş hâldeki tek bir ney.',
-      en: 'A single finished ney placed diagonally on a woven reed mat.',
-      ar: 'ناي واحد مكتمل الصنع، موضوع بشكل قطري على حصيرة من القصب المضفور.',
     },
   },
   {
@@ -144,16 +128,6 @@ export const gallery: GalleryItem[] = [
       tr: 'Gri iş önlüğü giymiş bir ustanın, kilim kaplı bir sedirde oturarak neyi dikey tutup çalması.',
       en: 'A craftsman in a grey work coat, seated on a kilim-covered bench, playing the ney held vertically.',
       ar: 'حرفي يرتدي مريولاً رماديًا، جالسًا على مقعد مغطى بالكليم، يعزف الناي ممسكًا به بشكل عمودي.',
-    },
-  },
-  {
-    id: 'stage-performance',
-    image: stagePerformance,
-    category: 'neys',
-    alt: {
-      tr: 'Bordo perde önünde sahnede mikrofonla ney çalan bir sanatçının performans anı.',
-      en: 'A stage performance moment of an artist playing the ney into a microphone in front of a maroon curtain.',
-      ar: 'لحظة من أداء على المسرح لفنان يعزف الناي أمام ميكروفون وستارة نبيتية اللون.',
     },
   },
   {
@@ -221,9 +195,9 @@ export const gallery: GalleryItem[] = [
     image: playingAtShopCounter,
     category: 'workshop',
     alt: {
-      tr: 'Dükkânın cam vitrinli tezgâhı önünde, duvarda def ve neylerin sergilendiği bir ortamda ney çalınması.',
-      en: "The ney being played at the shop's glass display counter, surrounded by neys and drums displayed on the wall.",
-      ar: 'عزف الناي عند منضدة العرض الزجاجية في المتجر، وسط نايات ودفوف معروضة على الحائط.',
+      tr: 'Arkasında duvara asılı def ve bendirler, önünde cam vitrinli tezgâhta sergilenen neyler bulunan bir köşede ney çalınması.',
+      en: 'The ney being played in a corner with daf and bendir drums hanging on the wall behind, and neys displayed in the glass counter in front.',
+      ar: 'عزف الناي في ركن تتدلى فيه الدفوف والبندير على الحائط خلفه، بينما تُعرض النايات في منضدة العرض الزجاجية أمامه.',
     },
   },
   {

@@ -1,7 +1,10 @@
 import 'server-only';
+import { isDryRun } from './dry-run';
 
+// Eksik anahtar veya ağ hatasında hata fırlatır; `handleSubmission` bunu
+// yakalayıp `server` hatasına çevirir.
 export async function verifyTurnstile(token: string | null, ip: string | null): Promise<boolean> {
-  if (process.env.FORMS_DRY_RUN === '1') return true;
+  if (isDryRun()) return true;
   const secret = process.env.TURNSTILE_SECRET_KEY;
   if (!secret) throw new Error('TURNSTILE_SECRET_KEY tanımlı değil');
   if (!token) return false;

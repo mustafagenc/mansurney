@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { OrderForm } from '@/components/forms/OrderForm';
 import { PageHero } from '@/components/PageHero';
@@ -32,11 +31,9 @@ export default async function OrderPage({ params }: PageProps<'/[locale]/siparis
           <ReedDivider className="mb-6 max-w-[220px]" />
           <h2 className="text-3xl">{t('Order.heading')}</h2>
           <p className="mt-3">{t('Order.intro')}</p>
-          {/* `akort` sorgu parametresi yalnızca `OrderForm` içinde, istemcide
-              okunur — sayfa `searchParams`'a dokunmadığı için statik kalır. */}
-          <Suspense fallback={null}>
-            <OrderForm />
-          </Suspense>
+          {/* `akort` sorgu parametresi yalnızca `OrderForm` içindeki küçük bir istemci
+              bileşeninde, kendi `<Suspense>` sınırında okunur — form statik HTML'de kalır. */}
+          <OrderForm />
         </div>
         <aside className="h-fit rounded-kart bg-yesil p-6 text-kagit">
           <h2 className="border-b border-altin pb-2 text-lg text-white">{t('Order.whyTitle')}</h2>

@@ -38,5 +38,8 @@ export type FormState = {
   status: 'idle' | 'success' | 'error';
   error?: 'validation' | 'captcha' | 'server';
   fields?: string[];
+  /** Hata dönüşlerinde gönderilen metin değerleri (honeypot ve Turnstile token'ı hariç):
+   * React 19 her action sonrası formu sıfırladığı için alanlar bunlarla yeniden doldurulur. */
+  values?: Record<string, string>;
 };
 export const initialFormState: FormState = { status: 'idle' };

@@ -27,7 +27,10 @@ export function LanguageSwitcher() {
           const next = e.target.value as Locale;
           const alt = document.querySelector<HTMLLinkElement>(`link[rel="alternate"][hreflang="${next}"]`);
           if (alt) {
-            window.location.assign(alt.href);
+            // hreflang href'leri `NEXT_PUBLIC_SITE_URL` (canlı alan adı) üzerinde mutlaktır;
+            // yalnızca yolu kullanarak mevcut host'ta (ör. Vercel preview) kalınır.
+            const url = new URL(alt.href);
+            window.location.assign(url.pathname + window.location.search + window.location.hash);
             return;
           }
           startTransition(() =>

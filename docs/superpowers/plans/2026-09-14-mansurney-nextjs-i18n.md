@@ -24,7 +24,7 @@
 - Hedefler: Lighthouse mobil Performans ≥ 90, Erişilebilirlik ≥ 95, SEO 100; axe “serious/critical” ihlali 0.
 - Her eski URL (analiz §5) yeni karşılığına **kalıcı** yönlendirilir; 404’e düşen eski URL kalmaz.
 - Kişisel veri toplayan her form: KVKK aydınlatma linki + zorunlu onay kutusu + Turnstile + honeypot.
-- Commit mesajları Conventional Commits; her commit sonunda `Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>`.
+- Commit mesajları Conventional Commits; `Co-Authored-By` satırı **eklenmez** (kullanıcı kararı).
 
 ---
 

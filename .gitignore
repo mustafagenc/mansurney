@@ -50,3 +50,7 @@ next-env.d.ts
 
 # claude code ajan worktree’leri
 .claude/worktrees/
+
+# optimize edilmemiş, canlı siteden çekilen ham görseller (R30 — LFS kurulmadı,
+# ham görseller ekip Drive'ında saklanır; yalnızca optimize çıktıları commitlenir)
+assets-src/

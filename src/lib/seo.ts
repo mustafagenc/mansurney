@@ -41,7 +41,9 @@ export async function pageMetadata(args: {
   // hero photo when the page has no cover of its own.
   const image = args.image ?? heroImage;
   return {
-    title: `${args.title} — ${t('siteName')}`,
+    // `[locale]/layout.tsx`'in `title.template`'i (`%s — Mansur Ney`) site adını
+    // ekler; burada tekrar eklenirse başlık "X — Mansur Ney — Mansur Ney" olur.
+    title: args.title,
     description: args.description,
     alternates,
     openGraph: {

@@ -1,12 +1,15 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { Container } from '@/components/ui/Container';
 import { ReedDivider } from '@/components/ui/ReedDivider';
 import { business, telUrl, whatsappUrl } from '@/config/business';
 import { Link } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/routing';
+import { getGuideList } from '@/lib/content';
 
 export async function Footer() {
   const t = await getTranslations();
   const social = Object.entries(business.social).filter((e): e is [string, string] => e[1] !== null);
+  const guides = await getGuideList((await getLocale()) as Locale);
   return (
     <footer className="bg-murekkep pt-16 text-kamis">
       <Container>
@@ -49,11 +52,12 @@ export async function Footer() {
           </div>
           <div>
             <h2 className="mb-4 text-base text-kagit">{t('Footer.guideLinks')}</h2>
-            {/* Görev 6: getGuideList(locale) ile rehber yazıları listelenir */}
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/ney-rehberi">{t('Nav.guide')}</Link>
-              </li>
+              {guides.map((g) => (
+                <li key={g.key}>
+                  <Link href={{ pathname: '/ney-rehberi/[slug]', params: { slug: g.slug } }}>{g.meta.title}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <address className="not-italic">

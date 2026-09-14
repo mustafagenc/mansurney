@@ -40,5 +40,16 @@
     "title": "Page not found",
     "text": "The page may have been moved or removed. You can continue from the home page."
   },
-  "Home": { "title": "Mansur Ney" }
+  "Home": { "title": "Mansur Ney" },
+  "Guide": {
+    "eyebrow": "Ney Guide",
+    "title": "Articles",
+    "description": "Stories on the history, making, parts and care of the ney.",
+    "updated": "Updated: {date}",
+    "related": "More articles",
+    "faqTitle": "Frequently asked questions",
+    "orderCtaTitle": "Order a Ney",
+    "orderCtaText": "Contact our workshop for your handmade Mansur ney.",
+    "orderCtaButton": "Place an order"
+  }
 }

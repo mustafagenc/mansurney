@@ -40,5 +40,16 @@
     "title": "Aradığınız sayfa bulunamadı",
     "text": "Sayfa taşınmış ya da kaldırılmış olabilir. Anasayfadan devam edebilirsiniz."
   },
-  "Home": { "title": "Mansur Ney" }
+  "Home": { "title": "Mansur Ney" },
+  "Guide": {
+    "eyebrow": "Ney Rehberi",
+    "title": "Bilgi & Makaleler",
+    "description": "Neyin tarihçesinden yapımına, bölümlerinden bakımına dair yazılar.",
+    "updated": "Güncelleme: {date}",
+    "related": "Diğer yazılar",
+    "faqTitle": "Sık sorulan sorular",
+    "orderCtaTitle": "Ney Siparişi",
+    "orderCtaText": "El yapımı Mansur neyleriniz için atölyemizle iletişime geçin.",
+    "orderCtaButton": "Sipariş ver"
+  }
 }

@@ -23,12 +23,18 @@ export function LanguageSwitcher() {
         className="rounded-full border border-white/20 bg-transparent px-3 py-1"
         value={locale}
         disabled={pending}
-        onChange={(e) =>
+        onChange={(e) => {
+          const next = e.target.value as Locale;
+          const alt = document.querySelector<HTMLLinkElement>(`link[rel="alternate"][hreflang="${next}"]`);
+          if (alt) {
+            window.location.assign(alt.href);
+            return;
+          }
           startTransition(() =>
             // @ts-expect-error -- params mevcut rotayla eşleşir (next-intl önerilen kalıp)
-            router.replace({ pathname, params }, { locale: e.target.value as Locale }),
-          )
-        }
+            router.replace({ pathname, params }, { locale: next }),
+          );
+        }}
       >
         {routing.locales.map((l) => (
           <option key={l} value={l} lang={l} className="text-murekkep">

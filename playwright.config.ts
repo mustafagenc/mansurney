@@ -8,7 +8,12 @@ export default defineConfig({
     url: 'http://localhost:3100',
     reuseExistingServer: !process.env.CI,
     timeout: 240_000,
-    env: { FORMS_DRY_RUN: '1' },
+    // NEXT_PUBLIC_SITE_URL feeds `metadataBase`, which Next resolves every
+    // relative canonical/hreflang URL against — without it those links point
+    // at the production domain instead of this test server, breaking any e2e
+    // flow (e.g. the hreflang-based language switcher) that navigates via
+    // `<link rel="alternate">` hrefs.
+    env: { FORMS_DRY_RUN: '1', NEXT_PUBLIC_SITE_URL: 'http://localhost:3100' },
   },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'] } },

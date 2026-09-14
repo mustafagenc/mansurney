@@ -16,8 +16,14 @@ yayına özgü adımlar ve teyitler yer alır.
       Komut: `source ~/.nvm/nvm.sh && nvm use 22 && pnpm prelaunch`
 - [ ] `content/en/` ve `content/ar/` altındaki tüm MDX dosyalarındaki profesyonel çeviriler
       yerleştirilmiş, taslak (`ÇEVİRİ-TASLAK`) işaretleri kaldırılmış.
+- [ ] `messages/en.json` ve `messages/ar.json` içindeki İngilizce/Arapça arayüz metinleri de
+      taslak çeviridir ve profesyonel çeviri kontrolüne dahil edilmiş (`pnpm prelaunch` yalnızca
+      `content/` klasörünü tarar; bu dosyalardaki taslak metinleri yakalamaz).
 - [ ] `content/*/legal/kvkk.mdx` ve `content/*/legal/privacy.mdx` metinleri hukuk
       danışmanınca onaylanmış, `HUKUK-ONAYI-BEKLİYOR` işaretleri kaldırılmış (üç dilde de).
+- [ ] **Avukata sorulacak:** Aydınlatma metni ile açık rıza aynı onay kutusunda birleşik
+      (`Forms.consent`); md. 5/2-c varken açık rıza istenip istenmeyeceği ve aydınlatmanın
+      ayrı sunulması avukatla netleştirilmeli.
 - [ ] Aşağıdaki "Sahibinden beklenen bilgiler" bölümündeki tüm maddeler teyit edilmiş ve
       ilgili koda/içeriğe işlenmiş (`src/config/business.ts`, `src/data/tunings.ts`,
       `src/data/case-models.ts`, galeri ve sosyal medya bağlantıları).
@@ -68,35 +74,37 @@ kod bu durumu dürüstçe gösterir (uydurma veri yoktur). Yayından önce hepsi
 - [ ] Mevcut `A`/`CNAME` (`@` ve `www`) kayıtlarını not edin — geçiş sonrası eski değere
       dönmek gerekirse bu kayıt referans olacak.
 - [ ] Mevcut `MX`, `SPF`, `DKIM` kayıt sayısının geçişten sonra **değişmediğini** teyit
-      edecek bir kontrol planlayın (bkz. Adım 6 ve İzleme bölümü).
+      edecek bir kontrol planlayın (bkz. Adım 7 — Geçiş ve Adım 9 — İzleme).
 
 ## 4. Vercel projesi
 
 - [ ] Depo Vercel'e **Git entegrasyonu** ile bağlandı (push tetiklemeli; ayrı build/install
       komutu girilmesine gerek yok — bkz. [README → Yayın (Vercel)](../README.md#yayın-vercel)).
-- [ ] `.env.example` içindeki tüm değişkenler Vercel proje ayarlarında **Production** ve
-      **Preview** için ayrı ayrı girildi: `NEXT_PUBLIC_SITE_URL`, `RESEND_API_KEY`,
-      `FORM_TO_EMAIL`, `FORM_FROM_EMAIL`, `NEXT_PUBLIC_TURNSTILE_SITE_KEY`,
-      `TURNSTILE_SECRET_KEY`, `FORMS_DRY_RUN`.
-- [ ] `FORMS_DRY_RUN`, **Production**'da tanımsız bırakıldı (yalnızca test/Preview
-      ortamında `1` olmalı — tanımlıysa formlar gerçek e-posta göndermez).
+- [ ] Şu değişkenler Vercel proje ayarlarında **Production** ve **Preview** için ayrı ayrı
+      girildi: `NEXT_PUBLIC_SITE_URL`, `RESEND_API_KEY`, `FORM_TO_EMAIL`, `FORM_FROM_EMAIL`,
+      `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`.
+- [ ] `FORMS_DRY_RUN` Vercel'de **hiçbir ortamda (Production veya Preview) tanımlı değil**.
+      Bu bayrak yalnızca yerel uçtan uca testler içindir; tanımlıyken formlar e-posta
+      göndermez ve Turnstile doğrulaması atlanır. (Kod, `VERCEL_ENV=production` iken bayrağı
+      zaten yok sayar ve log'a hata yazar; yine de hiçbir Vercel ortamında girilmemelidir.)
 - [ ] `vercel.json` içindeki `regions: ["fra1"]` ayarı korunuyor (Frankfurt, Türkiye'ye en
       yakın Vercel bölgesi) — proje ayarlarında ezilmemiş.
 - [ ] Vercel **Domains** ayarlarında `www.mansurney.com` → `mansurney.com` (apex) kalıcı
       yönlendirmesi yapılandırıldı.
-- [ ] Preview URL'sinde sipariş ve iletişim formlarının gerçek gönderim testi tekrarlandı
-      (Turnstile dahil, `FORMS_DRY_RUN` kapalıyken en az bir kez gerçek e-posta ile).
+- [ ] Preview URL'sinde, gerçek Resend ve Turnstile anahtarlarıyla (Adım 5 ve 6 tamamlandıktan
+      sonra) sipariş ve iletişim formlarının her biri en az bir kez gerçekten gönderildi ve
+      e-postanın `FORM_TO_EMAIL` adresine ulaştığı görüldü.
 
 ## 5. Resend alan adı doğrulaması
 
-- [ ] Resend panelinden `mansurney.com` alan adı eklendi; verilen DKIM kayıtları DNS'e
-      eklendi.
-- [ ] Resend'in istediği SPF kaydı, **mevcut SPF kaydıyla birleştirilerek** tek bir TXT
-      kaydı olarak eklendi (iki ayrı SPF TXT kaydı DMARC/SPF doğrulamasını bozar):
-      `v=spf1 include:<mevcut sağlayıcı> include:amazonses.com ~all`
-      (`<mevcut sağlayıcı>` yerine Adım 3'te çıkarılan envanterdeki gerçek `include:` değeri
-      yazılmalı — burada uydurulmamıştır.)
-- [ ] Resend panelinde alan adı durumu **"Verified"** oluncaya kadar geçişe (Adım 6)
+- [ ] Resend panelinden `mansurney.com` alan adı eklendi.
+- [ ] DNS'e **yalnızca Resend panelinde bu alan adı için gösterilen kayıtlar, panelde yazdığı
+      ad ve değerlerle birebir** eklendi (Resend gönderim için bir alt alan adı ve bir DKIM
+      kaydı kullanır; değerler burada verilmemiştir, panelden kopyalanmalıdır).
+- [ ] Kök alan adındaki (apex) mevcut `SPF` (TXT) ve `MX` kayıtları **düzenlenmedi** (bkz.
+      Adım 3). Resend paneli kök alan adında bir değişiklik isterse **durun** ve
+      `neyzen@mansurney.com` e-postasını yöneten kişiye danışmadan devam etmeyin.
+- [ ] Resend panelinde alan adı durumu **"Verified"** oluncaya kadar geçişe (Adım 7)
       başlanmadı.
 
 ## 6. Cloudflare Turnstile anahtarları
@@ -137,9 +145,10 @@ Eski bir URL kalıbı kalıcı yönlendiriliyor (örnek: `icerik.php?id=13`):
 curl -sI "https://mansurney.com/icerik.php?id=13&s=neyin-bakimi" | grep -iE "^(HTTP|location)"
 ```
 
-Beklenen: `301` durum kodu ve `location: /ney-rehberi/bakimi` (sorgu dizesi olduğu gibi
-iletilebilir — bu kabul edilebilir, çünkü hedef sayfadaki canonical etiketi asıl URL'yi
-zaten belirtir).
+Beklenen: `301` durum kodu ve `location` başlığında hedef yol — göreli
+(`/ney-rehberi/bakimi`) veya mutlak (`https://mansurney.com/ney-rehberi/bakimi`) olabilir,
+ikisi de doğrudur (sorgu dizesi olduğu gibi iletilebilir — bu kabul edilebilir, çünkü hedef
+sayfadaki canonical etiketi asıl URL'yi zaten belirtir).
 
 Sitemap 42 URL içeriyor (14 rota × 3 dil):
 
@@ -155,8 +164,8 @@ curl -s https://mansurney.com/robots.txt
 
 > Not: Bu doğrulamalar yalnızca canlı (production) alan adında anlamlıdır. `vercel.json`
 > yönlendirmeleri Vercel kenarında uygulanır; yerel `pnpm start` bunları uygulamaz — bu
-> yüzden Görev 12'nin birim testi dışında gerçek 301 davranışı ancak burada, bir Vercel
-> preview veya production URL'sinde doğrulanabilir.
+> yüzden gerçek 301 davranışı ancak burada, bir Vercel preview veya production URL'sinde
+> doğrulanabilir.
 
 ## 8. Arama motorları
 
@@ -194,7 +203,7 @@ tekrar **listelenmemiştir**.
 |---|---|---|---|
 | `tests/unit/lib/routes.test.ts` | Birim (Vitest) | Görev 13 | `allRoutes()`'un 8 sabit + 4 rehber + 2 yasal = 14 benzersiz rota döndürdüğünü doğrular |
 | `tests/e2e/seo.spec.ts` | Uçtan uca (Playwright) | Görev 13 | `sitemap.xml`'in 42 URL ve `hreflang="ar"` içerdiğini, `robots.txt`'in sitemap'i gösterdiğini, anasayfada `MusicStore` JSON-LD/NAP verisinin doğru olduğunu, her sayfada `og:image`/description bulunduğunu doğrular |
-| `tests/e2e/a11y.spec.ts` | Uçtan uca (Playwright + axe) | Görev 14 | Tüm 16 rotada (TR/EN/AR) axe ile WCAG 2.2 AA ihlali sıfır olduğunu doğrular (Görev 4'teki mevcut testten farklı olarak minor ihlalleri de kapsar) |
+| `tests/e2e/a11y.spec.ts` | Uçtan uca (Playwright + axe) | Görev 14 | Tüm 17 rotada (TR/EN/AR) axe ile WCAG 2.2 AA ihlali sıfır olduğunu doğrular (Görev 4'teki mevcut testten farklı olarak minor ihlalleri de kapsar) |
 | `tests/unit/scripts/prelaunch-check.test.ts` | Birim (Vitest) | Görev 14 | `findLaunchBlockers()`'ın taslak çeviri/hukuk işaretlerini bulduğunu, onaylı içeriği engel saymadığını doğrular — kontrolcü kararıyla bu görevde de yazılmadı |
 | `vercel.json` hedef-geçerlilik testi | Birim (Vitest, `tests/unit/config/vercel-redirects.test.ts` içine ek `test`) | Görev 12 | Her `destination` değerinin `routing.pathnames` TR yolları + `guideSlug(k,'tr')` kümesinde gerçekten var olan bir rotaya karşılık geldiğini doğrular — dosya mevcut ama bu spesifik doğrulama eklenmedi |
 | Lighthouse CI bütçeleri (`lighthouserc.json`, `pnpm lhci`) | Performans/erişilebilirlik/SEO eşiği | Görev 14 | `/`, `/ney-rehberi/bakimi`, `/siparis`, `/ar` sayfalarında Performans ≥ 90, Erişilebilirlik ≥ 95, SEO 100 hedeflerini CI'da otomatik doğrular |

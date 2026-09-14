@@ -75,5 +75,15 @@
     "master": "Ney yapım ustası",
     "aboutAlt": "Ney çalan bir neyzeni betimleyen mürekkep tasviri",
     "interiorAlt": "Atölye duvarında asılı neyler, tespihler ve tef/bendirler"
+  },
+  "Gallery": {
+    "eyebrow": "Atölyeden",
+    "title": "Foto Galeri",
+    "description": "Mansur Ney atölyesinden neyler, kamışlar ve çalışma anları.",
+    "viewer": "Görsel görüntüleyici",
+    "prev": "Önceki görsel",
+    "next": "Sonraki görsel",
+    "close": "Kapat",
+    "categories": { "workshop": "Atölye", "neys": "Neyler", "cases": "Çantalar" }
   }
 }

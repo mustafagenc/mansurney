@@ -75,5 +75,15 @@
     "master": "Ney-making master",
     "aboutAlt": "Ink illustration of a neyzen playing the ney",
     "interiorAlt": "Neys, prayer beads and tef/bendir drums hanging on the workshop wall"
+  },
+  "Gallery": {
+    "eyebrow": "From the Workshop",
+    "title": "Photo Gallery",
+    "description": "Neys, reed canes and moments of everyday work from the Mansur Ney workshop.",
+    "viewer": "Image viewer",
+    "prev": "Previous image",
+    "next": "Next image",
+    "close": "Close",
+    "categories": { "workshop": "Workshop", "neys": "Neys", "cases": "Cases" }
   }
 }

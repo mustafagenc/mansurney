@@ -1,6 +1,7 @@
 import type { StaticImageData } from 'next/image';
 import harbiyeKavaliFoto from '@/assets/images/press/harbiye-kavali-2025.jpg';
 import kamistanNefeseFoto from '@/assets/images/press/kamistan-nefese-alper-yildirim.jpg';
+import kutuphanelerHaftasiFoto from '@/assets/images/press/kutuphaneler-haftasi-sergi-2026.jpg';
 import neyYapimAtolyesiFoto from '@/assets/images/press/ney-yapim-atolyesi-2025.jpg';
 import samandagKamisiFoto from '@/assets/images/press/samandag-kamisi-2012.jpg';
 import type { Locale } from '@/i18n/routing';
@@ -49,6 +50,31 @@ export type PressItem = {
  * },
  */
 export const press: PressItem[] = [
+  {
+    id: 'son-dakika-hatay-2026-kutuphaneler-haftasi-sergi',
+    date: '2026-03-31',
+    outlet: 'Son Dakika Hatay',
+    title: {
+      tr: 'Hatay, Kütüphaneler Haftası kapsamında kültür ve sanatı bir araya getiren özel bir sergiye ev sahipliği yaptı',
+      en: 'Hatay Hosts a Special Exhibition Bringing Culture and Art Together for Library Week',
+      ar: 'هاتاي تستضيف معرضًا خاصًا يجمع بين الثقافة والفن بمناسبة أسبوع المكتبات',
+    },
+    description: {
+      tr: 'T.C. Hatay Valiliği ve T.C. Hatay İl Kültür ve Turizm Müdürlüğü öncülüğünde, Hatay Turizm Derneği ve Hatay Kültür Sanat Çarşısı iş birliğiyle düzenlenen etkinlik, Cemil Meriç İl Halk Kütüphanesi’nde sanatseverlerle buluştu.',
+      en: 'Organized under the leadership of the Hatay Governorship and the Hatay Provincial Directorate of Culture and Tourism, in cooperation with the Hatay Tourism Association and the Hatay Culture and Art Bazaar, the event brought art lovers together at the Cemil Meriç Provincial Public Library.',
+      ar: 'بتنظيم من محافظة هاتاي والمديرية الإقليمية للثقافة والسياحة في هاتاي، وبالتعاون مع جمعية هاتاي للسياحة وسوق هاتاي للثقافة والفنون، جمعت الفعالية محبي الفن في مكتبة جميل مريتش العامة الإقليمية.',
+    },
+    media: {
+      type: 'image',
+      image: kutuphanelerHaftasiFoto,
+      alt: {
+        tr: 'Cemil Meriç İl Halk Kütüphanesi’nde düzenlenen sergide bir araya gelen katılımcılar, arkada kitap rafları',
+        en: 'Participants gathered for the exhibition at Cemil Meriç Provincial Public Library, with bookshelves in the background',
+        ar: 'مشاركون يجتمعون في معرض أُقيم في مكتبة جميل مريتش العامة، وخلفهم رفوف الكتب',
+      },
+    },
+    url: 'https://www.sondakikahatay.com/ilce-haberleri/hatayda-kutuphaneler-haftasina-ozel-sanat-sergisi-acildi',
+  },
   {
     id: 'hatay-mahalli-haber-2025-ney-yapim-atolyesi',
     date: '2025-02-16',

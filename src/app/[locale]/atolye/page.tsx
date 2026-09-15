@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import aboutImage from '@/assets/images/workshop/about.jpg';
+import exteriorImage from '@/assets/images/workshop/shop-exterior.jpg';
 import interiorImage from '@/assets/images/workshop/shop-interior.jpg';
 import { PageHero } from '@/components/PageHero';
 import { Button } from '@/components/ui/Button';
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PageProps<'/[locale]/atolye'>
     locale,
     title: meta.title,
     description: meta.description,
-    image: aboutImage,
+    image: exteriorImage,
     hrefFor: () => '/atolye',
   });
 }
@@ -35,27 +35,25 @@ export default async function WorkshopPage({ params }: PageProps<'/[locale]/atol
         lead={meta.description}
       />
       <Container className="reveal py-16 md:py-20">
-        <Image
-          src={aboutImage}
-          alt={t('Workshop.aboutAlt')}
-          loading="eager"
-          fetchPriority="high"
-          placeholder="blur"
-          sizes="(min-width:1280px) 1184px, 100vw"
-          className="aspect-[16/9] w-full rounded-kart object-cover"
-        />
-        {/* İki sütunlu metin (spec §4.3): tek akan MDX metni CSS `columns` ile
-            ikiye bölünür; `prose-editorial`in okuma genişliği burada kaldırılır. */}
-        <div className="mt-12 md:columns-2 md:gap-14 lg:gap-16 [&>.prose-editorial]:max-w-none">
+        {/* İki sütunlu metin (spec §4.3): MDX'teki başlık+paragraf çiftleri masaüstünde
+            sütun öncelikli ızgaraya yerleşir; böylece iki başlık aynı satırda hizalanır. */}
+        <div className="[&>.prose-editorial]:max-w-none md:[&>.prose-editorial]:grid md:[&>.prose-editorial]:grid-flow-col md:[&>.prose-editorial]:grid-cols-2 md:[&>.prose-editorial]:grid-rows-[auto_auto] md:[&>.prose-editorial]:gap-x-14 lg:[&>.prose-editorial]:gap-x-16 md:[&>.prose-editorial>h2]:mt-0">
           <Content />
         </div>
-        <div className="mt-14 md:ms-auto md:w-10/12">
+        <div className="mt-14 grid gap-6 md:grid-cols-12 md:items-end md:gap-8">
+          <Image
+            src={exteriorImage}
+            alt={t('Workshop.exteriorAlt')}
+            placeholder="blur"
+            sizes="(min-width:768px) 40vw, 100vw"
+            className="aspect-[4/5] w-full rounded-kart object-cover md:col-span-5"
+          />
           <Image
             src={interiorImage}
             alt={t('Workshop.interiorAlt')}
             placeholder="blur"
-            sizes="(min-width:768px) 66vw, 100vw"
-            className="aspect-[3/2] w-full rounded-kart object-cover"
+            sizes="(min-width:768px) 58vw, 100vw"
+            className="aspect-[3/2] w-full rounded-kart object-cover md:col-span-7"
           />
         </div>
         {business.master.consent && (

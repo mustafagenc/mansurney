@@ -100,7 +100,8 @@
     "eyebrow": "Hakkımızda",
     "master": "Ney yapım ustası",
     "aboutAlt": "Ney çalan bir neyzeni betimleyen mürekkep tasviri",
-    "interiorAlt": "Atölye duvarında asılı neyler, tespihler ve tef/bendirler"
+    "interiorAlt": "Atölye duvarında asılı neyler, tespihler ve tef/bendirler",
+    "exteriorAlt": "Atölyenin ahşap cephesi, tabelası ve vitrininden görünen neyler"
   },
   "Gallery": {
     "eyebrow": "Atölyeden",

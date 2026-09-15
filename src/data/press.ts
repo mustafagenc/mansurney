@@ -5,6 +5,7 @@ import kutuphanelerHaftasiFoto from '@/assets/images/press/kutuphaneler-haftasi-
 import kutuphanelerHaftasiFotoB from '@/assets/images/press/kutuphaneler-haftasi-sergi-2026-b.jpg';
 import neyYapimAtolyesiFoto from '@/assets/images/press/ney-yapim-atolyesi-2025.jpg';
 import samandagKamisiFoto from '@/assets/images/press/samandag-kamisi-2012.jpg';
+import samandagKamisiNeycilerinGozdesiFoto from '@/assets/images/press/samandag-kamisi-neycilerin-gozdesi-2007.jpg';
 import type { Locale } from '@/i18n/routing';
 
 /** Haberin görseli: fotoğraf ya da YouTube videosu. */
@@ -200,6 +201,31 @@ export const press: PressItem[] = [
       },
     },
     url: 'https://www.hataymahallihaber.com/haber/kamistan-nefese-uzanan-bir-ustalik-hikayesi-alper-yildirim/',
+  },
+  {
+    id: 'iskenderun-org-2007-samandag-kamisi',
+    date: '2007-12-18',
+    outlet: 'İskenderun.org',
+    title: {
+      tr: 'Samandağ Kamışı Ney’cilerin Gözdesi',
+      en: 'Samandağ Reed, the Favorite of Ney Makers',
+      ar: 'قصب ساماندآغ المفضّل لدى صنّاع الناي',
+    },
+    description: {
+      tr: 'Antakya’da Edebiyat öğretmenliğinin yanı sıra Ney üretimi yapan Alper Yıldırım ağızlığı Manda boynuzundan, ana gövdesi Samandağ kamışından yapılan neylerin Türkiye’de ve Dünyada bir numara olduğunu söyledi. Mevlana’nın 800. doğum yıldönümü nedeniyle İskenderun Halk Eğitim Merkezi Sergi salonunda kendi ürettiği neyler ile Birlikte Mesnevi müzik aletlerini sergisi açan edebiyat öğretmeni Alper Yıldırım Hatay’ın Samandağ İlçesinin dünyaca ünlü yönünü öne çıkardı. Edebiyat Öğretmeni Alper Yıldırım, Mevlevi sazlarını tanıtmak amacıyla bu sergiyi açtıklarını belirterek yöre halkının ve birçok kişinin Ney yapımcıları tarafından Samandağ bölgesinde yetişen kamışlardan yapıldığını bilmediğine dikkat çekti.',
+      en: 'Alper Yıldırım, who teaches literature in Antakya alongside making neys, said that the neys he crafts — with mouthpieces of water-buffalo horn and bodies of Samandağ reed — are unmatched in Turkey and the world. For the 800th anniversary of Rumi’s birth, literature teacher Alper Yıldırım opened an exhibition of Mesnevi musical instruments, including his own neys, at the İskenderun Public Education Center exhibition hall, highlighting the world-renowned reputation of Hatay’s Samandağ district. Alper Yıldırım said the exhibition was opened to introduce Mevlevi instruments, noting that many people, including locals, are unaware that neys are made from reed grown in the Samandağ region.',
+      ar: 'قال ألبر يلدريم، الذي يعمل مدرّسًا للأدب في أنطاكيا إلى جانب صناعته للناي، إن النايات التي يصنعها -بمبسم من قرن الجاموس وجسم رئيسي من قصب ساماندآغ- هي الأفضل في تركيا والعالم. وبمناسبة الذكرى الثمانمائة لميلاد مولانا، افتتح مدرّس الأدب ألبر يلدريم معرضًا لآلات المثنوي الموسيقية إلى جانب النايات التي صنعها بنفسه، في قاعة معرض مركز إسكندرون للتعليم الشعبي، مسلّطًا الضوء على الشهرة العالمية لمنطقة ساماندآغ التابعة لهاتاي. وأشار ألبر يلدريم إلى أن الهدف من المعرض هو التعريف بآلات المولوية، لافتًا إلى أن كثيرًا من الناس، بمن فيهم أهالي المنطقة، لا يعلمون أن الناي يُصنع من القصب النابت في منطقة ساماندآغ.',
+    },
+    media: {
+      type: 'image',
+      image: samandagKamisiNeycilerinGozdesiFoto,
+      alt: {
+        tr: 'Alper Yıldırım, sergi salonunda duvara asılı neyleri işaret ederken elinde uzun bir kamış tutuyor',
+        en: 'Alper Yıldırım pointing to neys displayed on the exhibition wall, holding a long cane',
+        ar: 'ألبر يلدريم يشير إلى النايات المعروضة على جدار الصالة، ممسكًا بقصبة طويلة',
+      },
+    },
+    url: 'https://www.iskenderun.org/samandag-kamisi-neycilerin-gozdesi',
   },
 ];
 

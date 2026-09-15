@@ -31,7 +31,7 @@ export default async function PressPage({ params }: PageProps<'/[locale]/basinda
         {items.length === 0 ? (
           <p className="max-w-[60ch] border-s-2 border-altin/60 ps-5 text-lg text-metin-soluk">{t('Press.empty')}</p>
         ) : (
-          <ol className="list-none divide-y divide-murekkep/10 border-y border-murekkep/10">
+          <ol className="list-none divide-y divide-murekkep/10">
             {items.map((item) => {
               const title = item.title[locale];
               return (

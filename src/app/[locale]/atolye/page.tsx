@@ -29,30 +29,38 @@ export default async function WorkshopPage({ params }: PageProps<'/[locale]/atol
   const { Content, meta } = await loadPage(locale, 'workshop');
   return (
     <>
-      <PageHero title={meta.title} breadcrumbs={[{ label: t('Common.home'), href: '/' }, { label: meta.title }]} />
-      <Container className="py-14">
+      <PageHero
+        title={meta.title}
+        breadcrumbs={[{ label: t('Common.home'), href: '/' }, { label: meta.title }]}
+        lead={meta.description}
+      />
+      <Container className="reveal py-16 md:py-20">
         <Image
           src={aboutImage}
           alt={t('Workshop.aboutAlt')}
           loading="eager"
           fetchPriority="high"
           placeholder="blur"
-          sizes="(min-width:1024px) 760px, 100vw"
-          className="rounded-kart"
+          sizes="(min-width:1280px) 1184px, 100vw"
+          className="aspect-[16/9] w-full rounded-kart object-cover"
         />
-        <div className="mt-8 max-w-prose text-lg">
+        {/* İki sütunlu metin (spec §4.3): tek akan MDX metni CSS `columns` ile
+            ikiye bölünür; `prose-editorial`in okuma genişliği burada kaldırılır. */}
+        <div className="mt-12 md:columns-2 md:gap-14 lg:gap-16 [&>.prose-editorial]:max-w-none">
           <Content />
         </div>
-        <Image
-          src={interiorImage}
-          alt={t('Workshop.interiorAlt')}
-          placeholder="blur"
-          sizes="(min-width:1024px) 760px, 100vw"
-          className="mt-8 rounded-kart"
-        />
+        <div className="mt-14 md:ms-auto md:w-10/12">
+          <Image
+            src={interiorImage}
+            alt={t('Workshop.interiorAlt')}
+            placeholder="blur"
+            sizes="(min-width:768px) 66vw, 100vw"
+            className="aspect-[3/2] w-full rounded-kart object-cover"
+          />
+        </div>
         {business.master.consent && (
-          <p className="mt-8 text-lg">
-            {t('Workshop.master')}: {business.master.name}
+          <p className="mt-10 text-sm text-metin-soluk">
+            <span className="font-semibold text-murekkep">{t('Workshop.master')}:</span> {business.master.name}
           </p>
         )}
         <div className="mt-10 flex flex-wrap gap-4">

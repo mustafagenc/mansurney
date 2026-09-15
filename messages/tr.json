@@ -110,6 +110,7 @@
     "prev": "Önceki görsel",
     "next": "Sonraki görsel",
     "close": "Kapat",
+    "imageCount": "{count, plural, =1 {1 görsel} other {# görsel}}",
     "categories": { "workshop": "Atölye", "neys": "Neyler", "cases": "Çantalar" }
   },
   "Forms": {

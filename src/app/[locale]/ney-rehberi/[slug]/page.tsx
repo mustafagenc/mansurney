@@ -1,11 +1,11 @@
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getFormatter, getTranslations, setRequestLocale } from 'next-intl/server';
 import { OrderCta } from '@/components/guide/OrderCta';
+import { RelatedGuides } from '@/components/guide/RelatedGuides';
 import { JsonLd } from '@/components/JsonLd';
 import { PageHero } from '@/components/PageHero';
 import { Container } from '@/components/ui/Container';
-import { getPathname, Link } from '@/i18n/navigation';
+import { getPathname } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import { allGuideParams, getGuideList, guideKeyFromSlug, guideSlug, loadGuide } from '@/lib/content';
 import { articleLd, breadcrumbLd, faqLd } from '@/lib/jsonld';
@@ -75,40 +75,42 @@ export default async function GuidePage({ params }: PageProps<'/[locale]/ney-reh
           { label: t('Guide.eyebrow'), href: '/ney-rehberi' },
           { label: meta.title },
         ]}
-      />
+        lead={meta.description}
+        image={{ src: meta.cover, alt: meta.coverAlt }}
+      >
+        <p className="text-sm text-metin-soluk">
+          {t('Guide.updated', { date: format.dateTime(new Date(meta.updated), { dateStyle: 'long' }) })}
+        </p>
+      </PageHero>
 
-      <Container className="grid gap-12 py-14 lg:grid-cols-[1fr_320px]">
-        <article>
-          <Image src={meta.cover} alt={meta.coverAlt} loading="eager" fetchPriority="high" placeholder="blur" sizes="(min-width:1024px) 760px, 100vw" className="rounded-kart" />
-          <p className="mt-4 text-sm text-metin-soluk">{t('Guide.updated', { date: format.dateTime(new Date(meta.updated), { dateStyle: 'long' }) })}</p>
-          <p className="mt-6 text-lg font-semibold text-yesil">{meta.description}</p>
-          <div className="max-w-prose">
-            <Content />
-          </div>
+      <Container className="reveal grid gap-x-12 gap-y-16 py-16 md:py-20 lg:grid-cols-12">
+        <article className="lg:col-span-8">
+          <Content />
           {faq.length > 0 && (
-            <section className="mt-12">
-              <h2 className="mb-4 text-2xl">{t('Guide.faqTitle')}</h2>
-              {faq.map((f) => (
-                <details key={f.q} className="border-b border-yesil/15 py-4">
-                  <summary className="cursor-pointer font-semibold">{f.q}</summary>
-                  <p className="mt-2">{f.a}</p>
-                </details>
-              ))}
+            <section className="relative mt-16 pt-16 before:absolute before:start-0 before:top-0 before:h-px before:w-10 before:bg-altin">
+              <h2 className="text-h3">{t('Guide.faqTitle')}</h2>
+              <div className="mt-8 border-t border-murekkep/10">
+                {faq.map((f) => (
+                  <details key={f.q} className="group border-b border-murekkep/10 py-5">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-lg text-murekkep marker:content-none [&::-webkit-details-marker]:hidden">
+                      <span>{f.q}</span>
+                      <span aria-hidden="true" className="relative size-6 flex-none text-2xl leading-none text-altin-metin">
+                        <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-200 group-open:opacity-0">+</span>
+                        <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200 group-open:opacity-100">−</span>
+                      </span>
+                    </summary>
+                    <p className="mt-3 max-w-[65ch] text-metin-soluk">{f.a}</p>
+                  </details>
+                ))}
+              </div>
             </section>
           )}
         </article>
-        <aside className="space-y-6">
-          <nav aria-label={t('Guide.related')} className="rounded-kart bg-white p-6 shadow-kart">
-            <h2 className="mb-4 text-lg">{t('Guide.related')}</h2>
-            <ul className="space-y-3">
-              {others.map((g) => (
-                <li key={g.key}>
-                  <Link href={{ pathname: '/ney-rehberi/[slug]', params: { slug: g.slug } }}>{g.meta.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <OrderCta />
+        <aside className="lg:col-span-4">
+          <div className="space-y-10 lg:sticky lg:top-28">
+            <RelatedGuides items={others} title={t('Guide.related')} />
+            <OrderCta />
+          </div>
         </aside>
       </Container>
     </>

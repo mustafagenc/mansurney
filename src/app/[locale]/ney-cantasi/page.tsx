@@ -21,40 +21,48 @@ export default async function CasePage({ params }: PageProps<'/[locale]/ney-cant
   const { Content, meta } = await loadPage(locale, 'case');
   return (
     <>
-      <PageHero title={meta.title} breadcrumbs={[{ label: t('Common.home'), href: '/' }, { label: meta.title }]} />
-      <Container className="py-14">
-        <div className="max-w-prose text-lg">
+      <PageHero
+        title={meta.title}
+        breadcrumbs={[{ label: t('Common.home'), href: '/' }, { label: meta.title }]}
+        lead={meta.description}
+      />
+      <Container className="reveal grid gap-12 py-16 md:py-20 lg:grid-cols-12 lg:gap-16">
+        <div className="lg:col-span-7">
           <Content />
+          <Button href="/iletisim" variant="primary" className="mt-10">
+            {t('Nav.contact')}
+          </Button>
         </div>
-        <h2 className="mt-12 text-2xl">{t('Case.models')}</h2>
-        <ul className="mt-6 grid gap-6 sm:grid-cols-2">
-          {caseModels.map((m) => (
-            <li key={m.key} className="rounded-kart bg-white p-6 shadow-kart">
-              {m.image && (
-                <Image
-                  src={m.image}
-                  alt=""
-                  placeholder="blur"
-                  sizes="(min-width:640px) 50vw, 100vw"
-                  className="mb-4 rounded-kart"
-                />
-              )}
-              <p className="font-display text-xl">
-                {m.capacity === 'set' ? t('Case.set') : t('Case.capacity', { count: m.capacity })} ·{' '}
-                {t(`Case.${m.material}`)}
-              </p>
-              {m.dimensionsCm && (
-                <p className="mt-1 text-sm text-metin-soluk" dir="ltr">
-                  {m.dimensionsCm.join(' × ')} cm
-                </p>
-              )}
-              <p className="mt-2 text-sm">{t('Case.askPrice')}</p>
-            </li>
-          ))}
-        </ul>
-        <Button href="/iletisim" variant="primary" className="mt-10">
-          {t('Nav.contact')}
-        </Button>
+        <div className="lg:col-span-5">
+          <h2 className="text-h3">{t('Case.models')}</h2>
+          <ul className="mt-6 border-t border-murekkep/10">
+            {caseModels.map((m) => (
+              <li key={m.key} className="flex items-center gap-5 border-b border-murekkep/10 py-6">
+                {m.image && (
+                  <Image
+                    src={m.image}
+                    alt=""
+                    placeholder="blur"
+                    sizes="80px"
+                    className="size-20 flex-none rounded-kart object-cover"
+                  />
+                )}
+                <div>
+                  <p className="font-display text-lg text-murekkep">
+                    {m.capacity === 'set' ? t('Case.set') : t('Case.capacity', { count: m.capacity })} ·{' '}
+                    {t(`Case.${m.material}`)}
+                  </p>
+                  {m.dimensionsCm && (
+                    <p className="mt-1 text-sm text-metin-soluk" dir="ltr">
+                      {m.dimensionsCm.join(' × ')} cm
+                    </p>
+                  )}
+                  <p className="mt-1 text-sm text-metin-soluk">{t('Case.askPrice')}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </Container>
     </>
   );

@@ -110,6 +110,7 @@
     "prev": "الصورة السابقة",
     "next": "الصورة التالية",
     "close": "إغلاق",
+    "imageCount": "{count, plural, =1 {صورة واحدة} other {# صور}}",
     "categories": { "workshop": "الورشة", "neys": "النايات", "cases": "الحقائب" }
   },
   "Forms": {

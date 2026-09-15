@@ -110,6 +110,7 @@
     "prev": "Previous image",
     "next": "Next image",
     "close": "Close",
+    "imageCount": "{count, plural, =1 {1 image} other {# images}}",
     "categories": { "workshop": "Workshop", "neys": "Neys", "cases": "Cases" }
   },
   "Forms": {

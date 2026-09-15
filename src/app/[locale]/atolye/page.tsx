@@ -46,14 +46,14 @@ export default async function WorkshopPage({ params }: PageProps<'/[locale]/atol
             alt={t('Workshop.exteriorAlt')}
             placeholder="blur"
             sizes="(min-width:768px) 40vw, 100vw"
-            className="aspect-[4/5] w-full rounded-kart object-cover md:col-span-5"
+            className="aspect-4/5 w-full rounded-kart object-cover md:col-span-5"
           />
           <Image
             src={interiorImage}
             alt={t('Workshop.interiorAlt')}
             placeholder="blur"
             sizes="(min-width:768px) 58vw, 100vw"
-            className="aspect-[3/2] w-full rounded-kart object-cover md:col-span-7"
+            className="aspect-3/2 w-full rounded-kart object-cover md:col-span-7"
           />
         </div>
         {business.master.consent && (

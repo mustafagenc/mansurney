@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -14,6 +14,12 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+// Statik: dile bağlı değil, bu yüzden `generateViewport` yerine düz `viewport` export'u
+// (bkz. node_modules/next/dist/docs/.../generate-viewport.md).
+export const viewport: Viewport = {
+  themeColor: '#10201b',
+};
+
 export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Promise<Metadata> {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
@@ -22,6 +28,9 @@ export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Pr
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mansurney.vercel.app'),
     title: { default: `${t('siteName')} — ${t('tagline')}`, template: `%s — ${t('siteName')}` },
     description: t('defaultDescription'),
+    // Hafif PWA: yalnızca "ana ekrana ekle" (bkz. src/app/manifest.ts) — service worker yok.
+    manifest: '/manifest.webmanifest',
+    appleWebApp: { title: t('siteName'), statusBarStyle: 'default' },
   };
 }
 

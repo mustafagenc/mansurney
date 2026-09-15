@@ -44,7 +44,7 @@ export default async function PressPage({ params }: PageProps<'/[locale]/basinda
                           alt={item.media.alt[locale]}
                           placeholder="blur"
                           sizes="(min-width:768px) 40vw, 100vw"
-                          className="aspect-[3/2] w-full rounded-kart object-cover"
+                          className="aspect-3/2 w-full rounded-kart object-cover"
                         />
                       ) : (
                         <YouTubeEmbed

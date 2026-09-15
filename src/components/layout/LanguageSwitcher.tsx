@@ -8,7 +8,12 @@ import { routing, type Locale } from '@/i18n/routing';
 
 const labels: Record<Locale, string> = { tr: 'Türkçe', en: 'English', ar: 'العربية' };
 
-export function LanguageSwitcher() {
+const tones = {
+  light: 'border-murekkep/25 text-murekkep hover:border-murekkep',
+  dark: 'border-kagit/30 text-kagit hover:border-kagit',
+} as const;
+
+export function LanguageSwitcher({ tone = 'light', className = '' }: { tone?: keyof typeof tones; className?: string }) {
   const t = useTranslations('Common');
   const locale = useLocale();
   const pathname = usePathname();
@@ -17,10 +22,10 @@ export function LanguageSwitcher() {
   const [pending, startTransition] = useTransition();
 
   return (
-    <label className="inline-flex items-center gap-2 text-sm">
+    <label className={`relative inline-flex items-center ${className}`}>
       <span className="sr-only">{t('language')}</span>
       <select
-        className="rounded-full border border-white/20 bg-transparent px-3 py-1"
+        className={`cursor-pointer appearance-none rounded-none border-0 border-b bg-transparent py-1.5 pe-6 ps-0 text-[0.875rem] font-semibold transition-colors disabled:opacity-60 ${tones[tone]}`}
         value={locale}
         disabled={pending}
         onChange={(e) => {
@@ -45,6 +50,18 @@ export function LanguageSwitcher() {
           </option>
         ))}
       </select>
+      <svg
+        aria-hidden="true"
+        width="10"
+        height="6"
+        viewBox="0 0 10 6"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.25"
+        className={`pointer-events-none absolute end-0.5 ${tone === 'dark' ? 'text-kagit' : 'text-murekkep'}`}
+      >
+        <path d="M1 1l4 4 4-4" />
+      </svg>
     </label>
   );
 }

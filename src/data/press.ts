@@ -1,4 +1,5 @@
 import type { StaticImageData } from 'next/image';
+import harbiyeKavaliFoto from '@/assets/images/press/harbiye-kavali-2025.jpg';
 import kamistanNefeseFoto from '@/assets/images/press/kamistan-nefese-alper-yildirim.jpg';
 import samandagKamisiFoto from '@/assets/images/press/samandag-kamisi-2012.jpg';
 import type { Locale } from '@/i18n/routing';
@@ -47,6 +48,31 @@ export type PressItem = {
  * },
  */
 export const press: PressItem[] = [
+  {
+    id: 'ilk-haber-gazetesi-2025-harbiye-kavali',
+    date: '2025-06-03',
+    outlet: 'İlk Haber Gazetesi',
+    title: {
+      tr: 'Neyin ustası, kavalın izinde: Harbiye’ye nostaljik bir dönüş',
+      en: 'The Ney Master on the Trail of the Kaval: A Nostalgic Return to Harbiye',
+      ar: 'أسطى الناي في أثر الكافال: عودة حنينية إلى حربية',
+    },
+    description: {
+      tr: 'Tasavvuf müziğinin usta ismi Alper Yıldırım, unutulmaya yüz tutmuş Harbiye kavalını yeniden üretmeye hazırlanıyor. Samandağ kamışlarından ney yapan sanatçı, şimdi de çocukluk ezgilerini günümüze taşımak için kolları sıvıyor.',
+      en: 'Alper Yıldırım, a master name in Sufi music, is preparing to revive the nearly forgotten Harbiye kaval. Having built neys from Samandağ reed, the artisan is now rolling up his sleeves to bring the melodies of his childhood into the present.',
+      ar: 'يستعد ألبر يلدريم، الاسم البارز في الموسيقى الصوفية، لإعادة إنتاج كافال حربية الذي كاد يُنسى. وبعد صناعته النايات من قصب ساماندآغ، يشمّر الفنان الآن عن ساعديه لينقل ألحان طفولته إلى الحاضر.',
+    },
+    media: {
+      type: 'image',
+      image: harbiyeKavaliFoto,
+      alt: {
+        tr: 'Alper Yıldırım atölyesinde elindeki uzun bir neyi üflüyor',
+        en: 'Alper Yıldırım blowing a long ney in his workshop',
+        ar: 'ألبر يلدريم ينفخ في ناي طويل داخل ورشته',
+      },
+    },
+    url: 'https://www.ilkhaber-gazetesi.com/dunya/neyin-ustasi-kavalin-izinde-harbiye-ye-nostaljik-bir-donus-289501',
+  },
   {
     id: 'yeni-asya-2012-samandag-kamisi',
     date: '2012-02-25',

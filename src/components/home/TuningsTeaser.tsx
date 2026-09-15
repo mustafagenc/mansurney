@@ -10,7 +10,7 @@ export async function TuningsTeaser() {
   return (
     <section id="akortlar" className="bg-kagit-2 py-20">
       <Container className="text-center">
-        <SectionHeading eyebrow={t('eyebrow')} title={t('title')} />
+        <SectionHeading align="center" eyebrow={t('eyebrow')} title={t('title')} />
         <ul className="flex flex-wrap justify-center gap-3">
           {tunings.map((tu) => (
             <li key={tu.key}>
@@ -24,7 +24,7 @@ export async function TuningsTeaser() {
             </li>
           ))}
         </ul>
-        <Button href="/akortlar" variant="green" className="mt-10">
+        <Button href="/akortlar" variant="primary" className="mt-10">
           {t('cta')}
         </Button>
       </Container>

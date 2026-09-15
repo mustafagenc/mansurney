@@ -52,7 +52,7 @@ export default async function CasePage({ params }: PageProps<'/[locale]/ney-cant
             </li>
           ))}
         </ul>
-        <Button href="/iletisim" className="mt-10">
+        <Button href="/iletisim" variant="primary" className="mt-10">
           {t('Nav.contact')}
         </Button>
       </Container>

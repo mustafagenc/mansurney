@@ -11,8 +11,10 @@ export async function OrderBand() {
         <h2 className="text-3xl text-kagit md:text-4xl">{t('Home.order.title')}</h2>
         <p className="mx-auto mt-4 max-w-xl text-kamis">{t('Home.order.text')}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Button href="/siparis">{t('Nav.order')}</Button>
-          <Button href={whatsappUrl(t('Order.whatsappText'))} variant="outline">
+          <Button href="/siparis" variant="onDark">
+            {t('Nav.order')}
+          </Button>
+          <Button href={whatsappUrl(t('Order.whatsappText'))} variant="secondary" className="text-kagit">
             {t('Common.whatsapp')}
           </Button>
         </div>

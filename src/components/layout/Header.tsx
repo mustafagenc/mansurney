@@ -50,7 +50,7 @@ export async function Header() {
             </ul>
           </nav>
           <div className="flex items-center gap-3">
-            <Button href="/siparis" variant="gold" className="hidden sm:inline-flex">
+            <Button href="/siparis" className="hidden sm:inline-flex">
               {t('Nav.order')}
             </Button>
             <MobileNav items={[...items, { href: '/siparis', label: t('Nav.order') }]} />

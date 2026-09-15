@@ -11,7 +11,7 @@ export default function NotFound() {
       <ReedDivider className="mx-auto my-6 max-w-[200px]" />
       <h1 className="text-3xl">{t('NotFound.title')}</h1>
       <p className="mx-auto mt-3 max-w-md text-metin-soluk">{t('NotFound.text')}</p>
-      <Button href="/" variant="green" className="mt-8">
+      <Button href="/" variant="primary" className="mt-8">
         {t('Common.backHome')}
       </Button>
     </Container>

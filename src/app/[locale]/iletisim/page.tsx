@@ -78,7 +78,7 @@ export default async function ContactPage({ params }: PageProps<'/[locale]/ileti
               })}
             </ul>
           </div>
-          <Button href={whatsappUrl()} className="mt-6 w-full justify-center">
+          <Button href={whatsappUrl()} variant="onDark" className="mt-6 w-full">
             {t('Common.whatsapp')}
           </Button>
           <a

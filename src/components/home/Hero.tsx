@@ -39,8 +39,10 @@ export async function Hero() {
         <p className="mt-4 max-w-xl font-display text-xl italic text-kamis">{t('Home.hero.text')}</p>
         <p className="mt-2 max-w-xl text-kagit/90">{t('Home.hero.lead')}</p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Button href="/siparis">{t('Nav.order')}</Button>
-          <Button href="/galeri" variant="outline">
+          <Button href="/siparis" variant="onDark">
+            {t('Nav.order')}
+          </Button>
+          <Button href="/galeri" variant="secondary" className="text-kagit">
             {t('Home.hero.gallery')}
           </Button>
         </div>

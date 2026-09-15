@@ -16,7 +16,7 @@ export async function GalleryStrip() {
         <SectionHeading eyebrow={t('Gallery.eyebrow')} title={t('Gallery.title')} />
         <GalleryGrid items={items} />
         <div className="mt-10 text-center">
-          <Button href="/galeri" variant="green">
+          <Button href="/galeri" variant="primary">
             {t('Home.gallery.cta')}
           </Button>
         </div>

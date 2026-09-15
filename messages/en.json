@@ -14,7 +14,8 @@
     "whatsapp": "Message us on WhatsApp",
     "call": "Call us",
     "skipToContent": "Skip to content",
-    "mainNav": "Main navigation"
+    "mainNav": "Main navigation",
+    "breadcrumb": "Breadcrumb"
   },
   "Nav": {
     "home": "Home",

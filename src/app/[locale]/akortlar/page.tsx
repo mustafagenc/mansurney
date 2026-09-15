@@ -38,9 +38,11 @@ export default async function TuningsPage({ params }: PageProps<'/[locale]/akort
                   <source src={tu.audio} type="audio/mpeg" />
                 </audio>
               )}
-              <Button href={{ pathname: '/siparis', query: { akort: tu.key } }} variant="green" className="mt-auto self-start pt-3">
-                {t('Tunings.orderThis', { name: tu.name })}
-              </Button>
+              <div className="mt-auto pt-4">
+                <Button href={{ pathname: '/siparis', query: { akort: tu.key } }} variant="primary">
+                  {t('Tunings.orderThis', { name: tu.name })}
+                </Button>
+              </div>
             </li>
           ))}
         </ul>

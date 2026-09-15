@@ -45,7 +45,7 @@ export default async function OrderPage({ params }: PageProps<'/[locale]/siparis
             ))}
           </ul>
           <p className="mt-4 text-sm text-kamis">{t('Order.shipping')}</p>
-          <Button href={whatsappUrl(t('Order.whatsappText'))} className="mt-6 w-full justify-center">
+          <Button href={whatsappUrl(t('Order.whatsappText'))} variant="onDark" className="mt-6 w-full">
             {t('Common.whatsapp')}
           </Button>
           <a href={telUrl()} dir="ltr" className="mt-3 block text-center text-kagit">

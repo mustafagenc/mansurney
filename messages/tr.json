@@ -14,7 +14,8 @@
     "whatsapp": "WhatsApp ile yazın",
     "call": "Arayın",
     "skipToContent": "İçeriğe geç",
-    "mainNav": "Ana menü"
+    "mainNav": "Ana menü",
+    "breadcrumb": "Sayfa konumu"
   },
   "Nav": {
     "home": "Anasayfa",

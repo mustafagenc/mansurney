@@ -56,10 +56,12 @@ export default async function WorkshopPage({ params }: PageProps<'/[locale]/atol
           </p>
         )}
         <div className="mt-10 flex flex-wrap gap-4">
-          <Button href="/galeri" variant="green">
+          <Button href="/galeri" variant="secondary" className="text-murekkep">
             {t('Nav.gallery')}
           </Button>
-          <Button href="/siparis">{t('Guide.orderCtaButton')}</Button>
+          <Button href="/siparis" variant="primary">
+            {t('Guide.orderCtaButton')}
+          </Button>
         </div>
       </Container>
     </>

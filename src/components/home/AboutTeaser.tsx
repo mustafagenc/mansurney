@@ -31,7 +31,7 @@ export async function AboutTeaser() {
           <p className="mt-4 text-metin-soluk">{t('Home.about.text')}</p>
           <Button
             href={{ pathname: '/ney-rehberi/[slug]', params: { slug: guideSlug('history', locale) } }}
-            variant="green"
+            variant="primary"
             className="mt-6"
           >
             {t('Home.about.cta')}

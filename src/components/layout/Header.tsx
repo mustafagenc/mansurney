@@ -20,8 +20,8 @@ export async function Header() {
     { href: '/ney-rehberi', label: t('Nav.guide') },
     { href: '/akortlar', label: t('Nav.tunings') },
     { href: '/ney-cantasi', label: t('Nav.case') },
-    { href: '/atolye', label: t('Nav.workshop') },
     { href: '/galeri', label: t('Nav.gallery') },
+    { href: '/basinda-biz', label: t('Nav.press') },
     { href: '/iletisim', label: t('Nav.contact') },
   ];
   return (

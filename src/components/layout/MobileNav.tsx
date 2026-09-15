@@ -2,8 +2,9 @@
 
 import { useTranslations } from 'next-intl';
 import { useRef } from 'react';
+import { InstagramIcon } from '@/components/ui/InstagramIcon';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
-import { business, telUrl, whatsappUrl } from '@/config/business';
+import { business, socialHandle, telUrl, whatsappUrl } from '@/config/business';
 import { Link, usePathname } from '@/i18n/navigation';
 import type { NavItem } from './Header';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -85,6 +86,20 @@ export function MobileNav({ items, className = '' }: { items: NavItem[]; classNa
                   <span className="link-underline">{t('Common.whatsapp')}</span>
                 </a>
               </p>
+              {business.social.instagram && (
+                <p>
+                  <a
+                    href={business.social.instagram}
+                    target="_blank"
+                    rel="noopener"
+                    dir="ltr"
+                    className="inline-flex items-center gap-2 text-kamis hover:text-kagit"
+                  >
+                    <InstagramIcon />
+                    <span className="link-underline">{socialHandle(business.social.instagram)}</span>
+                  </a>
+                </p>
+              )}
             </div>
             <LanguageSwitcher tone="dark" />
           </div>

@@ -4,8 +4,9 @@ import { JsonLd } from '@/components/JsonLd';
 import { PageHero } from '@/components/PageHero';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
+import { InstagramIcon } from '@/components/ui/InstagramIcon';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
-import { business, telUrl, whatsappUrl } from '@/config/business';
+import { business, socialHandle, telUrl, whatsappUrl } from '@/config/business';
 import type { Locale } from '@/i18n/routing';
 import { localBusinessLd } from '@/lib/jsonld';
 import { pageMetadata } from '@/lib/seo';
@@ -59,6 +60,18 @@ export default async function ContactPage({ params }: PageProps<'/[locale]/ileti
             <a href={`mailto:${business.email}`} dir="ltr" className="link-underline block w-fit text-murekkep">
               {business.email}
             </a>
+            {business.social.instagram && (
+              <a
+                href={business.social.instagram}
+                target="_blank"
+                rel="noopener"
+                dir="ltr"
+                className="flex w-fit items-center gap-2 text-murekkep"
+              >
+                <InstagramIcon />
+                <span className="link-underline">{socialHandle(business.social.instagram)}</span>
+              </a>
+            )}
           </div>
           <div className="mt-8 border-t border-murekkep/10 pt-6">
             <h3 className="text-xs font-semibold text-metin-soluk">{t('Contact.hours')}</h3>

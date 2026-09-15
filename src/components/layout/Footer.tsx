@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Container } from '@/components/ui/Container';
 import { ReedDivider } from '@/components/ui/ReedDivider';
+import { InstagramIcon } from '@/components/ui/InstagramIcon';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 import { business, telUrl, whatsappUrl } from '@/config/business';
 import { Link } from '@/i18n/navigation';
@@ -50,8 +51,14 @@ export async function Footer() {
               <ul className="mt-6 flex gap-5">
                 {social.map(([name, url]) => (
                   <li key={name}>
-                    <a href={url} target="_blank" rel="noopener" className={`capitalize ${link}`}>
-                      {name}
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener"
+                      className="inline-flex items-center gap-2 capitalize transition-colors duration-200 hover:text-kagit"
+                    >
+                      {name === 'instagram' && <InstagramIcon />}
+                      <span className="link-underline">{name}</span>
                     </a>
                   </li>
                 ))}

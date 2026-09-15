@@ -1,6 +1,7 @@
 import type { StaticImageData } from 'next/image';
 import harbiyeKavaliFoto from '@/assets/images/press/harbiye-kavali-2025.jpg';
 import kamistanNefeseFoto from '@/assets/images/press/kamistan-nefese-alper-yildirim.jpg';
+import neyYapimAtolyesiFoto from '@/assets/images/press/ney-yapim-atolyesi-2025.jpg';
 import samandagKamisiFoto from '@/assets/images/press/samandag-kamisi-2012.jpg';
 import type { Locale } from '@/i18n/routing';
 
@@ -48,6 +49,31 @@ export type PressItem = {
  * },
  */
 export const press: PressItem[] = [
+  {
+    id: 'hatay-mahalli-haber-2025-ney-yapim-atolyesi',
+    date: '2025-02-16',
+    outlet: 'Hatay Mahalli Haber',
+    title: {
+      tr: 'Kamıştan Nefese Uzanan Yolculuk: Ney Yapım Atölyesi Büyük İlgi Gördü',
+      en: 'A Journey from Reed to Breath: Ney-Making Workshop Draws Great Interest',
+      ar: 'رحلة من القصب إلى النفَس: ورشة صناعة الناي تلقى إقبالًا كبيرًا',
+    },
+    description: {
+      tr: 'Milli Eğitim Bakanlığı bünyesinde faaliyet gösteren Öğretmen Akademileri kapsamında Sanat Çarşısı atölyesinde düzenlenen Müzik Akademisi etkinlikleri hız kesmeden devam ediyor. Bu kapsamda gerçekleştirilen beşinci etkinlik olan “Kamıştan Nefese Uzanan Yolculuk” Ney Yapım Atölyesi, yoğun ilgi gördü.',
+      en: 'The Music Academy events held at the Art Bazaar workshop, part of the Ministry of National Education’s Teacher Academies, continue without slowing down. The fifth event in this series, the “Journey from Reed to Breath” Ney-Making Workshop, drew great interest.',
+      ar: 'تتواصل فعاليات أكاديمية الموسيقى التي تُقام في ورشة السوق الفني ضمن أكاديميات المعلمين التابعة لوزارة التربية الوطنية، دون تباطؤ. ولقيت الفعالية الخامسة في هذا الإطار، ورشة "رحلة من القصب إلى النفَس" لصناعة الناي، إقبالًا كبيرًا.',
+    },
+    media: {
+      type: 'image',
+      image: neyYapimAtolyesiFoto,
+      alt: {
+        tr: 'Alper Yıldırım, Müzik Akademisi etkinliğinde dinleyicilere ney yapımını anlatıyor',
+        en: 'Alper Yıldırım demonstrating ney-making to an audience at the Music Academy event',
+        ar: 'ألبر يلدريم يشرح صناعة الناي للحضور في فعالية أكاديمية الموسيقى',
+      },
+    },
+    url: 'https://www.hataymahallihaber.com/haber/kamistan-nefese-uzanan-yolculuk-ney-yapim-atolyesi-buyuk-ilgi-gordu/',
+  },
   {
     id: 'ilk-haber-gazetesi-2025-harbiye-kavali',
     date: '2025-06-03',

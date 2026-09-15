@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
 import { isRtl, routing } from '@/i18n/routing';
@@ -34,6 +35,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
       <body>
         <NextIntlClientProvider>
           <Analytics />
+          <GoogleAnalytics />
           <Header />
           <main id="icerik">{children}</main>
           <Footer />

@@ -24,6 +24,10 @@ yayına özgü adımlar ve teyitler yer alır.
 - [ ] **Avukata sorulacak:** Aydınlatma metni ile açık rıza aynı onay kutusunda birleşik
       (`Forms.consent`); md. 5/2-c varken açık rıza istenip istenmeyeceği ve aydınlatmanın
       ayrı sunulması avukatla netleştirilmeli.
+- [ ] **Avukata sorulacak:** Google Analytics (`NEXT_PUBLIC_GA_MEASUREMENT_ID` tanımlıysa,
+      yalnızca Vercel Production'da yüklenir — `src/components/analytics/GoogleAnalytics.tsx`)
+      zorunlu olmayan bir izleme çerezi kullanır; Gizlilik Politikası bunu belirtir ancak
+      açık rıza gerektiren bir çerez onay bandı eklenip eklenmeyeceği avukatla netleştirilmeli.
 - [ ] Aşağıdaki "Sahibinden beklenen bilgiler" bölümündeki tüm maddeler teyit edilmiş ve
       ilgili koda/içeriğe işlenmiş (`src/config/business.ts`, `src/data/tunings.ts`,
       `src/data/case-models.ts`, galeri ve sosyal medya bağlantıları).

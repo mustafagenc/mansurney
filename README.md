@@ -14,6 +14,8 @@
 - **Resend** — form e-postalarının gönderimi
 - **Cloudflare Turnstile** (`@marsidev/react-turnstile`) — form spam koruması
 - **Vitest 5** + Testing Library, **Playwright** + `@axe-core/playwright` — mevcut test paketleri (bkz. [Doğrulama](#doğrulama))
+- **Vercel Analytics** + **Google Analytics 4** — yalnızca `VERCEL_ENV=production`'da yüklenir
+- Hafif **PWA** desteği — Web App Manifest (`app/manifest.ts`) ve ikonlar; ayrı bir servis çalışanı kaydı yoktur
 - **Vercel** — barındırma
 
 Sürümler `package.json` içindeki gerçek bağımlılıklardan alınmıştır; güncel liste için o dosyaya bakın.
@@ -80,6 +82,7 @@ Değişikliklerin doğrulama yolu `pnpm typecheck`, `pnpm lint` ve `pnpm build` 
 | Değişken | Anlamı |
 |---|---|
 | `NEXT_PUBLIC_SITE_URL` | Sitenin kanonik kök URL'si (`https://mansurney.vercel.app`) |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 ölçüm kimliği (`G-XXXXXXXXXX`). Boşsa ya da `VERCEL_ENV=production` değilse GA hiç yüklenmez |
 | `RESEND_API_KEY` | Sipariş/iletişim formu e-postalarını göndermek için Resend API anahtarı |
 | `FORM_TO_EMAIL` | Form gönderimlerinin ulaşacağı adres (`neyzen@mansurney.com`) |
 | `FORM_FROM_EMAIL` | Resend üzerinden gönderilen e-postaların "gönderen" adresi |
@@ -96,8 +99,9 @@ messages/     Arayüz metinleri, dil başına JSON (tr.json, en.json, ar.json)
 scripts/      Görsel kurtarma/optimizasyon ve yayın öncesi kontrol betikleri
 tests/        Vitest (tests/unit) ve Playwright (tests/e2e) testleri (güncel tutulmuyor; bkz. Doğrulama)
 docs/         Site analizi, mevcut sitenin içerik arşivi ve uygulama planı — depoda kalır, Vercel'e dağıtılmaz
-assets/photos/  Müşteriden alınan ham fotoğraflar — depoda kalır, Vercel'e dağıtılmaz.
-                Optimize edilmiş, uygulamanın kullandığı kopyalar `src/assets/images/` altındadır.
+assets/       Müşteriden alınan ham fotoğraflar için geçici çalışma alanı — depoda kalır, Vercel'e
+              dağıtılmaz (bkz. `.vercelignore`); kullanılan görseller optimize edilip `src/assets/images/`
+              altına taşındıktan sonra genelde depodan temizlenir.
 ```
 
 ## Yayın (Vercel)

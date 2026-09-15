@@ -21,10 +21,10 @@ export function ContactForm() {
   if (state.status === 'success') return <FormStatus state={state} />;
 
   return (
-    <form action={action} className="mt-6 space-y-5">
+    <form action={action} className="mt-8 space-y-8">
       {/* Hata dönüşünde alanlar gönderilen değerlerle yeniden bağlanır (bkz. useSubmissionKey). */}
       <Fragment key={submissionKey}>
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
           <Field label={t('Forms.name')} required error={err('name')}>
             <input name="name" autoComplete="name" defaultValue={v.name} />
           </Field>
@@ -55,7 +55,7 @@ export function ContactForm() {
       </Fragment>
       <TurnstileField state={state} />
       <FormStatus state={state} />
-      <Button type="submit" disabled={pending}>
+      <Button type="submit" disabled={pending} className="w-full sm:w-auto">
         {pending ? t('Forms.sending') : t('Contact.submit')}
       </Button>
     </form>

@@ -20,7 +20,7 @@ export function ConsentCheckbox({ invalid, defaultChecked }: { invalid: boolean;
           defaultChecked={defaultChecked}
           aria-invalid={invalid || undefined}
           aria-describedby={invalid ? errId : undefined}
-          className="mt-1 size-4 accent-yesil"
+          className="mt-1 size-4 accent-murekkep"
         />
         <span>
           {t.rich('consent', {

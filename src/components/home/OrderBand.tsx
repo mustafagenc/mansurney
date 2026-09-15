@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 import { whatsappUrl } from '@/config/business';
 
 // Spec §4.2.7: kagit zeminde büyük hairline çerçeveli alan (paspartu gibi çift çizgi);
@@ -19,6 +20,7 @@ export async function OrderBand() {
             <div className="flex flex-wrap gap-3 md:col-span-5 md:justify-end">
               <Button href="/siparis">{t('Nav.order')}</Button>
               <Button href={whatsappUrl(t('Order.whatsappText'))} variant="secondary" className="text-murekkep">
+                <WhatsAppIcon />
                 {t('Common.whatsapp')}
               </Button>
             </div>

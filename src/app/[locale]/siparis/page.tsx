@@ -3,6 +3,7 @@ import { OrderForm } from '@/components/forms/OrderForm';
 import { PageHero } from '@/components/PageHero';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 import { business, telUrl, whatsappUrl } from '@/config/business';
 import type { Locale } from '@/i18n/routing';
 import { pageMetadata } from '@/lib/seo';
@@ -49,6 +50,7 @@ export default async function OrderPage({ params }: PageProps<'/[locale]/siparis
           <p className="mt-8 border-t border-murekkep/10 pt-6 text-sm text-metin-soluk">{t('Order.shipping')}</p>
           <div className="mt-8 flex flex-col items-center gap-3">
             <Button href={whatsappUrl(t('Order.whatsappText'))} className="w-full">
+              <WhatsAppIcon />
               {t('Common.whatsapp')}
             </Button>
             <a href={telUrl()} dir="ltr" className="link-underline text-murekkep">

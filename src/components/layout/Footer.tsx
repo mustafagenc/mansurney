@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Container } from '@/components/ui/Container';
 import { ReedDivider } from '@/components/ui/ReedDivider';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 import { business, telUrl, whatsappUrl } from '@/config/business';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
@@ -118,8 +119,14 @@ export async function Footer() {
               </a>
             </p>
             <p className="mt-3">
-              <a href={whatsappUrl()} target="_blank" rel="noopener" className={link}>
-                {t('Common.whatsapp')}
+              <a
+                href={whatsappUrl()}
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-kagit"
+              >
+                <WhatsAppIcon />
+                <span className="link-underline">{t('Common.whatsapp')}</span>
               </a>
             </p>
           </address>

@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useRef } from 'react';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 import { business, telUrl, whatsappUrl } from '@/config/business';
 import { Link, usePathname } from '@/i18n/navigation';
 import type { NavItem } from './Header';
@@ -74,8 +75,14 @@ export function MobileNav({ items, className = '' }: { items: NavItem[]; classNa
                 </a>
               </p>
               <p>
-                <a href={whatsappUrl()} target="_blank" rel="noopener" className="link-underline text-kamis hover:text-kagit">
-                  {t('Common.whatsapp')}
+                <a
+                  href={whatsappUrl()}
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center gap-2 text-kamis hover:text-kagit"
+                >
+                  <WhatsAppIcon />
+                  <span className="link-underline">{t('Common.whatsapp')}</span>
                 </a>
               </p>
             </div>

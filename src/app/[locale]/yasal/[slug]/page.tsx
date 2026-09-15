@@ -49,15 +49,15 @@ export default async function LegalPage({ params }: PageProps<'/[locale]/yasal/[
       <PageHero
         title={meta.title}
         breadcrumbs={[{ label: t('Common.home'), href: '/' }, { label: meta.title }]}
-      />
-      <Container className="py-14">
-        <article className="max-w-prose">
-          <p className="text-sm text-metin-soluk">
-            {t('Legal.updated', { date: format.dateTime(new Date(meta.updated), { dateStyle: 'long' }) })}
-          </p>
-          <div className="mt-6">
-            <Content />
-          </div>
+      >
+        <p className="text-sm text-metin-soluk">
+          {t('Legal.updated', { date: format.dateTime(new Date(meta.updated), { dateStyle: 'long' }) })}
+        </p>
+      </PageHero>
+      {/* Yasal metinlerde Phase 1 drop cap kapatılır (bkz. `.no-dropcap`, globals.css sonu). */}
+      <Container className="no-dropcap py-14 md:py-20">
+        <article>
+          <Content />
         </article>
       </Container>
     </>

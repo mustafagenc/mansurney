@@ -172,3 +172,9 @@
   &:where([dir='rtl'], [dir='rtl'] *) { background-position: right 100%; }
   &:hover, &:focus-visible { background-size: 100% 2px; }
 }
+
+/* Yasal sayfalarda (spec §4.4) Phase 1 drop cap kapatılır: layer dışı olduğu için
+   `.prose-editorial`'ın kendi `@layer components` kuralından her zaman önceliklidir. */
+.no-dropcap .prose-editorial > p:first-of-type::first-letter {
+  all: unset;
+}

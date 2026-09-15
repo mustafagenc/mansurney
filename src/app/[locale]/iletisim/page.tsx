@@ -4,7 +4,6 @@ import { JsonLd } from '@/components/JsonLd';
 import { PageHero } from '@/components/PageHero';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
-import { ReedDivider } from '@/components/ui/ReedDivider';
 import { business, telUrl, whatsappUrl } from '@/config/business';
 import type { Locale } from '@/i18n/routing';
 import { localBusinessLd } from '@/lib/jsonld';
@@ -37,39 +36,38 @@ export default async function ContactPage({ params }: PageProps<'/[locale]/ileti
       <PageHero
         title={t('Contact.title')}
         breadcrumbs={[{ label: t('Common.home'), href: '/' }, { label: t('Contact.title') }]}
+        lead={t('Contact.description')}
       />
-      <Container className="grid gap-12 py-14 lg:grid-cols-[1fr_340px]">
-        <div className="rounded-kart bg-white p-6 shadow-kart md:p-10">
-          <ReedDivider className="mb-6 max-w-[220px]" />
-          <h2 className="text-3xl">{t('Contact.heading')}</h2>
+      {/* 7/5 asimetrik yerleşim (spec §4.4): sol form, sağ yapışkan bilgi paneli. */}
+      <Container className="grid gap-x-12 gap-y-14 py-14 md:py-20 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <h2 className="text-h3 md:text-[2rem]">{t('Contact.heading')}</h2>
           <ContactForm />
         </div>
-        <aside className="h-fit rounded-kart bg-yesil p-6 text-kagit">
-          <h2 className="border-b border-altin pb-2 text-lg text-white">{t('Contact.infoTitle')}</h2>
-          <address className="mt-4 space-y-2 text-sm not-italic text-kamis">
+        <aside className="h-fit border border-murekkep/10 bg-kagit-2 p-8 lg:sticky lg:top-28 lg:col-span-5">
+          <h2 className="text-h3">{t('Contact.infoTitle')}</h2>
+          <address className="mt-6 text-sm not-italic text-metin-soluk">
             <p>
               {business.address.street}, {business.address.locality} / {business.address.region}
             </p>
-            <p>
-              <a href={telUrl()} dir="ltr" className="text-kagit">
-                {business.phoneDisplay}
-              </a>
-            </p>
-            <p>
-              <a href={`mailto:${business.email}`} className="text-kagit" dir="ltr">
-                {business.email}
-              </a>
-            </p>
           </address>
-          <div className="mt-5">
-            <h3 className="text-sm font-semibold text-white">{t('Contact.hours')}</h3>
-            <ul className="mt-2 space-y-1 text-sm text-kamis">
+          <div className="mt-6 space-y-3 border-t border-murekkep/10 pt-6 text-sm">
+            <a href={telUrl()} dir="ltr" className="link-underline block w-fit text-murekkep">
+              {business.phoneDisplay}
+            </a>
+            <a href={`mailto:${business.email}`} dir="ltr" className="link-underline block w-fit text-murekkep">
+              {business.email}
+            </a>
+          </div>
+          <div className="mt-8 border-t border-murekkep/10 pt-6">
+            <h3 className="text-xs font-semibold text-metin-soluk">{t('Contact.hours')}</h3>
+            <ul className="mt-3 space-y-1.5 text-sm">
               {business.openingHours.map((h) => {
                 const firstDay = h.days[0] ?? 'Mo';
                 const lastDay = h.days[h.days.length - 1] ?? firstDay;
                 return (
-                  <li key={`${h.days.join('')}-${h.opens}`}>
-                    {h.days.length > 1 ? `${dayName(firstDay)}–${dayName(lastDay)}` : dayName(firstDay)}{' '}
+                  <li key={`${h.days.join('')}-${h.opens}`} className="flex justify-between gap-4">
+                    <span>{h.days.length > 1 ? `${dayName(firstDay)}–${dayName(lastDay)}` : dayName(firstDay)}</span>
                     <span dir="ltr">
                       {h.opens}–{h.closes}
                     </span>
@@ -78,17 +76,14 @@ export default async function ContactPage({ params }: PageProps<'/[locale]/ileti
               })}
             </ul>
           </div>
-          <Button href={whatsappUrl()} variant="onDark" className="mt-6 w-full">
-            {t('Common.whatsapp')}
-          </Button>
-          <a
-            href={mapUrl}
-            target="_blank"
-            rel="noopener"
-            className="mt-3 block text-center text-kagit underline decoration-altin"
-          >
-            {t('Contact.map')}
-          </a>
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <Button href={whatsappUrl()} className="w-full">
+              {t('Common.whatsapp')}
+            </Button>
+            <a href={mapUrl} target="_blank" rel="noopener" className="link-underline text-murekkep">
+              {t('Contact.map')}
+            </a>
+          </div>
         </aside>
       </Container>
     </>

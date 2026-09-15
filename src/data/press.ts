@@ -1,4 +1,5 @@
 import type { StaticImageData } from 'next/image';
+import alisanHayataGulumseFoto from '@/assets/images/press/alisan-hayata-gulumse-2026.jpg';
 import harbiyeKavaliFoto from '@/assets/images/press/harbiye-kavali-2025.jpg';
 import kamistanNefeseFoto from '@/assets/images/press/kamistan-nefese-alper-yildirim.jpg';
 import kutuphanelerHaftasiFoto from '@/assets/images/press/kutuphaneler-haftasi-sergi-2026.jpg';
@@ -53,6 +54,27 @@ export type PressItem = {
  * },
  */
 export const press: PressItem[] = [
+  {
+    id: 'trt1-2026-alisan-ile-hayata-gulumse',
+    date: '2026-04-08',
+    outlet: 'TRT 1',
+    title: {
+      tr: 'Alişan İle Hayata Gülümse 882. Bölüm',
+      en: 'Alişan İle Hayata Gülümse — Episode 882',
+      ar: 'أليشان مع ابتسم للحياة – الحلقة 882',
+    },
+    description: {
+      tr: 'Alişan, Antakya Medeniyetler Korosu ve Hataylı konuklarla şehrin zengin kültürel mirasını, coğrafi işaretli yöresel yemeklerini ve geleneksel el sanatlarını ekranlara taşıyor. Programda deprem sonrası Hatay’da yürütülen çalışmalar, müzikal performanslar ve tiyatro gösterileri eşliğinde kadim şehrin dayanışma ruhu ve mutfak kültürü tüm yönleriyle tanıtılıyor.',
+      en: 'Alişan brings the city’s rich cultural heritage, geographically-indicated local dishes and traditional handicrafts to the screen together with the Antakya Civilizations Choir and guests from Hatay. Alongside the post-earthquake recovery work under way in Hatay, the program showcases every facet of the ancient city’s spirit of solidarity and its culinary culture through musical performances and theatrical shows.',
+      ar: 'ينقل أليشان إلى الشاشة، بمشاركة جوقة أنطاكيا للحضارات وضيوف من هاتاي، التراث الثقافي الغني للمدينة وأطباقها المحلية ذات المؤشر الجغرافي وحرفها اليدوية التقليدية. ويعرض البرنامج، إلى جانب الأعمال الجارية في هاتاي بعد الزلزال، وعبر عروض موسيقية ومسرحية، روح التضامن في هذه المدينة العريقة وثقافتها الغذائية بكل جوانبها.',
+    },
+    media: {
+      type: 'youtube',
+      videoId: 'twNCOOlFV3c',
+      poster: alisanHayataGulumseFoto,
+    },
+    url: 'https://www.youtube.com/watch?v=twNCOOlFV3c',
+  },
   {
     id: 'son-dakika-hatay-2026-kutuphaneler-haftasi-sergi',
     date: '2026-03-31',

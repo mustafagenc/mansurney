@@ -45,10 +45,13 @@ export async function Header() {
           </Link>
           <NavLinks items={items.slice(1)} label={t('Common.mainNav')} className="hidden xl:block" />
           <div className="flex items-center gap-5">
-            <LanguageSwitcher className="hidden md:inline-flex" />
-            <Button href="/siparis" className="hidden sm:inline-flex">
-              {t('Nav.order')}
-            </Button>
+            {/* Görünürlük kapsayıcıda: bileşenlerin kendi `inline-flex` sınıfı `hidden`'ı ezmesin. */}
+            <div className="hidden md:block">
+              <LanguageSwitcher />
+            </div>
+            <div className="hidden sm:block">
+              <Button href="/siparis">{t('Nav.order')}</Button>
+            </div>
             <MobileNav items={[...items, { href: '/siparis', label: t('Nav.order') }]} className="-me-2.5 xl:hidden" />
           </div>
         </Container>

@@ -18,10 +18,10 @@ type Props = {
 export function PageHero({ title, breadcrumbs, lead, children, image }: Props) {
   return (
     <section className="border-b border-murekkep/10 bg-kagit">
-      <Container className="pb-12 pt-8 md:pb-16 md:pt-10 lg:pb-20">
+      <Container className="pb-10 pt-8 md:pb-14 md:pt-10">
         <Breadcrumbs items={breadcrumbs} />
-        <h1 className="mt-10 max-w-5xl text-h1 md:mt-14">{title}</h1>
-        {lead && <p className="mt-6 max-w-[60ch] text-lg text-metin-soluk md:mt-8 md:text-xl">{lead}</p>}
+        <h1 className="mt-8 max-w-4xl text-h1 md:mt-10">{title}</h1>
+        {lead && <p className="mt-5 max-w-[60ch] text-lg text-metin-soluk md:mt-6">{lead}</p>}
         {children && <div className="mt-6 md:mt-8">{children}</div>}
         {image && (
           <Image

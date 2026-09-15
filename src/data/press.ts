@@ -2,6 +2,7 @@ import type { StaticImageData } from 'next/image';
 import harbiyeKavaliFoto from '@/assets/images/press/harbiye-kavali-2025.jpg';
 import kamistanNefeseFoto from '@/assets/images/press/kamistan-nefese-alper-yildirim.jpg';
 import kutuphanelerHaftasiFoto from '@/assets/images/press/kutuphaneler-haftasi-sergi-2026.jpg';
+import kutuphanelerHaftasiFotoB from '@/assets/images/press/kutuphaneler-haftasi-sergi-2026-b.jpg';
 import neyYapimAtolyesiFoto from '@/assets/images/press/ney-yapim-atolyesi-2025.jpg';
 import samandagKamisiFoto from '@/assets/images/press/samandag-kamisi-2012.jpg';
 import type { Locale } from '@/i18n/routing';
@@ -74,6 +75,31 @@ export const press: PressItem[] = [
       },
     },
     url: 'https://www.sondakikahatay.com/ilce-haberleri/hatayda-kutuphaneler-haftasina-ozel-sanat-sergisi-acildi',
+  },
+  {
+    id: 'kurtulus-gazetesi-2026-kutuphaneler-haftasi-sergi',
+    date: '2026-03-31',
+    outlet: 'Kurtuluş Gazetesi',
+    title: {
+      tr: 'Hatay’da Kütüphaneler Haftası’na Özel Sanat Sergisi',
+      en: 'A Special Art Exhibition for Library Week in Hatay',
+      ar: 'معرض فني خاص بمناسبة أسبوع المكتبات في هاتاي',
+    },
+    description: {
+      tr: 'Hatay Valiliği ile Hatay İl Kültür ve Turizm Müdürlüğü’nün öncülüğünde; Hatay Turizm Derneği ve Hatay Kültür Sanat Çarşısı iş birliğiyle, Cemil Meriç İl Halk Kütüphanesi’nde Hatay’ın yöresel sanatlarını tanıtan özel bir sergi kapılarını sanatseverlere açtı.',
+      en: 'Led by the Hatay Governorship and the Hatay Provincial Directorate of Culture and Tourism, in cooperation with the Hatay Tourism Association and the Hatay Culture and Art Bazaar, a special exhibition showcasing Hatay’s local arts opened its doors to art lovers at the Cemil Meriç Provincial Public Library.',
+      ar: 'بقيادة محافظة هاتاي والمديرية الإقليمية للثقافة والسياحة في هاتاي، وبالتعاون مع جمعية هاتاي للسياحة وسوق هاتاي للثقافة والفنون، فتح معرض خاص يُعرّف بالفنون المحلية في هاتاي أبوابه لمحبي الفن في مكتبة جميل مريتش العامة الإقليمية.',
+    },
+    media: {
+      type: 'image',
+      image: kutuphanelerHaftasiFotoB,
+      alt: {
+        tr: 'Kütüphanedeki büyük mozaik pano önünde toplu fotoğraf veren sergi katılımcıları',
+        en: 'Exhibition participants posing for a group photo in front of the library’s large mosaic panel',
+        ar: 'مشاركون في المعرض يلتقطون صورة جماعية أمام لوحة الفسيفساء الكبيرة في المكتبة',
+      },
+    },
+    url: 'https://www.kurtulusgazetesi.com/hatayda-kutuphaneler-haftasina-ozel-sanat-sergisi/',
   },
   {
     id: 'hatay-mahalli-haber-2025-ney-yapim-atolyesi',

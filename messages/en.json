@@ -24,6 +24,7 @@
     "case": "Ney Case",
     "workshop": "Workshop",
     "gallery": "Gallery",
+    "press": "Press",
     "order": "Order a Ney",
     "contact": "Contact"
   },
@@ -113,6 +114,13 @@
     "close": "Close",
     "imageCount": "{count, plural, =1 {1 image} other {# images}}",
     "categories": { "workshop": "Workshop", "neys": "Neys", "cases": "Cases" }
+  },
+  "Press": {
+    "title": "Press",
+    "description": "News stories about the Mansur Ney workshop and the art of the ney published in newspapers, magazines and on television.",
+    "readMore": "Read the story",
+    "playVideo": "Play video",
+    "empty": "We will share our press coverage here soon."
   },
   "Forms": {
     "required": "required",

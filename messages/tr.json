@@ -24,6 +24,7 @@
     "case": "Ney Çantası",
     "workshop": "Atölye",
     "gallery": "Galeri",
+    "press": "Basında Biz",
     "order": "Ney Siparişi",
     "contact": "İletişim"
   },
@@ -113,6 +114,13 @@
     "close": "Kapat",
     "imageCount": "{count, plural, =1 {1 görsel} other {# görsel}}",
     "categories": { "workshop": "Atölye", "neys": "Neyler", "cases": "Çantalar" }
+  },
+  "Press": {
+    "title": "Basında Biz",
+    "description": "Mansur Ney atölyesi ve ney sanatı hakkında gazete, dergi ve televizyonlarda yayımlanan haberler.",
+    "readMore": "Haberi oku",
+    "playVideo": "Videoyu oynat",
+    "empty": "Basında çıkan haberlerimizi yakında burada paylaşacağız."
   },
   "Forms": {
     "required": "zorunlu",

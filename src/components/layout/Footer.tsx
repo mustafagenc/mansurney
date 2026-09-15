@@ -88,8 +88,8 @@ export async function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/akortlar" className={link}>
-                  {t('Nav.tunings')}
+                <Link href="/basinda-biz" className={link}>
+                  {t('Nav.press')}
                 </Link>
               </li>
               <li>

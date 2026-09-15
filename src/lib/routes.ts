@@ -3,7 +3,7 @@ import { guideKeys, guideSlug } from '@/lib/content';
 import { legalKeys, legalSlug } from '@/lib/legal-slugs';
 import type { Href } from '@/lib/seo';
 
-const staticPaths = ['/', '/ney-rehberi', '/akortlar', '/ney-cantasi', '/atolye', '/galeri', '/siparis', '/iletisim'] as const;
+const staticPaths = ['/', '/ney-rehberi', '/akortlar', '/ney-cantasi', '/atolye', '/galeri', '/basinda-biz', '/siparis', '/iletisim'] as const;
 
 export function allRoutes(): { key: string; hrefFor: (l: Locale) => Href }[] {
   return [

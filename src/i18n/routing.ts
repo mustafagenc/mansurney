@@ -14,6 +14,7 @@ export const routing = defineRouting({
     '/ney-cantasi': { tr: '/ney-cantasi', en: '/ney-case', ar: '/haqibat-al-nay' },
     '/atolye': { tr: '/atolye', en: '/workshop', ar: '/al-warsha' },
     '/galeri': { tr: '/galeri', en: '/gallery', ar: '/maarad' },
+    '/basinda-biz': { tr: '/basinda-biz', en: '/press', ar: '/al-sahafa' },
     '/siparis': { tr: '/siparis', en: '/order', ar: '/talab' },
     '/iletisim': { tr: '/iletisim', en: '/contact', ar: '/ittisal' },
     '/yasal/[slug]': { tr: '/yasal/[slug]', en: '/legal/[slug]', ar: '/qanuni/[slug]' },

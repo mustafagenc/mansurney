@@ -1,4 +1,6 @@
 import type { StaticImageData } from 'next/image';
+import kamistanNefeseFoto from '@/assets/images/press/kamistan-nefese-alper-yildirim.jpg';
+import samandagKamisiFoto from '@/assets/images/press/samandag-kamisi-2012.jpg';
 import type { Locale } from '@/i18n/routing';
 
 /** Haberin görseli: fotoğraf ya da YouTube videosu. */
@@ -44,6 +46,57 @@ export type PressItem = {
  *   url: 'https://…',
  * },
  */
-export const press: PressItem[] = [];
+export const press: PressItem[] = [
+  {
+    id: 'yeni-asya-2012-samandag-kamisi',
+    date: '2012-02-25',
+    outlet: 'Yeni Asya',
+    title: {
+      tr: 'Dünyanın En Kaliteli Ney Kamışı Hatay Samandağı’nda',
+      en: 'The World’s Finest Ney Reed Grows in Hatay’s Samandağ',
+      ar: 'أجود قصب الناي في العالم في ساماندآغ بولاية هاتاي',
+    },
+    description: {
+      tr: 'Tasavvuf müziğinin en önemli enstrümanlarından neyin yapımında kullanılan ve boğum aralığı nedeniyle yurt içi ve yurt dışındaki neyzenlerin tercih ettiği Hatay’ın Samandağ ilçesinde tabiî olarak yetişen kamışların, coğrafi işaretlemesinin alınması için çalışma başlatıldı.',
+      en: 'Work has begun to secure a geographical indication for the reed that grows naturally in Hatay’s Samandağ district — used to make the ney, one of the most important instruments in Sufi music, and preferred by neyzens at home and abroad for its node spacing.',
+      ar: 'بدأ العمل على تسجيل مؤشر جغرافي للقصب الذي ينمو طبيعيًا في منطقة ساماندآغ بولاية هاتاي، والذي يُستخدم في صناعة الناي، أحد أهمّ آلات الموسيقى الصوفية، ويفضّله عازفو الناي في الداخل والخارج بسبب تباعد عُقَده.',
+    },
+    media: {
+      type: 'image',
+      image: samandagKamisiFoto,
+      alt: {
+        tr: 'Bir neyzen, arkasında def ve tespihlerin bulunduğu bir ortamda ney üflüyor',
+        en: 'A neyzen playing the ney, with a tambourine and prayer beads in the background',
+        ar: 'عازف ناي ينفخ في نايه وخلفه دف ومسبحة',
+      },
+    },
+    url: 'https://www.yeniasya.com.tr/hafta-sonu/dunyanin-en-kaliteli-ney-kamisi-hatay-samandagi-nda_129993',
+  },
+  {
+    id: 'hatay-mahalli-haber-2025-kamistan-nefese-alper-yildirim',
+    date: '2025-05-22',
+    outlet: 'Hatay Mahalli Haber',
+    title: {
+      tr: 'Kamıştan Nefese Uzanan Bir Ustalık Hikayesi: Alper Yıldırım',
+      en: 'A Story of Mastery from Reed to Breath: Alper Yıldırım',
+      ar: 'حكاية إتقان من القصب إلى النفَس: ألبر يلدريم',
+    },
+    description: {
+      tr: 'Tasavvuf müziğinin vazgeçilmez enstrümanlarından biri olan ve insan sesine en yakın enstrüman olarak kabul edilen ney, usta sanatçı Alper Yıldırım’ın ellerinde adeta hayat buluyor. 2010 yılında Kültür ve Turizm Bakanlığı tarafından “Geleneksel El Sanatkârı” belgesi verilen Yıldırım, coğrafi işarete sahip Samandağ kamışından ürettiği neylerle hem yurt içinde hem de yurt dışında tanınıyor.',
+      en: 'The ney — one of the essential instruments of Sufi music and regarded as the instrument closest to the human voice — comes to life in the hands of master artisan Alper Yıldırım. Awarded a “Traditional Craftsman” certificate by the Ministry of Culture and Tourism in 2010, Yıldırım is known at home and abroad for the neys he makes from geographically-indicated Samandağ reed.',
+      ar: 'الناي، أحد أهمّ آلات الموسيقى الصوفية والمعتبَر أقرب آلة إلى الصوت البشري، يكتسب حياة حقيقية بين يدَي الحرفي الماهر ألبر يلدريم. حصل يلدريم عام 2010 على شهادة "الحرفي التقليدي" من وزارة الثقافة والسياحة، وهو معروف داخل تركيا وخارجها بالنايات التي يصنعها من قصب ساماندآغ ذي المؤشر الجغرافي.',
+    },
+    media: {
+      type: 'image',
+      image: kamistanNefeseFoto,
+      alt: {
+        tr: 'Alper Yıldırım atölyesinde elindeki uzun bir neyi üflüyor',
+        en: 'Alper Yıldırım blowing a long ney in his workshop',
+        ar: 'ألبر يلدريم ينفخ في ناي طويل داخل ورشته',
+      },
+    },
+    url: 'https://www.hataymahallihaber.com/haber/kamistan-nefese-uzanan-bir-ustalik-hikayesi-alper-yildirim/',
+  },
+];
 
 export const sortedPress = () => [...press].sort((a, b) => b.date.localeCompare(a.date));

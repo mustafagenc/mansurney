@@ -4,6 +4,7 @@ import kamistanNefeseFoto from '@/assets/images/press/kamistan-nefese-alper-yild
 import kutuphanelerHaftasiFoto from '@/assets/images/press/kutuphaneler-haftasi-sergi-2026.jpg';
 import kutuphanelerHaftasiFotoB from '@/assets/images/press/kutuphaneler-haftasi-sergi-2026-b.jpg';
 import neyYapimAtolyesiFoto from '@/assets/images/press/ney-yapim-atolyesi-2025.jpg';
+import neyYapimAtolyesiFotoB from '@/assets/images/press/ney-yapim-atolyesi-2025-b.jpg';
 import samandagKamisiFoto from '@/assets/images/press/samandag-kamisi-2012.jpg';
 import samandagKamisiNeycilerinGozdesiFoto from '@/assets/images/press/samandag-kamisi-neycilerin-gozdesi-2007.jpg';
 import type { Locale } from '@/i18n/routing';
@@ -126,6 +127,31 @@ export const press: PressItem[] = [
       },
     },
     url: 'https://www.hataymahallihaber.com/haber/kamistan-nefese-uzanan-yolculuk-ney-yapim-atolyesi-buyuk-ilgi-gordu/',
+  },
+  {
+    id: 'hatay-eksen-2025-ney-yapim-atolyesi',
+    date: '2025-02-16',
+    outlet: 'Hatay Eksen',
+    title: {
+      tr: 'Ney Yapım Atölyesi Büyük İlgi Gördü',
+      en: 'Ney-Making Workshop Draws Great Interest',
+      ar: 'ورشة صناعة الناي تلقى إقبالًا كبيرًا',
+    },
+    description: {
+      tr: 'Milli Eğitim Bakanlığı bünyesinde faaliyet gösteren Öğretmen Akademileri kapsamında düzenlenen Müzik Akademisi etkinlikleri hız kesmeden devam ediyor. Bu kapsamda gerçekleştirilen beşinci etkinlik olan “Kamıştan Nefese Uzanan Yolculuk” Ney Yapım Atölyesi, yoğun ilgi gördü. Müzik Akademisi Koordinatörleri Mehmet Akif Karataş ve Rezzan Ezer’in öncülüğünde gerçekleşen etkinlikte, ney yapım ustası Alper Yıldırım katılımcılarla buluştu. Yıldırım, neyin tarihçesi, farklı coğrafyalardaki üretim yöntemleri ve çeşitleri hakkında detaylı bilgiler aktararak, katılımcılara ney yapım sürecini yakından gözlemleme ve deneyimleme fırsatı sundu.',
+      en: 'The Music Academy events held under the Ministry of National Education’s Teacher Academies continue without slowing down. The fifth event in this series, the “Journey from Reed to Breath” Ney-Making Workshop, drew great interest. Led by Music Academy Coordinators Mehmet Akif Karataş and Rezzan Ezer, the event brought participants together with ney-making master Alper Yıldırım. Yıldırım shared detailed information about the history of the ney and its production methods and varieties across different regions, giving participants the chance to closely observe and experience the ney-making process.',
+      ar: 'تتواصل فعاليات أكاديمية الموسيقى التي تُقام ضمن أكاديميات المعلمين التابعة لوزارة التربية الوطنية، دون تباطؤ. ولقيت الفعالية الخامسة في هذا الإطار، ورشة "رحلة من القصب إلى النفَس" لصناعة الناي، إقبالًا كبيرًا. وبقيادة منسّقَي أكاديمية الموسيقى محمد عاكف كاراتاش ورزان إيزر، التقى المشاركون بأسطى صناعة الناي ألبر يلدريم. وقدّم يلدريم معلومات مفصّلة عن تاريخ الناي وطرق صناعته وأنواعه في مناطق مختلفة، مانحًا المشاركين فرصة لمراقبة عملية صناعة الناي وتجربتها عن قرب.',
+    },
+    media: {
+      type: 'image',
+      image: neyYapimAtolyesiFotoB,
+      alt: {
+        tr: 'Ney Yapım Atölyesi katılımcıları, önlüğünde “Mansurney Ney Atölyesi” yazan Alper Yıldırım ile birlikte dışarıda poz veriyor',
+        en: 'Participants of the Ney-Making Workshop pose outdoors with Alper Yıldırım, wearing an apron that reads “Mansurney Ney Atölyesi”',
+        ar: 'مشاركون في ورشة صناعة الناي يلتقطون صورة في الخارج مع ألبر يلدريم الذي يرتدي مئزرًا مكتوبًا عليه "Mansurney Ney Atölyesi"',
+      },
+    },
+    url: 'https://hatayeksen.com/2025/02/16/ney-yapim-atolyesi-buyuk-ilgi-gordu/',
   },
   {
     id: 'ilk-haber-gazetesi-2025-harbiye-kavali',

@@ -5,45 +5,57 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 
+// Spec §4.2.1: 7/5 bölünme — solda dev başlık (vurgu kelimesi italik altın), italik
+// beyit cümlesi, kısa açıklama ve iki buton; sağda dikey oranlı görsel + altyazı.
+// Mobilde DOM sırası gereği metin önce, görsel sonra gelir.
 export async function Hero() {
   const t = await getTranslations();
   return (
-    <section id="hero" className="relative isolate flex min-h-[78svh] items-end overflow-hidden bg-murekkep">
-      {/* Next.js 16 deprecated `priority` in favor of `preload` (see
-          node_modules/next/dist/docs/01-app/03-api-reference/02-components/image.md,
-          "#preload" / "#priority"). Neither `preload` nor legacy `priority`
-          sets the rendered `fetchpriority` attribute by themselves — that prop
-          is passed straight through to the `<img>` (see
-          node_modules/next/dist/shared/lib/get-img-props.js, `fetchPriority`
-          is a raw pass-through, never derived from `priority`/`preload`). The
-          docs' own guidance for this exact case ("the image is the LCP
-          element … above the fold, typically the hero image") says: "In most
-          cases, you should use `loading='eager'` or `fetchPriority='high'`
-          instead of `preload`." We use both together here: `loading="eager"`
-          disables native lazy-loading and `fetchPriority="high"` produces the
-          `fetchpriority="high"` attribute the LCP test asserts. */}
-      <Image
-        src={heroImage}
-        alt={t('Home.hero.imageAlt')}
-        fill
-        loading="eager"
-        fetchPriority="high"
-        placeholder="blur"
-        sizes="100vw"
-        className="-z-10 object-cover opacity-80"
-      />
-      <div className="absolute inset-0 -z-10 bg-linear-to-t from-murekkep via-murekkep/50 to-transparent" />
-      <Container className="pb-20 pt-40 text-kagit">
-        <Eyebrow className="text-altin!">{t('Home.hero.eyebrow')}</Eyebrow>
-        <h1 className="mt-3 text-5xl text-kagit md:text-7xl">{t('Home.hero.title')}</h1>
-        <p className="mt-4 max-w-xl font-display text-xl italic text-kamis">{t('Home.hero.text')}</p>
-        <p className="mt-2 max-w-xl text-kagit/90">{t('Home.hero.lead')}</p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Button href="/siparis">{t('Nav.order')}</Button>
-          <Button href="/galeri" variant="outline">
-            {t('Home.hero.gallery')}
-          </Button>
+    <section id="hero" className="border-b border-murekkep/10">
+      <Container className="grid gap-12 pb-16 pt-12 md:pb-20 md:pt-16 lg:grid-cols-12 lg:items-center lg:gap-12 lg:pb-24 lg:pt-20">
+        <div className="lg:col-span-7">
+          <Eyebrow>{t('Home.hero.eyebrow')}</Eyebrow>
+          {/* Vurgu kelimesi mesajdaki `<accent>` etiketiyle işaretlenir; büyük metin
+              (≥48px) için altin-koyu kagit üzerinde ~3.5:1 ile AA büyük metin eşiğini geçer. */}
+          <h1 className="mt-6 text-display md:mt-8">
+            {t.rich('Home.hero.title', {
+              accent: (chunks) => <em className="italic text-altin-koyu">{chunks}</em>,
+            })}
+          </h1>
+          <p className="mt-6 max-w-[36ch] font-display text-xl leading-snug italic text-metin md:mt-8 md:text-2xl">
+            {t('Home.hero.text')}
+          </p>
+          <p className="mt-5 max-w-[48ch] text-metin-soluk">{t('Home.hero.lead')}</p>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Button href="/siparis">{t('Nav.order')}</Button>
+            <Button href="/galeri" variant="secondary" className="text-murekkep">
+              {t('Home.hero.gallery')}
+            </Button>
+          </div>
         </div>
+        <figure className="lg:col-span-5">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-kart bg-kagit-2">
+            {/* Next.js 16 `priority`'yi `preload` lehine kullanımdan kaldırdı; LCP görseli
+                için belgeler (node_modules/next/dist/docs/01-app/03-api-reference/
+                02-components/image.md, "#preload") `loading="eager"` ya da
+                `fetchPriority="high"` önerir. `fetchPriority` `<img>`'e doğrudan geçer
+                ve `fetchpriority="high"` özniteliğini üretir. */}
+            <Image
+              src={heroImage}
+              alt={t('Home.hero.imageAlt')}
+              fill
+              loading="eager"
+              fetchPriority="high"
+              placeholder="blur"
+              sizes="(min-width:1280px) 480px, (min-width:1024px) 40vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <figcaption className="mt-4 flex items-center gap-3 text-sm text-metin-soluk">
+            <span aria-hidden="true" className="h-px w-6 shrink-0 bg-altin" />
+            {t('Home.hero.caption')}
+          </figcaption>
+        </figure>
       </Container>
     </section>
   );

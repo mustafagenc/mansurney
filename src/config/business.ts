@@ -24,11 +24,13 @@ export const business: Business = {
   address: { street: 'Atatürk Caddesi, Narin Otel yanı', locality: 'Antakya', region: 'Hatay', postalCode: null, country: 'TR' },
   geo: null,
   openingHours: [{ days: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'], opens: '09:00', closes: '19:30' }],
-  social: { instagram: null, youtube: null, facebook: null },
+  social: { instagram: 'https://www.instagram.com/alpermansurney/', youtube: null, facebook: null },
   foundingYear: 2003,
   master: { name: 'Alper Yıldırım', consent: false },
 };
 
 export const telUrl = () => `tel:${business.phone}`;
+/** Sosyal profil URL'sinden görünen kullanıcı adı: `https://www.instagram.com/alpermansurney/` → `@alpermansurney`. */
+export const socialHandle = (url: string) => `@${new URL(url).pathname.split('/').filter(Boolean)[0] ?? ''}`;
 export const whatsappUrl = (text?: string) =>
   `https://wa.me/${business.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ''}`;

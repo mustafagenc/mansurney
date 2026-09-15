@@ -16,26 +16,165 @@
      4.5:1 text threshold. altin-metin (#7d6428) reaches ~5.0:1 on kagit and is
      used for small/bold text (e.g. Eyebrow) where altin-koyu would otherwise apply. */
   --color-altin-metin: #7d6428;
-  --radius-kart: 14px;
+  --radius-kart: 4px;
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-body: var(--font-source-sans), system-ui, sans-serif;
   --font-arabic: var(--font-noto-naskh), 'Geeza Pro', serif;
   --shadow-kart: 0 18px 48px -24px rgb(16 32 27 / 0.55);
+
+  /* Editoryal tipografi ölçeği (spec §3.1) — `text-display`, `text-h1`, `text-h2`,
+     `text-h3` yardımcı sınıflarını üretir (boyut + satır yüksekliği + aralık + kalınlık). */
+  --text-display: clamp(3rem, 8vw, 7.5rem);
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 500;
+  --text-h1: clamp(2.125rem, 3.6vw, 3.25rem);
+  --text-h1--line-height: 1.08;
+  --text-h1--letter-spacing: -0.02em;
+  --text-h1--font-weight: 500;
+  --text-h2: clamp(2rem, 4vw, 3.25rem);
+  --text-h2--line-height: 1.05;
+  --text-h2--letter-spacing: -0.015em;
+  --text-h2--font-weight: 500;
+  --text-h3: clamp(1.5rem, 2.2vw, 1.75rem);
+  --text-h3--line-height: 1.2;
+  --text-h3--letter-spacing: -0.01em;
+  --text-h3--font-weight: 500;
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.4;
+  --text-eyebrow--letter-spacing: 0.18em;
+  --text-eyebrow--font-weight: 600;
+
+  --animate-reveal: reveal linear both;
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      translate: 0 16px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
 }
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { @apply bg-kagit text-metin font-body antialiased; font-size: 17px; line-height: 1.65; }
-  h1, h2, h3, h4 { @apply font-display text-murekkep; font-weight: 600; line-height: 1.15; }
+  body { @apply bg-kagit text-metin font-body antialiased; font-size: 1.0625rem; line-height: 1.7; }
+  @media (min-width: 48rem) { body { font-size: 1.125rem; } }
+  h1, h2, h3, h4 { @apply font-display text-murekkep; font-weight: 500; line-height: 1.15; text-wrap: balance; }
   :lang(ar) body, :lang(ar) h1, :lang(ar) h2, :lang(ar) h3, :lang(ar) h4 { font-family: var(--font-arabic); line-height: 1.8; }
   :focus-visible { outline: 3px solid var(--color-altin); outline-offset: 2px; }
+  ::selection { background-color: var(--color-kamis); color: var(--color-murekkep); }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 }
 
-/* `font-display`/`font-body` yardımcı sınıfları (utilities katmanı) base katmanındaki
-   Arapça kuralını ezer; Arapça metinde her durumda Noto Naskh Arabic kullanılır ve
-   Arap yazısında anlamsız olan eğik (italic) stil kapatılır. */
+/* Eyebrow / etiket (spec §3.1): küçük büyük harf, geniş aralık, önünde mantıksal
+   yönde ince çizgi. Arapçada büyük harf, harf aralığı ve çizgi yok. */
+@layer components {
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    font-family: var(--font-body);
+    font-size: var(--text-eyebrow);
+    line-height: var(--text-eyebrow--line-height);
+    letter-spacing: var(--text-eyebrow--letter-spacing);
+    font-weight: var(--text-eyebrow--font-weight);
+    text-transform: uppercase;
+    color: var(--color-altin-metin);
+  }
+  .eyebrow::before {
+    content: '';
+    flex: none;
+    inline-size: 1.75rem;
+    block-size: 1px;
+    background-color: currentColor;
+  }
+  .eyebrow-center { justify-content: center; }
+  :lang(ar) .eyebrow { font-family: var(--font-arabic); font-size: 0.875rem; letter-spacing: normal; text-transform: none; }
+  :lang(ar) .eyebrow::before { content: none; }
+
+  /* Sayısal indeks (01, 02…) */
+  .index-num {
+    font-family: var(--font-display);
+    font-variant-numeric: tabular-nums lining-nums;
+    color: var(--color-altin-metin);
+    letter-spacing: 0.02em;
+  }
+
+  /* MDX okuma düzeni (spec §4.1). Öğe sınıfları `mdx-components.tsx` içinde;
+     burada yalnızca yapı/sözde öğe kuralları var. */
+  .prose-editorial {
+    max-width: 65ch;
+    color: var(--color-metin);
+  }
+  .prose-editorial > :first-child { margin-block-start: 0; }
+  .prose-editorial > :last-child { margin-block-end: 0; }
+  /* İlk paragrafta Fraunces drop cap — yalnızca Latin yazılı diller (TR/EN). */
+  .prose-editorial:not(:lang(ar)) > p:first-of-type::first-letter {
+    float: left;
+    float: inline-start;
+    margin-block-start: 0.1em;
+    margin-inline-end: 0.1em;
+    font-family: var(--font-display);
+    font-size: 3.75em;
+    font-weight: 500;
+    line-height: 0.8;
+    color: var(--color-murekkep);
+  }
+}
+
 @layer utilities {
+  /* `font-display`/`font-body` yardımcı sınıfları (utilities katmanı) base katmanındaki
+     Arapça kuralını ezer; Arapça metinde her durumda Noto Naskh Arabic kullanılır ve
+     Arap yazısında anlamsız olan eğik (italic) stil kapatılır. */
   :lang(ar) .font-display, :lang(ar) .font-body { font-family: var(--font-arabic); }
   :lang(ar) .italic { font-style: normal; }
+  /* Negatif harf aralığı Arap harflerinin bitişmesini bozar; satır yüksekliği de
+     Naskh'ın uzun çıkıntıları için açılır. */
+  :lang(ar) .text-display, :lang(ar) .text-h1, :lang(ar) .text-h2, :lang(ar) .text-h3 { letter-spacing: normal; line-height: 1.45; }
+}
+
+/* Kaydırmada hafif belirme (spec §3.5). Desteklemeyen tarayıcıda içerik doğrudan görünür. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: var(--animate-reveal);
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
+
+/* Alttan çizgi animasyonu: bağlantı üzerine gelince/odaklanınca çizgi başlangıç
+   yönünden uzar. `group` ebeveyni üzerinde de tetiklenir. */
+@utility link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: left 100%;
+  background-size: 0% 1px;
+  padding-block-end: 0.125em;
+  transition: background-size 300ms ease;
+  &:where([dir='rtl'], [dir='rtl'] *) { background-position: right 100%; }
+  &:hover, &:focus-visible, :where(.group):hover & { background-size: 100% 1px; }
+}
+
+/* Başlangıçta görünür çizgi (ör. gövde içi bağlantılar); üzerine gelince kalınlaşır. */
+@utility link-underline-static {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: left 100%;
+  background-size: 100% 1px;
+  padding-block-end: 0.125em;
+  transition: background-size 300ms ease;
+  &:where([dir='rtl'], [dir='rtl'] *) { background-position: right 100%; }
+  &:hover, &:focus-visible { background-size: 100% 2px; }
+}
+
+/* Yasal sayfalarda (spec §4.4) Phase 1 drop cap kapatılır: layer dışı olduğu için
+   `.prose-editorial`'ın kendi `@layer components` kuralından her zaman önceliklidir. */
+.no-dropcap .prose-editorial > p:first-of-type::first-letter {
+  all: unset;
 }

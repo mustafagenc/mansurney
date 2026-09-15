@@ -14,7 +14,8 @@
     "whatsapp": "WhatsApp ile yazın",
     "call": "Arayın",
     "skipToContent": "İçeriğe geç",
-    "mainNav": "Ana menü"
+    "mainNav": "Ana menü",
+    "breadcrumb": "Sayfa konumu"
   },
   "Nav": {
     "home": "Anasayfa",
@@ -23,6 +24,7 @@
     "case": "Ney Çantası",
     "workshop": "Atölye",
     "gallery": "Galeri",
+    "press": "Basında Biz",
     "order": "Ney Siparişi",
     "contact": "İletişim"
   },
@@ -45,11 +47,12 @@
     "metaTitle": "El Yapımı Ney — Hatay",
     "hero": {
       "eyebrow": "Mansur Ney · Neyzen Atölyesi",
-      "title": "Dinle neyden",
+      "title": "Dinle <accent>neyden</accent>",
       "text": "Kamışın sükûtundan doğan ses; nefesle söze duran sabır.",
       "lead": "Asi kıyısının kamışından, sekiz akortta el yapımı ney.",
       "imageAlt": "Yakın plan, yan yana dizilmiş kamış neyler ve başpareler",
-      "gallery": "Galeriyi gör"
+      "gallery": "Galeriyi gör",
+      "caption": "Atölyeden · Kamış neyler ve başpâreler"
     },
     "about": {
       "eyebrow": "Neyin Tarihçesi",
@@ -57,6 +60,7 @@
       "text": "Ney; sulak zeminde, muhtelif uzunluklarda yetişen bitki ve bu bitkiden üretilen nefesli bir çalgıdır. Kökeni mitolojik çağlara dayanır; Sümerlerden Mevlevîliğe binlerce yıllık bir yolculuğun sesidir.",
       "cta": "Devamını oku"
     },
+    "guide": { "all": "Tüm yazılar" },
     "tunings": { "eyebrow": "Akortlar", "title": "Her ahenkte ney", "cta": "Akortları incele" },
     "gallery": { "cta": "Tüm galeriyi gör" },
     "order": {
@@ -97,7 +101,8 @@
     "eyebrow": "Hakkımızda",
     "master": "Ney yapım ustası",
     "aboutAlt": "Ney çalan bir neyzeni betimleyen mürekkep tasviri",
-    "interiorAlt": "Atölye duvarında asılı neyler, tespihler ve tef/bendirler"
+    "interiorAlt": "Atölye duvarında asılı neyler, tespihler ve tef/bendirler",
+    "exteriorAlt": "Atölyenin ahşap cephesi, tabelası ve vitrininden görünen neyler"
   },
   "Gallery": {
     "eyebrow": "Atölyeden",
@@ -107,7 +112,15 @@
     "prev": "Önceki görsel",
     "next": "Sonraki görsel",
     "close": "Kapat",
+    "imageCount": "{count, plural, =1 {1 görsel} other {# görsel}}",
     "categories": { "workshop": "Atölye", "neys": "Neyler", "cases": "Çantalar" }
+  },
+  "Press": {
+    "title": "Basında Biz",
+    "description": "Mansur Ney atölyesi ve ney sanatı hakkında gazete, dergi ve televizyonlarda yayımlanan haberler.",
+    "readMore": "Haberi oku",
+    "playVideo": "Videoyu oynat",
+    "empty": "Basında çıkan haberlerimizi yakında burada paylaşacağız."
   },
   "Forms": {
     "required": "zorunlu",

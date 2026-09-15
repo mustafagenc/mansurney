@@ -6,20 +6,31 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { gallery } from '@/data/gallery';
 import type { Locale } from '@/i18n/routing';
 
+// Mozaik 5 görselle tam dikdörtgen olur (ilk görsel 2×2 + dört küçük, mobilde ve
+// masaüstünde). İlk görsel büyük hücreye uygun, kompozisyonu güçlü bir kare seçildi.
+const stripIds = ['workshop-19', 'playing-ney-seated', 'workshop-17', 'drilling-finger-holes', 'ney-rows-closeup'];
+
 export async function GalleryStrip() {
   const locale = (await getLocale()) as Locale;
   const t = await getTranslations();
-  const items = gallery.slice(0, 8).map((g) => ({ id: g.id, src: g.image, alt: g.alt[locale] }));
+  const items = stripIds
+    .map((id) => gallery.find((g) => g.id === id))
+    .filter((g) => g !== undefined)
+    .map((g) => ({ id: g.id, src: g.image, alt: g.alt[locale] }));
   return (
-    <section className="py-20">
-      <Container>
-        <SectionHeading eyebrow={t('Gallery.eyebrow')} title={t('Gallery.title')} />
-        <GalleryGrid items={items} />
-        <div className="mt-10 text-center">
-          <Button href="/galeri" variant="green">
-            {t('Home.gallery.cta')}
-          </Button>
-        </div>
+    <section className="py-20 md:py-28 lg:py-32">
+      <Container className="reveal">
+        <SectionHeading
+          eyebrow={t('Gallery.eyebrow')}
+          title={t('Gallery.title')}
+          description={t('Gallery.description')}
+          action={
+            <Button href="/galeri" variant="link" className="text-murekkep">
+              {t('Home.gallery.cta')}
+            </Button>
+          }
+        />
+        <GalleryGrid items={items} layout="mosaic" />
       </Container>
     </section>
   );

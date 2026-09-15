@@ -14,7 +14,8 @@
     "whatsapp": "Message us on WhatsApp",
     "call": "Call us",
     "skipToContent": "Skip to content",
-    "mainNav": "Main navigation"
+    "mainNav": "Main navigation",
+    "breadcrumb": "Breadcrumb"
   },
   "Nav": {
     "home": "Home",
@@ -23,6 +24,7 @@
     "case": "Ney Case",
     "workshop": "Workshop",
     "gallery": "Gallery",
+    "press": "Press",
     "order": "Order a Ney",
     "contact": "Contact"
   },
@@ -45,11 +47,12 @@
     "metaTitle": "Handmade Ney — Hatay",
     "hero": {
       "eyebrow": "Mansur Ney · Ney Workshop",
-      "title": "Listen to the ney",
+      "title": "Listen to the <accent>ney</accent>",
       "text": "A sound born from the reed's silence; patience turned to speech by breath.",
       "lead": "Handmade ney in eight tunings, from reed grown on the banks of the Orontes.",
       "imageAlt": "Close-up of reed neys and mouthpieces arranged side by side",
-      "gallery": "View the gallery"
+      "gallery": "View the gallery",
+      "caption": "From the workshop · Reed neys and mouthpieces"
     },
     "about": {
       "eyebrow": "History of the Ney",
@@ -57,6 +60,7 @@
       "text": "The ney is a plant that grows to varying lengths in wetlands, and the wind instrument crafted from it. Its origins reach back to mythological times — the voice of a journey spanning thousands of years, from the Sumerians to the Mevlevi order.",
       "cta": "Read more"
     },
+    "guide": { "all": "All articles" },
     "tunings": { "eyebrow": "Tunings", "title": "A ney for every harmony", "cta": "Explore the tunings" },
     "gallery": { "cta": "View the full gallery" },
     "order": {
@@ -97,7 +101,8 @@
     "eyebrow": "About",
     "master": "Ney-making master",
     "aboutAlt": "Ink illustration of a neyzen playing the ney",
-    "interiorAlt": "Neys, prayer beads and tef/bendir drums hanging on the workshop wall"
+    "interiorAlt": "Neys, prayer beads and tef/bendir drums hanging on the workshop wall",
+    "exteriorAlt": "The workshop’s wooden storefront with its sign and neys visible through the window"
   },
   "Gallery": {
     "eyebrow": "From the Workshop",
@@ -107,7 +112,15 @@
     "prev": "Previous image",
     "next": "Next image",
     "close": "Close",
+    "imageCount": "{count, plural, =1 {1 image} other {# images}}",
     "categories": { "workshop": "Workshop", "neys": "Neys", "cases": "Cases" }
+  },
+  "Press": {
+    "title": "Press",
+    "description": "News stories about the Mansur Ney workshop and the art of the ney published in newspapers, magazines and on television.",
+    "readMore": "Read the story",
+    "playVideo": "Play video",
+    "empty": "We will share our press coverage here soon."
   },
   "Forms": {
     "required": "required",

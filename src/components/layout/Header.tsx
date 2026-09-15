@@ -4,11 +4,15 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Link } from '@/i18n/navigation';
 import type { AppPathname } from '@/i18n/routing';
+import { LanguageSwitcher } from './LanguageSwitcher';
 import { MobileNav } from './MobileNav';
-import { TopBar } from './TopBar';
+import { NavLinks } from './NavLinks';
 
 export type NavItem = { href: Exclude<AppPathname, `${string}[slug]`>; label: string };
 
+// Spec §4.1: tek satır yapışkan header — yarı saydam kağıt + bulanıklık, alt hairline.
+// Masaüstü menü `xl`'den itibaren (7 bağlantı + dil + buton daha dar ekrana sığmaz);
+// altında tam ekran `MobileNav`.
 export async function Header() {
   const t = await getTranslations();
   const items: NavItem[] = [
@@ -24,36 +28,31 @@ export async function Header() {
     <>
       <a
         href="#icerik"
-        className="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-50 focus:bg-altin focus:px-4 focus:py-2"
+        className="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-50 focus:bg-altin focus:px-4 focus:py-2 focus:text-murekkep"
       >
         {t('Common.skipToContent')}
       </a>
-      <TopBar />
-      <header className="sticky top-0 z-40 bg-yesil text-kagit shadow-kart">
-        <Container className="flex items-center justify-between gap-6 py-3">
-          <Link href="/" className="flex items-center gap-3 text-kagit">
+      <header className="sticky top-0 z-40 border-b border-murekkep/10 bg-kagit/85 backdrop-blur-md">
+        <Container className="flex h-18 items-center justify-between gap-6 lg:h-20">
+          <Link href="/" className="flex shrink-0 items-center gap-3">
             <Image src="/images/brand/amblem.svg" alt="" width={40} height={40} />
-            <span className="leading-tight">
-              <b className="block font-display text-xl">{t('Meta.siteName')}</b>
-              <small className="text-xs uppercase tracking-[0.2em] text-kamis rtl:tracking-normal">{t('Meta.tagline')}</small>
+            <span className="leading-none">
+              <span className="block font-display text-[1.375rem] text-murekkep">{t('Meta.siteName')}</span>
+              <span className="mt-1.5 block text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-altin-metin rtl:text-xs rtl:tracking-normal">
+                {t('Meta.tagline')}
+              </span>
             </span>
           </Link>
-          <nav className="hidden lg:block" aria-label={t('Common.mainNav')}>
-            <ul className="flex items-center gap-6 text-sm font-semibold uppercase tracking-wide rtl:normal-case">
-              {items.slice(1).map((i) => (
-                <li key={i.href}>
-                  <Link href={i.href} className="text-kagit hover:text-altin">
-                    {i.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <div className="flex items-center gap-3">
-            <Button href="/siparis" variant="gold" className="hidden sm:inline-flex">
-              {t('Nav.order')}
-            </Button>
-            <MobileNav items={[...items, { href: '/siparis', label: t('Nav.order') }]} />
+          <NavLinks items={items.slice(1)} label={t('Common.mainNav')} className="hidden xl:block" />
+          <div className="flex items-center gap-5">
+            {/* Görünürlük kapsayıcıda: bileşenlerin kendi `inline-flex` sınıfı `hidden`'ı ezmesin. */}
+            <div className="hidden md:block">
+              <LanguageSwitcher />
+            </div>
+            <div className="hidden sm:block">
+              <Button href="/siparis">{t('Nav.order')}</Button>
+            </div>
+            <MobileNav items={[...items, { href: '/siparis', label: t('Nav.order') }]} className="-me-2.5 xl:hidden" />
           </div>
         </Container>
       </header>

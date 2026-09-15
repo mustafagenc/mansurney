@@ -23,6 +23,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Claude Code ajan worktree'leri ve SDD çalışma alanı
+    ".claude/**",
+    ".superpowers/**",
   ]),
 ]);
 

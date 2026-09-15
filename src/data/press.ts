@@ -221,9 +221,9 @@ export const press: PressItem[] = [
       type: 'image',
       image: kamistanNefeseFoto,
       alt: {
-        tr: 'Alper Yıldırım atölyesinde elindeki uzun bir neyi üflüyor',
-        en: 'Alper Yıldırım blowing a long ney in his workshop',
-        ar: 'ألبر يلدريم ينفخ في ناي طويل داخل ورشته',
+        tr: 'Alper Yıldırım atölyesinde bir neyin başparesini işliyor',
+        en: 'Alper Yıldırım working on a ney’s mouthpiece in his workshop',
+        ar: 'ألبر يلدريم يعمل على باشبارة (فم) ناي داخل ورشته',
       },
     },
     url: 'https://www.hataymahallihaber.com/haber/kamistan-nefese-uzanan-bir-ustalik-hikayesi-alper-yildirim/',

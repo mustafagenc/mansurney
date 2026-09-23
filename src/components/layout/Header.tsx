@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
+import { whatsappUrl } from '@/config/business';
 import { Link } from '@/i18n/navigation';
 import type { AppPathname } from '@/i18n/routing';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -48,7 +50,17 @@ export async function Header() {
             <div className="hidden md:block">
               <LanguageSwitcher />
             </div>
-            <div className="hidden sm:block">
+            <div className="hidden items-center gap-3 sm:flex">
+              <a
+                href={whatsappUrl()}
+                target="_blank"
+                rel="noopener"
+                aria-label={t('Common.whatsapp')}
+                title={t('Common.whatsapp')}
+                className="flex items-center justify-center rounded-[2px] border border-murekkep/30 px-3.5 py-3.5 text-murekkep transition-colors duration-200 hover:border-murekkep hover:bg-murekkep/5"
+              >
+                <WhatsAppIcon className="size-[1.125em]" />
+              </a>
               <Button href="/siparis">{t('Nav.order')}</Button>
             </div>
             <MobileNav items={[...items, { href: '/siparis', label: t('Nav.order') }]} className="-me-2.5 xl:hidden" />

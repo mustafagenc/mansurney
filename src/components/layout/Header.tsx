@@ -50,16 +50,17 @@ export async function Header() {
             <div className="hidden md:block">
               <LanguageSwitcher />
             </div>
-            <div className="hidden items-center gap-3 sm:flex">
+            <div className="hidden items-stretch gap-3 sm:flex">
+              {/* `items-stretch`, "Ney Siparişi" butonuyla aynı yüksekliğe otomatik uzanmasını sağlar. */}
               <a
                 href={whatsappUrl()}
                 target="_blank"
                 rel="noopener"
                 aria-label={t('Common.whatsapp')}
                 title={t('Common.whatsapp')}
-                className="flex items-center justify-center rounded-[2px] border border-murekkep/30 px-3.5 py-3.5 text-murekkep transition-colors duration-200 hover:border-murekkep hover:bg-murekkep/5"
+                className="flex items-center justify-center rounded-[2px] bg-[#25D366] px-3.5 text-kagit transition-colors duration-200 hover:bg-[#1EBE5A]"
               >
-                <WhatsAppIcon className="size-[1.125em]" />
+                <WhatsAppIcon className="size-6" />
               </a>
               <Button href="/siparis">{t('Nav.order')}</Button>
             </div>

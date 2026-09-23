@@ -19,7 +19,6 @@ export async function Header() {
     { href: '/', label: t('Nav.home') },
     { href: '/ney-rehberi', label: t('Nav.guide') },
     { href: '/akortlar', label: t('Nav.tunings') },
-    { href: '/ney-cantasi', label: t('Nav.case') },
     { href: '/galeri', label: t('Nav.gallery') },
     { href: '/basinda-biz', label: t('Nav.press') },
     { href: '/iletisim', label: t('Nav.contact') },

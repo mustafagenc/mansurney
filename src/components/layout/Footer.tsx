@@ -118,7 +118,11 @@ export async function Footer() {
           <address className="not-italic lg:col-span-4">
             <h2 className={heading}>{t('Footer.contactTitle')}</h2>
             <p className="leading-relaxed">
-              {business.address.street}, {business.address.locality} / {business.address.region}
+              {business.address.street},
+              <br />
+              <span className="whitespace-nowrap">
+                {business.address.locality} / {business.address.region}
+              </span>
             </p>
             <p className="mt-5">
               <a href={telUrl()} dir="ltr" className={`font-display text-2xl text-kagit ${link}`}>

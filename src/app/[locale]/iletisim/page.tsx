@@ -50,7 +50,11 @@ export default async function ContactPage({ params }: PageProps<'/[locale]/ileti
           <h2 className="text-h3">{t('Contact.infoTitle')}</h2>
           <address className="mt-6 text-sm not-italic text-metin-soluk">
             <p>
-              {business.address.street}, {business.address.locality} / {business.address.region}
+              {business.address.street},
+              <br />
+              <span className="whitespace-nowrap">
+                {business.address.locality} / {business.address.region}
+              </span>
             </p>
           </address>
           <div className="mt-6 space-y-3 border-t border-murekkep/10 pt-6 text-sm">

@@ -20,7 +20,7 @@ export const business: Business = {
   phone: '+905325930436',
   phoneDisplay: '0 532 593 04 36',
   whatsapp: '905325930436',
-  email: 'neyzen@mansurney.com',
+  email: 'mansurney@hotmail.com',
   address: { street: 'Atatürk Caddesi, Narin Otel yanı', locality: 'Antakya', region: 'Hatay', postalCode: null, country: 'TR' },
   geo: null,
   openingHours: [{ days: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'], opens: '09:00', closes: '19:30' }],

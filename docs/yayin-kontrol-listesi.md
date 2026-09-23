@@ -55,7 +55,7 @@ kod bu durumu dürüstçe gösterir (uydurma veri yoktur). Yayından önce hepsi
       (harita gömme ve `LocalBusiness` yapılandırılmış verisi için zorunlu;
       `pnpm prelaunch` bu alan boşken engel olarak raporlar)
 - [ ] **Form alıcı e-postası** — sipariş ve iletişim formları hangi adrese düşsün?
-      (`.env.example` → `FORM_TO_EMAIL`; şu an `neyzen@mansurney.com` varsayılan)
+      (`.env.example` → `FORM_TO_EMAIL`; şu an `mansurney@hotmail.com` varsayılan)
 - [ ] **Sahne/performans fotoğrafları izni** — galeri veya diğer sayfalarda kullanılacak
       sahne/performans fotoğraflarının kullanım izni var mı?
 

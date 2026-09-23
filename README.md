@@ -84,7 +84,7 @@ Değişikliklerin doğrulama yolu `pnpm typecheck`, `pnpm lint` ve `pnpm build` 
 | `NEXT_PUBLIC_SITE_URL` | Sitenin kanonik kök URL'si (`https://mansurney.vercel.app`) |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 ölçüm kimliği (`G-XXXXXXXXXX`). Boşsa ya da `VERCEL_ENV=production` değilse GA hiç yüklenmez |
 | `RESEND_API_KEY` | Sipariş/iletişim formu e-postalarını göndermek için Resend API anahtarı |
-| `FORM_TO_EMAIL` | Form gönderimlerinin ulaşacağı adres (`neyzen@mansurney.com`) |
+| `FORM_TO_EMAIL` | Form gönderimlerinin ulaşacağı adres (`mansurney@hotmail.com`) |
 | `FORM_FROM_EMAIL` | Resend üzerinden gönderilen e-postaların "gönderen" adresi |
 | `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Cloudflare Turnstile istemci anahtarı |
 | `TURNSTILE_SECRET_KEY` | Cloudflare Turnstile sunucu doğrulama anahtarı |

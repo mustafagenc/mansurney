@@ -1,7 +1,7 @@
 {
   "Meta": {
     "siteName": "Mansur Ney",
-    "tagline": "Neyzen Atölyesi",
+    "tagline": "Ney Atölyesi",
     "defaultDescription": "Hatay’da Asi kamışından el yapımı ney. Tüm akortlarda ney siparişi, ney çantası, ney yapımı ve bakımı rehberi."
   },
   "Common": {
@@ -46,10 +46,10 @@
   "Home": {
     "metaTitle": "El Yapımı Ney — Hatay",
     "hero": {
-      "eyebrow": "Mansur Ney · Neyzen Atölyesi",
+      "eyebrow": "Mansur Ney · Ney Atölyesi",
       "title": "Dinle <accent>neyden</accent>",
       "text": "Kamışın sükûtundan doğan ses; nefesle söze duran sabır.",
-      "lead": "Asi kıyısının kamışından, sekiz akortta el yapımı ney.",
+      "lead": "Samandağ kamışından, istenilen akortta ney.",
       "imageAlt": "Yakın plan, yan yana dizilmiş kamış neyler ve başpareler",
       "gallery": "Galeriyi gör",
       "caption": "Atölyeden · Kamış neyler ve başpâreler"
@@ -76,13 +76,13 @@
     "related": "Diğer yazılar",
     "faqTitle": "Sık sorulan sorular",
     "orderCtaTitle": "Ney Siparişi",
-    "orderCtaText": "El yapımı Mansur neyleriniz için atölyemizle iletişime geçin.",
+    "orderCtaText": "Mansur neyleriniz için atölyemizle iletişime geçin.",
     "orderCtaButton": "Sipariş ver"
   },
   "Tunings": {
     "eyebrow": "Akortlar",
-    "title": "Her ahenkte el yapımı ney",
-    "intro": "Neyin akordu (ahengi) boyuna göre belirlenir. Atölyemiz sekiz akortta ney üretir; hangi akordun size uygun olduğundan emin değilseniz bize danışın.",
+    "title": "Her ahenkte profesyonel ney",
+    "intro": "Neyin akordu (ahengi) boyuna göre belirlenir. Atölyemiz her akortta ney üretir; hangi akordun size uygun olduğundan emin değilseniz bize danışın.",
     "length": "Boy",
     "lengthUnknown": "Ölçü için ustaya danışın",
     "listen": "Sesini dinleyin",
@@ -149,9 +149,9 @@
   },
   "Order": {
     "title": "Ney Siparişi",
-    "heading": "El Yapımı Mansur Neyi",
+    "heading": "Talep Edilen Ney",
     "intro": "Her neyimiz, seçilmiş kamıştan, geleneksel yöntemlerle ve ustalıkla hazırlanır. İstediğiniz akort ve ölçüde ney siparişi için aşağıdaki formu doldurun; atölyemiz en kısa sürede sizinle iletişime geçsin.",
-    "description": "El yapımı ney siparişi: Bolâhenk, Süpürde, Mansur, Kız, Müstahsen, Şah, Davud ve Bolâhenk Nısfiye akortlarında ney talebinizi iletin.",
+    "description": "Ney siparişi: Bolâhenk, Süpürde, Mansur, Kız, Müstahsen, Şah, Davud ve Bolâhenk Nısfiye akortlarında ney talebinizi iletin.",
     "tuning": "Akort",
     "tuningUnsure": "Seçiniz / danışacağım",
     "quantity": "Adet",

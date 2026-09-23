@@ -49,7 +49,7 @@
       "eyebrow": "Mansur Ney · Ney Workshop",
       "title": "Listen to the <accent>ney</accent>",
       "text": "A sound born from the reed's silence; patience turned to speech by breath.",
-      "lead": "Handmade ney in eight tunings, from reed grown on the banks of the Orontes.",
+      "lead": "Ney in your chosen tuning, from Samandağ reed.",
       "imageAlt": "Close-up of reed neys and mouthpieces arranged side by side",
       "gallery": "View the gallery",
       "caption": "From the workshop · Reed neys and mouthpieces"
@@ -76,13 +76,13 @@
     "related": "More articles",
     "faqTitle": "Frequently asked questions",
     "orderCtaTitle": "Order a Ney",
-    "orderCtaText": "Contact our workshop for your handmade Mansur ney.",
+    "orderCtaText": "Contact our workshop for your Mansur ney.",
     "orderCtaButton": "Place an order"
   },
   "Tunings": {
     "eyebrow": "Tunings",
-    "title": "Handmade ney in every tuning",
-    "intro": "A ney's tuning (ahenk) is determined by its length. Our workshop makes neys in eight tunings; if you are unsure which suits you, ask us.",
+    "title": "Professional ney in every tuning",
+    "intro": "A ney's tuning (ahenk) is determined by its length. Our workshop makes neys in every tuning; if you are unsure which suits you, ask us.",
     "length": "Length",
     "lengthUnknown": "Ask the master for the measurement",
     "listen": "Listen to its sound",
@@ -149,9 +149,9 @@
   },
   "Order": {
     "title": "Ney Order",
-    "heading": "Handmade Mansur Ney",
+    "heading": "Requested Ney",
     "intro": "Every ney we make is prepared from selected reed, using traditional methods and craftsmanship. Fill in the form below to order a ney in the tuning and size you want; our workshop will get in touch with you as soon as possible.",
-    "description": "Order a handmade ney: request your ney in the Bolâhenk, Süpürde, Mansur, Kız, Müstahsen, Şah, Davud or Bolâhenk Nısfiye tuning.",
+    "description": "Ney order: request your ney in the Bolâhenk, Süpürde, Mansur, Kız, Müstahsen, Şah, Davud or Bolâhenk Nısfiye tuning.",
     "tuning": "Tuning",
     "tuningUnsure": "Select / I'll ask for advice",
     "quantity": "Quantity",
